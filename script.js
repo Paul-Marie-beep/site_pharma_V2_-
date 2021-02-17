@@ -6,8 +6,11 @@ const navBar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-link");
 const logo = document.querySelector(".cross-logo");
 const allSections = document.querySelectorAll("section");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
 
 const slides = document.querySelectorAll(".carrousel-slide");
+const slide = document.querySelector(".carrousel-slide");
 
 const categories = document.querySelector(".categories");
 const products = document.querySelector(".moment-products");
@@ -68,6 +71,27 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Nav sticky
+const navHeight = navBar.getBoundingClientRect().height;
+const slideHeight = slide.getBoundingClientRect().height;
+
+const obsCallback = function (entries) {
+  const [entry] = entries;
+  console.log(!entry.isIntersecting);
+  if (entry.isIntersecting) navBar.classList.add("nav-sticky");
+  else navBar.classList.remove("nav-sticky");
+};
+
+const obsOptions = {
+  root: null,
+  threshold: 0.25,
+  rootMargin: `-${navHeight * 2}px`,
+};
+
+const navObserver = new IntersectionObserver(obsCallback, obsOptions);
+
+navObserver.observe(main);
+
 // Animation automatique du carrousel
 let curSlide = 0;
 
@@ -99,35 +123,25 @@ const categoriesOptions = {
   threshold: 0.2,
 };
 
-const titleOptions = {
-  root: null,
-  threshold: 0.6,
-};
-
 const contactOptions = {
   root: null,
-  threshold: 0.05,
+  threshold: 0.025,
 };
 
 const categoriesObserver = new IntersectionObserver(
   revealSection,
   categoriesOptions
 );
-const titleObserver = new IntersectionObserver(revealSection, titleOptions);
+// const titleObserver = new IntersectionObserver(revealSection, titleOptions);
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
 
 categories.classList.add("section-hidden");
-productsTitle.classList.add("section-hidden");
+products.classList.add("section-hidden");
 contact.classList.add("section-hidden");
 
 categoriesObserver.observe(categories);
-titleObserver.observe(productsTitle);
+categoriesObserver.observe(products);
 contactObserver.observe(contact);
-
-// allProducts.forEach(function (product) {
-//   product.classList.add("section-hidden");
-//   categoriesObserver.observe(product);
-// });
 
 //  Scroller vers contact
 

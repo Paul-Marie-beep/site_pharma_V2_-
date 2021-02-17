@@ -37,6 +37,12 @@ h2 {
   justify-content: space-between;
   height: 6.5rem;
 }
+
+.nav-sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
 .navbar ul {
   list-style: none;
 }
@@ -240,6 +246,7 @@ h2 {
   padding-bottom: 0px;
   border-top: 1px solid #ddd;
   padding-top: 4rem;
+  transition: 1s;
 }
 
 .product-grid {
@@ -361,10 +368,10 @@ h2 {
 .horaires-padded-component {
   margin: auto;
   width: 41%;
+  height: 18rem;
   border-radius: 5px;
   border: 1px gray;
   background-color: rgb(201, 247, 208);
-  padding-bottom: 4rem;
   border-radius: 10px;
 }
 
@@ -413,4 +420,11 @@ h2 {
 
 .horaires-content-hidden {
   display: none;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
+
+footer {
+  height: 5rem;
+  background-color: var(--color-primary);
 }
