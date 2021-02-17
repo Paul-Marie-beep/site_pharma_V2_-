@@ -124,10 +124,10 @@ categoriesObserver.observe(categories);
 titleObserver.observe(productsTitle);
 contactObserver.observe(contact);
 
-allProducts.forEach(function (product) {
-  product.classList.add("section-hidden");
-  categoriesObserver.observe(product);
-});
+// allProducts.forEach(function (product) {
+//   product.classList.add("section-hidden");
+//   categoriesObserver.observe(product);
+// });
 
 //  Scroller vers contact
 

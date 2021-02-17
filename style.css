@@ -242,11 +242,41 @@ h2 {
   padding-top: 4rem;
 }
 
-.product {
-  width: 65%;
+.product-grid {
+  width: 90%;
   margin: auto;
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 0%;
+}
+
+.product--1 {
+  grid-column: 1/7;
+  grid-row: 2/3;
+}
+
+.product--2 {
+  grid-column: 8/14;
+  grid-row: 2/3;
+}
+
+.product--3 {
+  grid-column: 1/7;
+  grid-row: 3;
+}
+
+.product--4 {
+  grid-column: 8/14;
+  grid-row: 3/4;
+}
+
+.product {
   margin-bottom: 4rem;
   transition: 1s;
+  display: flex;
+  align-items: center;
 }
 
 .travel-left {
@@ -264,7 +294,7 @@ h2 {
 }
 
 .product-text {
-  width: 40%;
+  width: auto;
   margin: 2rem;
 }
 
@@ -273,6 +303,7 @@ h2 {
   font-size: 3em;
   color: var(--color-primary);
   margin-bottom: 2%;
+  width: fit-content;
 }
 
 .product-text p {
@@ -283,14 +314,6 @@ h2 {
 
 .text-muted {
   color: grey;
-}
-
-.product-img {
-  width: 30%;
-}
-
-.somniphyt-img {
-  width: 40%;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
