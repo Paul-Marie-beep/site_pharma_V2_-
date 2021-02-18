@@ -3,6 +3,8 @@
   --text-primary: white;
   --text-muted: lightgrey;
   --nav-textSize: 1.7rem;
+  --border-color: #ddd;
+  --card-width: 45rem;
 }
 
 body {
@@ -135,13 +137,11 @@ h2 {
   transition: transform 2s;
   display: flex;
   justify-content: center;
-  /* border: 2px solid red; */
 }
 
 .carrousel-image {
   width: 100%;
   height: 90rem;
-  /* border: 2px solid red; */
 }
 
 .slide-text {
@@ -150,7 +150,6 @@ h2 {
   color: var(--text-primary);
   margin: auto;
   width: 70%;
-  /* flex-wrap: wrap; */
 }
 
 .slide-text h1 {
@@ -208,13 +207,11 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
 }
 
 .cat-icone {
   /* /* height: auto; */
   width: 20rem;
-  /* border: 2px solid blue; */
 }
 
 .huile-icone {
@@ -244,7 +241,7 @@ h2 {
 .moment-products {
   margin-top: 10rem;
   padding-bottom: 0px;
-  border-top: 1px solid #ddd;
+  border-top: 1px var(--border-color);
   padding-top: 4rem;
   transition: 1s;
 }
@@ -329,7 +326,7 @@ h2 {
   margin-top: 10rem;
   margin-bottom: 5rem;
   transition: 1s;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-color);
   padding-top: 4rem;
 }
 
@@ -427,4 +424,161 @@ h2 {
 footer {
   height: 5rem;
   background-color: var(--color-primary);
+  margin-top: 0px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Page produits naturels */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Jumbotron */
+
+.pdts-nat-body,
+.para-body {
+  background-color: rgb(243, 239, 239);
+}
+
+.jumbotron {
+  position: relative;
+}
+
+.jumbo-text {
+  color: var(--text-primary);
+  position: absolute;
+  bottom: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 12%;
+  width: 100%;
+}
+
+.jumbo-text h1 {
+  font-weight: 900;
+  font-size: 5rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.jumbo-text p {
+  font-weight: 500;
+  font-size: 2rem;
+  width: 70%;
+}
+
+.jumbo-img {
+  width: 100%;
+  height: 60rem;
+}
+
+/* .jumbo-img:hover {
+  transform: scale(1.5);
+  transition: 8s;
+} */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Cards laboratoires */
+
+.produits-naturels-presentation {
+  height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 7%;
+  margin-bottom: 0px;
+}
+
+.produits-naturels-grid-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 4rem;
+}
+
+.card--1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card--2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card--3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.card--4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card--5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card--6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.card--7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.card--8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.card--9 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.card {
+  border: 2px solid lightgray;
+  width: var(--card-width);
+  z-index: 1;
+  background-color: white;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+  transition: 1s;
+}
+
+.cardpic {
+  width: var(--card-width);
+  height: 23rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.card-body {
+  padding: 0px;
+  position: relative;
+  height: 20rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-body h5 {
+  font-size: 3rem;
+  width: fit-content;
+  margin-top: 3.5rem;
+  margin-bottom: 0px;
+  margin-left: 5%;
+  color: var(--color-primary);
+}
+
+.card-body p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-left: 5%;
+  width: 90%;
+  color: grey;
 }

@@ -1,6 +1,5 @@
 "use strict";
 
-//
 const crossLogo = document.querySelector(".cross-logo");
 const navBar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -76,7 +75,6 @@ const navHeight = navBar.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
-  console.log(!entry.isIntersecting);
   if (entry.isIntersecting) navBar.classList.add("nav-sticky");
   else navBar.classList.remove("nav-sticky");
 };
@@ -90,82 +88,3 @@ const obsOptions = {
 const navObserver = new IntersectionObserver(obsCallback, obsOptions);
 
 navObserver.observe(main);
-
-// Animation automatique du carrousel
-let curSlide = 0;
-
-const goToSlide = function (slideNumber) {
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
-  );
-};
-
-setInterval(() => {
-  const maxSlide = slides.length;
-
-  if (curSlide === maxSlide - 1) curSlide = 0;
-  else curSlide++;
-  goToSlide(curSlide);
-}, 6000);
-
-// Faire apparaître les catégories et les produits
-const revealSection = function (entries) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  entry.target.classList.remove("section-hidden");
-};
-
-const categoriesOptions = {
-  root: null,
-  threshold: 0.2,
-};
-
-const contactOptions = {
-  root: null,
-  threshold: 0.025,
-};
-
-const categoriesObserver = new IntersectionObserver(
-  revealSection,
-  categoriesOptions
-);
-// const titleObserver = new IntersectionObserver(revealSection, titleOptions);
-const contactObserver = new IntersectionObserver(revealSection, contactOptions);
-
-categories.classList.add("section-hidden");
-products.classList.add("section-hidden");
-contact.classList.add("section-hidden");
-
-categoriesObserver.observe(categories);
-categoriesObserver.observe(products);
-contactObserver.observe(contact);
-
-//  Scroller vers contact
-
-scrollToContact.forEach((s) =>
-  s.addEventListener("click", function (e) {
-    console.log("pouet");
-    contact.scrollIntoView({ behavior: "smooth" });
-  })
-);
-
-// Tabbed compenent horaires
-btnContainer.addEventListener("click", function (e) {
-  const clicked = e.target;
-  if (!clicked.classList.contains("horaires-btn")) return;
-
-  allHorairesBtn.forEach((a) => {
-    a.classList.remove("horaires-btn-active");
-  });
-  clicked.classList.add("horaires-btn-active");
-
-  horairesContent.forEach((h) => {
-    h.classList.add("horaires-content-hidden");
-  });
-
-  document
-    .querySelector(`.horaires-content--${clicked.dataset.tab}`)
-    .classList.remove("horaires-content-hidden");
-});
