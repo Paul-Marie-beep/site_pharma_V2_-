@@ -467,12 +467,18 @@ footer {
 .jumbo-img {
   width: 100%;
   height: 60rem;
+  overflow: hidden;
 }
 
-/* .jumbo-img:hover {
-  transform: scale(1.5);
-  transition: 8s;
-} */
+.para-img {
+  width: 100%;
+  height: 60rem;
+  transition: transform 10s ease;
+}
+
+.jumbo-img:hover .para-img {
+  transform: scale(1.2);
+}
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Cards laboratoires */
 
