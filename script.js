@@ -11,6 +11,9 @@ const main = document.querySelector("main");
 
 const slides = document.querySelectorAll(".carrousel-slide");
 const slide = document.querySelector(".carrousel-slide");
+const slide1 = document.querySelector(".slide--1");
+const slide2 = document.querySelector(".slide--2");
+const slide3 = document.querySelector(".slide--3");
 let index = 1;
 
 const categories = document.querySelector(".categories");
@@ -73,7 +76,6 @@ document.addEventListener("click", function (e) {
 
 // Nav sticky
 const navHeight = navBar.getBoundingClientRect().height;
-// const slideHeight = slide.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
@@ -93,25 +95,44 @@ navObserver.observe(main);
 
 // Fade in out photo intro
 
-let j = 0;
 let currentSlide;
+
+// On enlève toutes les classes fadeInOut qui s'occupe de la transition
 setInterval(() => {
   slides.forEach((slide) => {
     slide.classList.remove("carrousel-slide-fadeInOut");
   });
+
   index++;
-  j++;
   if (index === 4) index = 1;
 
   currentSlide = document.querySelector(`.slide--${index}`);
 
-  console.log(`index: ${index}`);
+  currentSlide.classList.add("carrousel-slide-fadeInOut");
 
-  setTimeout(() => {
-    console.log("Timer 2");
-    currentSlide.classList.add("carrousel-slide-fadeInOut");
-    currentSlide.style.zIndex = j;
-  }, 4000);
+  // let arr = [1, 2, 3];
+  // let [k, l] = arr.filter((a) => a !== index);
+  // console.log(k, l);
+  // document.querySelector(`.slide--${k}`).style.zIndex = ;
+  // document.querySelector(`.slide--${l}`).style.zIndex = ;
+
+  if (index === 1) {
+    currentSlide.style.zIndex = 3;
+    slide2.style.zIndex = 1;
+    slide3.style.zIndex = 2;
+  }
+
+  if (index === 2) {
+    currentSlide.style.zIndex = 3;
+    slide1.style.zIndex = 2;
+    slide3.style.zIndex = 1;
+  }
+
+  if (index === 3) {
+    currentSlide.style.zIndex = 3;
+    slide1.style.zIndex = 1;
+    slide2.style.zIndex = 2;
+  }
 }, 10000);
 
 // Faire apparaître les catégories et les produits
