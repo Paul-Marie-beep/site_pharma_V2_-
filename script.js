@@ -108,14 +108,10 @@ setInterval(() => {
 
   currentSlide = document.querySelector(`.slide--${index}`);
 
+  // On rajoute la classe qui gère le fadeout
   currentSlide.classList.add("carrousel-slide-fadeInOut");
 
-  // let arr = [1, 2, 3];
-  // let [k, l] = arr.filter((a) => a !== index);
-  // console.log(k, l);
-  // document.querySelector(`.slide--${k}`).style.zIndex = ;
-  // document.querySelector(`.slide--${l}`).style.zIndex = ;
-
+  // On gère les zindex pour que les images s'affichent bien
   if (index === 1) {
     currentSlide.style.zIndex = 3;
     slide2.style.zIndex = 1;
