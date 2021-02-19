@@ -11,6 +11,7 @@ const main = document.querySelector("main");
 
 const slides = document.querySelectorAll(".carrousel-slide");
 const slide = document.querySelector(".carrousel-slide");
+let index = 1;
 
 const categories = document.querySelector(".categories");
 const products = document.querySelector(".moment-products");
@@ -76,7 +77,6 @@ const navHeight = navBar.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
-  console.log(!entry.isIntersecting);
   if (entry.isIntersecting) navBar.classList.add("nav-sticky");
   else navBar.classList.remove("nav-sticky");
 };
@@ -91,22 +91,28 @@ const navObserver = new IntersectionObserver(obsCallback, obsOptions);
 
 navObserver.observe(main);
 
-// Animation automatique du carrousel
-let curSlide = 0;
+// Fade in out photo intro
 
-const goToSlide = function (slideNumber) {
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
-  );
-};
-
+let j = 0;
+let currentSlide;
 setInterval(() => {
-  const maxSlide = slides.length;
+  slides.forEach((slide) => {
+    slide.classList.remove("carrousel-slide-fadeInOut");
+  });
+  index++;
+  j++;
+  if (index === 4) index = 1;
 
-  if (curSlide === maxSlide - 1) curSlide = 0;
-  else curSlide++;
-  goToSlide(curSlide);
-}, 6000);
+  currentSlide = document.querySelector(`.slide--${index}`);
+
+  console.log(`index: ${index}`);
+
+  setTimeout(() => {
+    console.log("Timer 2");
+    currentSlide.classList.add("carrousel-slide-fadeInOut");
+    currentSlide.style.zIndex = j;
+  }, 4000);
+}, 10000);
 
 // Faire apparaître les catégories et les produits
 const revealSection = function (entries) {
