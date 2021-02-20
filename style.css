@@ -38,11 +38,15 @@ h2 {
   display: flex;
   justify-content: space-between;
   height: 6.5rem;
+  z-index: 50;
+  position: absolute;
+  top: 0px;
+  width: 100%;
 }
 
 .nav-sticky {
   position: fixed;
-  width: 100%;
+  top: 0px;
   z-index: 50;
 }
 .navbar ul {
@@ -122,7 +126,8 @@ h2 {
 
 .carrousel {
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 0px;
 }
 
 .carrousel-container {
@@ -132,8 +137,8 @@ h2 {
 
 .carrousel-slide {
   width: 100%;
+  width: 100%;
   position: absolute;
-  top: 0px;
   display: flex;
   justify-content: center;
 }
@@ -318,20 +323,6 @@ h2 {
   margin-bottom: 4rem;
   transition: 1s;
   display: flex;
-  align-items: center;
-}
-
-.travel-left {
-  /* transform: translateX(-3%); */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.travel-right {
-  /* transform: translateX(3%); */
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 

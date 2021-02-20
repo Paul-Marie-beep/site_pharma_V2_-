@@ -8,19 +8,11 @@ const allSections = document.querySelectorAll("section");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 
-const slides = document.querySelectorAll(".carrousel-slide");
-const slide = document.querySelector(".carrousel-slide");
+const cardsNat = document.querySelector(".produits-naturels-presentation");
+const cardsPara = document.querySelector(".produits-naturels-presentation");
 
-const categories = document.querySelector(".categories");
-const products = document.querySelector(".moment-products");
-const productsTitle = document.querySelector(".product-title");
-const allProducts = document.querySelectorAll(".product");
 const contact = document.querySelector(".contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
-
-const allHorairesBtn = document.querySelectorAll(".horaires-btn");
-const btnContainer = document.querySelector(".horaires-btn-container");
-const horairesContent = document.querySelectorAll(".horaires-content");
 
 // Mute link when hover another link
 navBar.addEventListener("mouseover", function (e) {
@@ -71,7 +63,6 @@ document.addEventListener("click", function (e) {
 
 // Nav sticky
 const navHeight = navBar.getBoundingClientRect().height;
-// const slideHeight = slide.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
@@ -79,12 +70,14 @@ const obsCallback = function (entries) {
   else navBar.classList.remove("nav-sticky");
 };
 
-const obsOptions = {
+const obsOptionsNat = {
   root: null,
-  threshold: 0.25,
-  rootMargin: `-${navHeight * 2}px`,
+  threshold: 0.7,
+  rootMargin: `-${navHeight + 23}px`,
 };
 
-const navObserver = new IntersectionObserver(obsCallback, obsOptions);
+const navObserverNat = new IntersectionObserver(obsCallback, obsOptionsNat);
 
-navObserver.observe(main);
+navObserverNat.observe(cardsNat);
+
+// Lien contact sur les pages 2 et 3
