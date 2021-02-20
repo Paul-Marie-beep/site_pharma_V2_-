@@ -20,7 +20,7 @@ const categories = document.querySelector(".categories");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
-const contact = document.querySelector(".contact");
+const contact = document.getElementById("contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
 
 const allHorairesBtn = document.querySelectorAll(".horaires-btn");
@@ -85,8 +85,8 @@ const obsCallback = function (entries) {
 
 const obsOptions = {
   root: null,
-  threshold: 0.2,
-  rootMargin: `-${navHeight * 2}px`,
+  threshold: 0.3,
+  rootMargin: `-${navHeight - 4}px`,
 };
 
 const navObserver = new IntersectionObserver(obsCallback, obsOptions);
@@ -154,7 +154,7 @@ const categoriesObserver = new IntersectionObserver(
   revealSection,
   categoriesOptions
 );
-// const titleObserver = new IntersectionObserver(revealSection, titleOptions);
+
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
 
 categories.classList.add("section-hidden");
@@ -168,8 +168,7 @@ contactObserver.observe(contact);
 //  Scroller vers contact
 
 scrollToContact.forEach((s) =>
-  s.addEventListener("click", function (e) {
-    console.log("pouet");
+  s.addEventListener("click", function () {
     contact.scrollIntoView({ behavior: "smooth" });
   })
 );
