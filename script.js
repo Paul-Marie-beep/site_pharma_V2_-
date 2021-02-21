@@ -132,15 +132,21 @@ setInterval(() => {
 }, 10000);
 
 // Faire apparaître les catégories et les produits
-const revealSection = function (entries) {
+const revealSection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
 };
 
 const categoriesOptions = {
+  root: null,
+  threshold: 0.25,
+};
+
+const productsOptions = {
   root: null,
   threshold: 0.2,
 };
@@ -154,7 +160,10 @@ const categoriesObserver = new IntersectionObserver(
   revealSection,
   categoriesOptions
 );
-
+const productsObserver = new IntersectionObserver(
+  revealSection,
+  productsOptions
+);
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
 
 categories.classList.add("section-hidden");
@@ -162,7 +171,7 @@ products.classList.add("section-hidden");
 contact.classList.add("section-hidden");
 
 categoriesObserver.observe(categories);
-categoriesObserver.observe(products);
+productsObserver.observe(products);
 contactObserver.observe(contact);
 
 //  Scroller vers contact
