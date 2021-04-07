@@ -11,7 +11,7 @@ const main = document.querySelector("main");
 
 const slides = document.querySelectorAll(".carrousel-slide");
 const slide = document.querySelector(".carrousel-slide");
-// Il y a un décalage sur les slides parce que je ne pensais pas rajouter du texte par-dessus
+// Il y a un décalage sur les slides parce que j'ai un peu fait nimp avec les z-index mais ça fontionne bien
 const slide1 = document.querySelector(".slide--2");
 const slide2 = document.querySelector(".slide--3");
 const slide3 = document.querySelector(".slide--4");
@@ -49,7 +49,6 @@ navBar.addEventListener("mouseout", function (e) {
     const siblings = e.target.closest("nav").querySelectorAll(".nav-link");
 
     siblings.forEach((s) => {
-      // console.log(s !== link);
       if (s !== link) {
         s.classList.remove("muted");
         s.classList.add("nav-white");
@@ -101,7 +100,6 @@ setInterval(() => {
     slide.classList.remove("carrousel-slide-fadeInOut");
   });
 
-  console.log("go");
   index++;
   if (index === 5) index = 2;
 
