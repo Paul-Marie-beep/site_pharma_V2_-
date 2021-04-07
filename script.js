@@ -11,10 +11,11 @@ const main = document.querySelector("main");
 
 const slides = document.querySelectorAll(".carrousel-slide");
 const slide = document.querySelector(".carrousel-slide");
-const slide1 = document.querySelector(".slide--1");
-const slide2 = document.querySelector(".slide--2");
-const slide3 = document.querySelector(".slide--3");
-let index = 1;
+// Il y a un décalage sur les slides parce que je ne pensais pas rajouter du texte par-dessus
+const slide1 = document.querySelector(".slide--2");
+const slide2 = document.querySelector(".slide--3");
+const slide3 = document.querySelector(".slide--4");
+let index = 2;
 
 const categories = document.querySelector(".categories");
 const products = document.querySelector(".moment-products");
@@ -32,10 +33,8 @@ navBar.addEventListener("mouseover", function (e) {
   if (e.target.classList.contains("nav-link")) {
     const link = e.target;
     const siblings = e.target.closest("nav").querySelectorAll(".nav-link");
-    // console.log(siblings[0]);
 
     siblings.forEach((s) => {
-      // console.log(s !== link);
       if (s !== link) {
         s.classList.add("muted");
         s.classList.remove("nav-white");
@@ -48,7 +47,6 @@ navBar.addEventListener("mouseout", function (e) {
   if (e.target.classList.contains("nav-link")) {
     const link = e.target;
     const siblings = e.target.closest("nav").querySelectorAll(".nav-link");
-    // console.log(siblings[0]);
 
     siblings.forEach((s) => {
       // console.log(s !== link);
@@ -103,8 +101,9 @@ setInterval(() => {
     slide.classList.remove("carrousel-slide-fadeInOut");
   });
 
+  console.log("go");
   index++;
-  if (index === 4) index = 1;
+  if (index === 5) index = 2;
 
   currentSlide = document.querySelector(`.slide--${index}`);
 
@@ -112,22 +111,22 @@ setInterval(() => {
   currentSlide.classList.add("carrousel-slide-fadeInOut");
 
   // On gère les zindex pour que les images s'affichent bien
-  if (index === 1) {
-    currentSlide.style.zIndex = 3;
-    slide2.style.zIndex = 1;
-    slide3.style.zIndex = 2;
-  }
-
   if (index === 2) {
-    currentSlide.style.zIndex = 3;
-    slide1.style.zIndex = 2;
-    slide3.style.zIndex = 1;
+    currentSlide.style.zIndex = 4;
+    slide2.style.zIndex = 2;
+    slide3.style.zIndex = 3;
   }
 
   if (index === 3) {
-    currentSlide.style.zIndex = 3;
-    slide1.style.zIndex = 1;
-    slide2.style.zIndex = 2;
+    currentSlide.style.zIndex = 4;
+    slide1.style.zIndex = 3;
+    slide3.style.zIndex = 2;
+  }
+
+  if (index === 4) {
+    currentSlide.style.zIndex = 4;
+    slide1.style.zIndex = 2;
+    slide2.style.zIndex = 3;
   }
 }, 10000);
 

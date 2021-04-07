@@ -2,14 +2,15 @@
   --color-primary: green;
   --text-primary: white;
   --text-muted: lightgrey;
-  --nav-textSize: 1.7rem;
+  --nav-textSize: 1rem;
   --border-color: #ddd;
   --card-width: 45rem;
 }
 
 body {
   margin: 0px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 html {
@@ -37,7 +38,7 @@ h2 {
   background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
-  height: 6.5rem;
+  height: 4.5rem;
   z-index: 50;
   position: absolute;
   top: 0px;
@@ -71,14 +72,13 @@ h2 {
 
 .navbar-left {
   display: flex;
-  justify-content: left;
   align-items: center;
   margin-left: 2rem;
   font-size: var(--nav-textSize);
 }
 
 .cross-logo {
-  height: 4rem;
+  height: 3rem;
 }
 
 .cross-logo-press {
@@ -88,13 +88,15 @@ h2 {
 .pharma-name {
   margin-left: 1rem;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .nav-btns-left {
   display: flex;
-  justify-content: left;
-  margin-left: -1rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -2rem;
+  margin-top: 1.2rem;
 }
 
 .nav-btns-left a:hover {
@@ -103,9 +105,9 @@ h2 {
 
 .nav-contact {
   margin-right: 1rem;
+  font-size: var(--nav-textSize);
   display: flex;
   align-items: center;
-  font-size: var(--nav-textSize);
 }
 
 .btn-contact {
@@ -116,6 +118,7 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   border: none;
+  margin: auto;
 }
 
 .btn-contact:hover {
@@ -136,7 +139,6 @@ h2 {
 }
 
 .carrousel-slide {
-  width: 100%;
   width: 100%;
   position: absolute;
   display: flex;
@@ -192,56 +194,55 @@ h2 {
 
 .carrousel-image {
   width: 100%;
-  height: 90rem;
+  height: 38rem;
 }
 
-.slide-text {
-  position: absolute;
-  bottom: 10rem;
+.title-space {
   color: var(--text-primary);
   margin: auto;
-  width: 70%;
+  width: 100%;
+  height: 9rem;
+  z-index: 1;
+  margin-top: 38rem;
+  background-color: var(--color-primary);
 }
 
-.slide-text h1 {
-  font-weight: 500;
-  font-size: 5rem;
-  margin-bottom: 0px;
-}
-
-.slide-text p {
-  font-size: 2rem;
+.title-text {
   margin-top: 1rem;
 }
-
-.slide-btn {
-  position: relative;
-  background-color: var(--color-primary);
-  color: var(--text-primary);
-  width: auto;
+.title-text--h1 {
+  font-weight: 500;
   font-size: 2rem;
-  padding: 1rem;
-  border-radius: 14px;
-  cursor: pointer;
-  border: none;
+  padding-top: 1rem;
+  color: var(--text-primary);
+  width: fit-content;
+  margin: auto;
+}
+
+.title-text--p {
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  width: 80%;
+  margin: auto;
 }
 
 .btn-slide-container {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  /* margin-right: 1rem; */
+  margin-top: 0.7rem;
+  width: 100%;
 }
 
-.btn-slide--1 {
-  margin-right: 5rem;
-}
-
-.btn-slide--2 {
-  margin-right: 1.5rem;
-}
-
-.btn-slide--3 {
-  margin-right: 1.4rem;
+.slide-btn {
+  background-color: white;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 14px;
+  cursor: pointer;
+  border: none;
+  margin: auto;
 }
 
 .slide-btn a {
