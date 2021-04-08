@@ -20,12 +20,24 @@ html {
 
 h2 {
   color: var(--color-primary);
-  font-weight: 900;
-  font-size: 5rem;
+  font-weight: 700;
+  font-size: 4.5rem;
   margin: auto;
   margin-bottom: 4rem;
   width: fit-content;
   transition: 1s;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--color-primary);
+  margin-bottom: 2%;
+  width: fit-content;
+}
+
+.title-center {
+  text-align: center;
 }
 
 .section-hidden {
@@ -122,6 +134,10 @@ h2 {
 
 .btn-contact:hover {
   border-bottom: 2px solid white;
+}
+
+.btn-contact:focus {
+  outline: none;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Carousel CSS */
@@ -253,7 +269,6 @@ h2 {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Categories */
 
 .categories {
-  position: relative;
   margin-top: 50rem;
   display: flex;
   justify-content: space-evenly;
@@ -262,7 +277,6 @@ h2 {
 }
 
 .categories h3 {
-  margin-top: 1rem;
 }
 
 .catprez {
@@ -281,7 +295,7 @@ h2 {
 }
 
 .cat-name {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--color-primary);
 }
 
@@ -292,7 +306,7 @@ h2 {
   padding: 0.5rem;
   border-radius: 10px;
   border-style: none;
-  margin-top: -1rem;
+  margin-top: 1rem;
 }
 
 .cat-btn a {
@@ -303,7 +317,7 @@ h2 {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
 
 .moment-products {
-  margin-top: 10rem;
+  margin-top: 5rem;
   border-top: 1px solid var(--border-color);
   padding-top: 4rem;
   transition: 1s;
@@ -351,16 +365,8 @@ h2 {
   margin: 2rem;
 }
 
-.product-text h3 {
-  font-weight: bold;
-  font-size: 3em;
-  color: var(--color-primary);
-  margin-bottom: 2%;
-  width: fit-content;
-}
-
 .product-text p {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-top: 0px;
   font-weight: lighter;
 }
@@ -369,10 +375,13 @@ h2 {
   color: grey;
 }
 
+.product-img {
+  width: 13rem;
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
 
 #contact {
-  margin-top: 5rem;
   margin-bottom: 5rem;
   transition: 1s;
   border-top: 1px solid var(--border-color);
@@ -385,34 +394,44 @@ h2 {
   align-items: center;
 }
 
-#contact h2 {
-  margin-top: 3rem;
-}
-
 .contact-text {
   width: 35%;
 }
 .contact-text h3 {
   color: var(--color-primary);
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1%;
 }
 
 .contact-text p {
-  font-size: 2rem;
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+
+.address {
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 .contact-text li {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
+.contact-bullets {
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */
+
 .horaires h3 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 600;
   margin: auto;
-  margin-top: 8rem;
+  margin-top: 5rem;
   width: fit-content;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 
 .horaires-padded-component {
@@ -427,7 +446,7 @@ h2 {
 
 .horaires-btn-container {
   margin: auto;
-  width: 61%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
 }
@@ -439,8 +458,14 @@ h2 {
   padding: 1rem;
   border: 1px solid var(--color-primary);
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  width: 8rem;
+  height: 5rem;
+}
+
+.horaires-btn:focus {
+  outline: none;
 }
 
 .horaires-btn-active {
@@ -460,13 +485,15 @@ h2 {
   margin: auto;
   width: fit-content;
   margin-top: 5%;
+  text-align: center;
 }
 
 .horaires-content p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: auto;
   width: fit-content;
   margin-top: 3%;
+  text-align: center;
 }
 
 .horaires-content-hidden {
@@ -476,9 +503,16 @@ h2 {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
 
 footer {
-  height: 5rem;
+  height: 3rem;
   background-color: var(--color-primary);
   margin-top: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.copy-right {
+  margin-left: 1rem;
+  color: var(--text-primary);
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Page produits naturels */
