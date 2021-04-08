@@ -76,10 +76,8 @@ const navHeight = navBar.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
-  if (entry.isIntersecting) {
-    navBar.classList.add("nav-sticky");
-    console.log("pouet");
-  } else navBar.classList.remove("nav-sticky");
+  if (entry.isIntersecting) navBar.classList.add("nav-sticky");
+  else navBar.classList.remove("nav-sticky");
 };
 
 const obsOptions = {
