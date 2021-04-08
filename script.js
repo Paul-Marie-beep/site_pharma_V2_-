@@ -23,6 +23,7 @@ const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
 const contact = document.getElementById("contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
+const scrollToProduct = document.querySelector(".scroll-to-products");
 
 const allHorairesBtn = document.querySelectorAll(".horaires-btn");
 const btnContainer = document.querySelector(".horaires-btn-container");
@@ -178,6 +179,12 @@ scrollToContact.forEach((s) =>
     contact.scrollIntoView({ behavior: "smooth" });
   })
 );
+
+//  Scroller vers produits du moment
+
+scrollToProduct.addEventListener("click", function () {
+  products.scrollIntoView({ behavior: "smooth" });
+});
 
 // Tabbed compenent horaires
 btnContainer.addEventListener("click", function (e) {
