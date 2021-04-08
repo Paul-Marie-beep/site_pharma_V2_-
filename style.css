@@ -260,6 +260,10 @@ h3 {
   margin: auto;
 }
 
+.slide-btn:focus {
+  outline: none;
+}
+
 .slide-btn a {
   text-decoration: none;
   white-space: nowrap;
@@ -274,9 +278,6 @@ h3 {
   justify-content: space-evenly;
   transition: 1s;
   border: none;
-}
-
-.categories h3 {
 }
 
 .catprez {
