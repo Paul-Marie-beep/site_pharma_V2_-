@@ -76,14 +76,16 @@ const navHeight = navBar.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
-  if (entry.isIntersecting) navBar.classList.add("nav-sticky");
-  else navBar.classList.remove("nav-sticky");
+  if (entry.isIntersecting) {
+    navBar.classList.add("nav-sticky");
+    console.log("pouet");
+  } else navBar.classList.remove("nav-sticky");
 };
 
 const obsOptions = {
   root: null,
-  threshold: 0.3,
-  rootMargin: `-${navHeight - 4}px`,
+  threshold: 0.22,
+  rootMargin: `-${navHeight + 3}px`,
 };
 
 const navObserver = new IntersectionObserver(obsCallback, obsOptions);
@@ -140,7 +142,7 @@ const revealSection = function (entries, observer) {
 
 const categoriesOptions = {
   root: null,
-  threshold: 0.25,
+  threshold: 0.5,
 };
 
 const productsOptions = {
