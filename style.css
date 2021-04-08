@@ -125,6 +125,7 @@ h3 {
   font-size: var(--nav-textSize);
   display: flex;
   align-items: center;
+  margin-top: 0.2rem;
 }
 
 .btn-contact {
