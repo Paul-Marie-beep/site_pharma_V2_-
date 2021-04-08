@@ -4,7 +4,7 @@
   --text-muted: lightgrey;
   --nav-textSize: 1rem;
   --border-color: #ddd;
-  --card-width: 45rem;
+  --card-width: 22rem;
 }
 
 body {
@@ -533,7 +533,7 @@ footer {
 .jumbo-text {
   color: var(--text-primary);
   position: absolute;
-  bottom: 12rem;
+  bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -542,28 +542,27 @@ footer {
 }
 
 .jumbo-text h1 {
-  font-weight: 900;
-  font-size: 5rem;
-  width: fit-content;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
 }
 
 .jumbo-text p {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 70%;
 }
 
 .jumbo-img {
   width: 100%;
-  height: 60rem;
+  height: 40rem;
   overflow: hidden;
 }
 
 .para-img {
   width: 100%;
   height: 60rem;
-  transition: transform 10s ease;
+  transition: transform 20s ease;
 }
 
 .jumbo-img:hover .para-img {
@@ -576,7 +575,7 @@ footer {
   height: 100%;
   padding-top: 5rem;
   padding-bottom: 7%;
-  margin-bottom: 0px;
+  margin-bottom: 2rem;
 }
 
 .produits-naturels-grid-container {
@@ -585,7 +584,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 4rem;
+  grid-gap: 2rem;
 }
 
 .card--1 {
@@ -641,20 +640,20 @@ footer {
 }
 
 .card:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-0.5rem);
   transition: 1s;
 }
 
 .cardpic {
   width: var(--card-width);
-  height: 23rem;
+  height: 12rem;
   border-bottom: 2px solid var(--border-color);
 }
 
 .card-body {
   padding: 0px;
   position: relative;
-  height: 20rem;
+  height: 8rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -663,7 +662,7 @@ footer {
 }
 
 .card-body h5 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   width: fit-content;
   margin-top: 3.5rem;
   margin-bottom: 0px;
@@ -672,7 +671,7 @@ footer {
 }
 
 .card-body p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-left: 5%;
   width: 90%;
