@@ -55,6 +55,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   height: 5vh;
+  min-height: 35px;
   z-index: 50;
   position: absolute;
   top: 0px;
@@ -380,6 +381,10 @@ h3 {
 .product-text {
   width: auto;
   margin: 2rem;
+}
+
+.product-grey-addition {
+  font-size: 1.8rem;
 }
 
 .product-text p {
