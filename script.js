@@ -1,5 +1,3 @@
-"use strict";
-
 //
 const crossLogo = document.querySelector(".cross-logo");
 const navBar = document.querySelector(".navbar");
@@ -204,3 +202,5 @@ btnContainer.addEventListener("click", function (e) {
     .querySelector(`.horaires-content--${clicked.dataset.tab}`)
     .classList.remove("horaires-content-hidden");
 });
+
+//  Cookies opt-in or out
