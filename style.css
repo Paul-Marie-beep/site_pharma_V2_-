@@ -417,10 +417,23 @@ h3 {
 }
 
 .contact-text {
-  width: 35%;
+  width: 40%;
+  margin-top: 3%;
 }
-.contact-text h3 {
-  color: var(--color-primary);
+
+.contact-bloc {
+  border-radius: 10px;
+  padding: 1rem;
+  border: 2px solid var(--color-primary);
+}
+
+.find-us {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateX(-8%);
+}
+.find-us h3 {
+  color: var(--text-primary);
   font-size: 2rem;
   margin-bottom: 1%;
 }
@@ -445,6 +458,11 @@ h3 {
   font-weight: lighter;
 }
 
+.contact-us {
+  transform: translateX(8%);
+  transform: translateY(-15%);
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */
 
 .horaires h3 {
@@ -458,7 +476,7 @@ h3 {
 
 .horaires-padded-component {
   margin: auto;
-  width: 41%;
+  width: 51%;
   height: 18rem;
   border-radius: 5px;
   border: 1px gray;
