@@ -15,7 +15,6 @@
     <script defer src="script.js"></script>
   </head>
 
-  
   <body>
     <header class="header">
       <nav class="navbar">
@@ -23,36 +22,36 @@
           <a class="pharma-logo" href="#"
             ><img class="cross-logo" src="Images/logo_pharma.png"
           /></a>
-          <a class="pharma-name nav-link nav-white" href="#"
-            >Pharmacie Notre-Dame</a
-          >
+          <a class="pharma-name nav-white" href="#">Pharmacie Notre-Dame</a>
+        </div>
+        <div class="nav-links">
           <ul class="nav-btns-left">
-            <li>
-              <a class="nav-link nav-white" href="produits_naturels.html"
+            <li class="nav-link">
+              <a class="nav-white for-opac" href="produits_naturels.html"
                 >Produits naturels</a
               >
             </li>
-            <li>
-              <a class="nav-link nav-white" href="parapharmacie.html"
+            <li class="nav-link">
+              <a class="nav-white for-opac" href="parapharmacie.html"
                 >Parapharmacie</a
               >
             </li>
           </ul>
+          <div class="nav-contact">
+            <button
+              class="btn-contact for-opac nav-white scroll-to-contact"
+              href="#"
+            >
+              Contact
+            </button>
+          </div>
         </div>
-        <div class="nav-contact">
-          <ul>
-            <li>
-              <button class="btn-contact nav-link scroll-to-contact" href="#">
-                Contact
-              </button>
-            </li>
-        </ul>
         <div class="burger">
           <div class="line1"></div>
           <div class="line2"></div>
-          <div class="line3 "></div>
+          <div class="line3"></div>
         </div>
-       </nav>
+      </nav>
 
       <section class="carrousel">
         <div class="carrousel-container">
@@ -84,15 +83,14 @@
           <!-- End div slide   -->
         </div>
         <!-- End carrousel -->
-
-      </section>    
+      </section>
 
       <div class="title-space">
         <div class="title-text">
           <h1 class="title-text--h1">Bienvenue à la pharmacie Notre-Dame.</h1>
           <p class="title-text--p">
-            En plein coeur du centre historique de Rennes à proximité immédiate du
-            Parlement de Bretagne, l'équipe de la pharmacie Notre-Dame est à
+            En plein coeur du centre historique de Rennes à proximité immédiate
+            du Parlement de Bretagne, l'équipe de la pharmacie Notre-Dame est à
             votre écoute.
           </p>
         </div>
@@ -104,8 +102,7 @@
             Venir nous voir
           </button>
         </div>
-    </div>
-      
+      </div>
     </header>
 
     <main>
@@ -158,72 +155,86 @@
         <div class="slider">
           <div class="slide">
             <div class="testimonial">
-              <img class="testimonial-pic" src="Images/somniphyt.jpg"
-              alt="image Somniphyt">
+              <img
+                class="testimonial-pic"
+                src="Images/somniphyt.jpg"
+                alt="image Somniphyt"
+              />
               <h3 class="testimonial_header">
-                Pour un bon sommeil: 
-                <span class="product-grey-addition"
-                  >pensez à Somniphyt.</span></h3>
+                Pour un bon sommeil:
+                <span class="product-grey-addition">pensez à Somniphyt.</span>
+              </h3>
               <blockquote class="testimonial__text">
-                Somniphyt® Total Nuit est un complément alimentaire qui associe des
-                plantes et de la Mélatonine, ce qui contribue à réduire le temps
-                d’endormissement.
+                Somniphyt® Total Nuit est un complément alimentaire qui associe
+                des plantes et de la Mélatonine, ce qui contribue à réduire le
+                temps d’endormissement.
               </blockquote>
             </div>
-          </div> 
-  
-            <div class="slide">
-              <div class="testimonial">
-                <img src="Images/bach.jpg" alt="image Fleurs de Bach" class="testimonial-pic" />
-                <h3 class="testimonial_header">
-                  Avec les Fleurs de Bach: 
-                  <span class="product-grey-addition"
-                    >restez positif !</span></h3>
-                <blockquote class="testimonial__text">
-                  Les Fleurs de Bach vous accompagnent dans votre bien-être au quotidien. Découvertes dans les années 30 par Edward Bach, les 38 Fleurs de Bach® Original sont depuis toujours préparées en Angleterre, selon la méthode traditionnelle.
-                </blockquote>
-              </div>
-            </div>  
-   
+          </div>
 
-            <div class="slide">
-              <div class="testimonial">
-                <img  src="Images/ergy_d.jpg" alt="image ergy d" class="testimonial-pic" />
-                <h3 class="testimonial_header">
-                  Pour rester en forme: 
-                  <span class="product-grey-addition"
-                    >Cure de Vitamine D !</span></h3>
-                <blockquote class="testimonial__text">
-                  ERGY D est riche en vitamine D3 qui contribue au fonctionnement normal
-                  du système immunitaire, et au maintien de l'ossature et de la fonction
-                  musculaire.
-                </blockquote>
-              </div>
-            </div>  
-
-            <div class="slide">
-              <div class="testimonial">
-                <img   src="Images/ergy_c_2.jpg" alt="image ergy c" class="testimonial-pic" />
-                <h3 class="testimonial_header">
-                  Pour rester en forme: 
-                  <span class="product-grey-addition"
-                    >Cure de Vitamine C !</span></h3>
-                <blockquote class="testimonial__text">
-                  ERGY C 400 est conseillé en cas de besoins importants en vitamine C et
-                  pour soutenir les défenses immunitaires.
-                </blockquote>
-              </div>
-            </div>  
-    
-            <div class="buttons">
-              <button class="slider__btn slider__btn--left">&larr;</button>
-              <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="slide">
+            <div class="testimonial">
+              <img
+                src="Images/bach.jpg"
+                alt="image Fleurs de Bach"
+                class="testimonial-pic"
+              />
+              <h3 class="testimonial_header">
+                Avec les Fleurs de Bach:
+                <span class="product-grey-addition">restez positif !</span>
+              </h3>
+              <blockquote class="testimonial__text">
+                Les Fleurs de Bach vous accompagnent dans votre bien-être au
+                quotidien. Découvertes dans les années 30 par Edward Bach, les
+                38 Fleurs de Bach® Original sont depuis toujours préparées en
+                Angleterre, selon la méthode traditionnelle.
+              </blockquote>
             </div>
-            <div class="dots"></div>
+          </div>
 
-    
-      </div>
-        
+          <div class="slide">
+            <div class="testimonial">
+              <img
+                src="Images/ergy_d.jpg"
+                alt="image ergy d"
+                class="testimonial-pic"
+              />
+              <h3 class="testimonial_header">
+                Pour rester en forme:
+                <span class="product-grey-addition">Cure de Vitamine D !</span>
+              </h3>
+              <blockquote class="testimonial__text">
+                ERGY D est riche en vitamine D3 qui contribue au fonctionnement
+                normal du système immunitaire, et au maintien de l'ossature et
+                de la fonction musculaire.
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="testimonial">
+              <img
+                src="Images/ergy_c_2.jpg"
+                alt="image ergy c"
+                class="testimonial-pic"
+              />
+              <h3 class="testimonial_header">
+                Pour rester en forme:
+                <span class="product-grey-addition">Cure de Vitamine C !</span>
+              </h3>
+              <blockquote class="testimonial__text">
+                ERGY C 400 est conseillé en cas de besoins importants en
+                vitamine C et pour soutenir les défenses immunitaires.
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="slider__btn slider__btn--left">&larr;</button>
+            <button class="slider__btn slider__btn--right">&rarr;</button>
+          </div>
+          <div class="dots"></div>
+        </div>
       </section>
 
       <section id="contact">
@@ -243,8 +254,8 @@
             <div class="find-us contact-bloc">
               <h3>Nous retrouver</h3>
               <p>
-                Située en plein coeur du centre historique de Rennes, la Pharmacie
-                Notre-Dame attend votre visite au:
+                Située en plein coeur du centre historique de Rennes, la
+                Pharmacie Notre-Dame attend votre visite au:
               </p>
               <p><span class="address">13 rue Hoche 35700 RENNES</span></p>
             </div>
@@ -255,11 +266,11 @@
                   <span class="text-muted">Mail: </span>
                   pharmacie.notredame35[@]gmail.com
                 </li>
-                <li >
+                <li>
                   <span class="text-muted">Tel & Fax: </span> 02 99 38 74 89
                 </li>
               </ul>
-            </div> 
+            </div>
           </div>
         </div>
 
@@ -285,13 +296,19 @@
               <p>9h30 et 19h30</p>
             </div>
             <div
-              class="horaires-content horaires-content-hidden horaires-content--2"
+              class="
+                horaires-content horaires-content-hidden
+                horaires-content--2
+              "
             >
               <h5>Pharmacie ouverte entre:</h5>
               <p>9h00 et 19h30</p>
             </div>
             <div
-              class="horaires-content horaires-content-hidden horaires-content--3"
+              class="
+                horaires-content horaires-content-hidden
+                horaires-content--3
+              "
             >
               <h5>Pharmacie ouverte entre:</h5>
               <p>9h30 et 12h30</p>
@@ -305,6 +322,5 @@
     <footer>
       <p class="copy-right">©Pharmacie Notre-Dame 2021</p>
     </footer>
-    
   </body>
 </html>

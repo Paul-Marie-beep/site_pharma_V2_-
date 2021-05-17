@@ -57,7 +57,7 @@ h3 {
 .navbar {
   background-color: var(--color-primary);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 5vh;
   min-height: 35px;
@@ -95,8 +95,12 @@ h3 {
 .navbar-left {
   display: flex;
   align-items: center;
+  margin-right: 0px;
   margin-left: 2rem;
   font-size: var(--nav-textSize);
+  width: 25%;
+  min-width: 252px;
+  height: 5vh;
 }
 
 .cross-logo {
@@ -112,31 +116,46 @@ h3 {
   margin-left: 1rem;
   font-weight: 600;
   font-size: 1.5rem;
+  min-width: 252px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 5vh;
+  margin-left: 1rem;
 }
 
 .nav-btns-left {
   display: flex;
-  justify-content: flex-start;
+  justify-content: left;
+  width: fit-content;
   align-items: center;
-  margin-left: -2rem;
-  margin-top: 1.2rem;
+  padding-left: 0px;
 }
 
 .nav-btns-left a:hover {
   border-bottom: 2px solid white;
 }
 
+.nav-link {
+  margin-left: 1rem;
+  transform: translateX(-3%);
+}
+
 .nav-contact {
   margin-right: 1rem;
+  height: 5vh;
   font-size: var(--nav-textSize);
   display: flex;
   align-items: center;
-  margin-top: 0.2rem;
+  width: min-content;
 }
 
 .btn-contact {
   background-color: var(--color-primary);
-  color: var(--text-primary);
   font-weight: 600;
   font-size: var(--nav-textSize);
   border-radius: 5px;
@@ -161,23 +180,108 @@ h3 {
   transform: translateY(-1px);
   display: none;
 }
+
 .burger div {
   width: 24px;
   height: 2px;
   margin: 5px;
   background-color: white;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 750px) {
-  .nav-btns-left {
+  body {
+    overflow-x: hidden;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar li {
+    margin: auto;
+  }
+
+  .nav-links {
     position: absolute;
     right: 0px;
     height: 95vh;
     top: 5vh;
     background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in;
+    opacity: 0;
   }
+
+  .for-opac {
+    opacity: 0;
+  }
+
+  .nav-btns-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    height: 5rem;
+    margin: auto;
+  }
+
   .nav-contact {
+    height: min-content;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
   }
+
+  .btn-contact {
+    margin: auto;
+  }
+
+  .burger {
+    display: block;
+    margin-right: 1.5rem;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.nav-visible {
+  opacity: 1;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+
+.toggle {
+  border: none;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Carousel CSS */

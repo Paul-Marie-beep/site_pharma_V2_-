@@ -292,3 +292,35 @@ btnContainer.addEventListener("click", function (e) {
     .querySelector(`.horaires-content--${clicked.dataset.tab}`)
     .classList.remove("horaires-content-hidden");
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Nav responsive
+
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navbBar__links = document.querySelectorAll(".for-opac");
+
+  const burgerPress = function () {
+    // Toggle nav
+    nav.classList.toggle("nav-active");
+    nav.classList.add("nav-visible");
+    // Reveal the links
+    navbBar__links.forEach((link, index) => {
+      // index incrémente à chaque fois qu'un truc se passe
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.3s ease forwards ${
+          index / 7 + 1
+        }s`;
+      }
+    });
+    // Burger animation
+    burger.classList.toggle("toggle");
+  };
+  // Event handler on the burger
+  burger.addEventListener("click", burgerPress);
+};
+
+navSlide();
