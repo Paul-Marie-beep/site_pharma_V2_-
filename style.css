@@ -335,10 +335,10 @@ h3 {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
 
 .moment-products {
-  margin-top: 5rem;
-  border-top: 1px solid var(--border-color);
+  margin-top: 7rem;
   padding-top: 4rem;
   transition: 1s;
+  min-height: 95vh;
 }
 
 /* SLIDER */
@@ -379,10 +379,9 @@ h3 {
   position: absolute;
   top: 50%;
   z-index: 10;
-
   border: none;
   background-color: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: var(--color-primary);
   border-radius: 50%;
   height: 5.5rem;
@@ -470,6 +469,7 @@ h3 {
 
 #contact {
   margin-bottom: 5rem;
+  margin-top: 1rem;
   transition: 1s;
   border-top: 1px solid var(--border-color);
   padding-top: 4rem;

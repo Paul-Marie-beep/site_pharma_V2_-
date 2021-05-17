@@ -149,7 +149,7 @@ const productsOptions = {
 
 const contactOptions = {
   root: null,
-  threshold: 0.025,
+  threshold: 0.01,
 };
 
 const categoriesObserver = new IntersectionObserver(
@@ -184,25 +184,7 @@ scrollToProduct.addEventListener("click", function () {
   products.scrollIntoView({ behavior: "smooth" });
 });
 
-// Tabbed compenent horaires
-btnContainer.addEventListener("click", function (e) {
-  const clicked = e.target;
-  if (!clicked.classList.contains("horaires-btn")) return;
-
-  allHorairesBtn.forEach((a) => {
-    a.classList.remove("horaires-btn-active");
-  });
-  clicked.classList.add("horaires-btn-active");
-
-  horairesContent.forEach((h) => {
-    h.classList.add("horaires-content-hidden");
-  });
-
-  document
-    .querySelector(`.horaires-content--${clicked.dataset.tab}`)
-    .classList.remove("horaires-content-hidden");
-});
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pour le slider des produits du moment
 
 const slider = function () {
@@ -290,3 +272,24 @@ const slider = function () {
 
 //On met les variables dans une fonction que l'on active maintenant.
 slider();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Tabbed compenent horaires
+btnContainer.addEventListener("click", function (e) {
+  const clicked = e.target;
+  if (!clicked.classList.contains("horaires-btn")) return;
+
+  allHorairesBtn.forEach((a) => {
+    a.classList.remove("horaires-btn-active");
+  });
+  clicked.classList.add("horaires-btn-active");
+
+  horairesContent.forEach((h) => {
+    h.classList.add("horaires-content-hidden");
+  });
+
+  document
+    .querySelector(`.horaires-content--${clicked.dataset.tab}`)
+    .classList.remove("horaires-content-hidden");
+});
