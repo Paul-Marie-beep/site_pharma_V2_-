@@ -341,64 +341,129 @@ h3 {
   transition: 1s;
 }
 
-.product-grid {
-  width: 90%;
-  margin: auto;
-  height: min-content;
-  display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-gap: 0%;
+/* SLIDER */
+.slider {
+  max-width: 80%;
+  height: 30rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding-top: 0px;
+  position: relative;
+  border: 1px solid var(--text-muted);
+
+  /* IN THE END */
+  overflow: hidden;
 }
 
-.product--1 {
-  grid-column: 1/7;
-  grid-row: 2/3;
-}
-
-.product--2 {
-  grid-column: 8/14;
-  grid-row: 2/3;
-}
-
-.product--3 {
-  grid-column: 1/7;
-  grid-row: 3;
-}
-
-.product--4 {
-  grid-column: 8/14;
-  grid-row: 3/4;
-}
-
-.product {
-  margin-bottom: 4rem;
-  transition: 1s;
+.slide {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 30rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: var(--color-primary);
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #888;
+  opacity: 1;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+  width: 65%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.product-text {
-  width: auto;
-  margin: 2rem;
+.testimonial-pic {
+  height: 13rem;
+  margin-top: 1rem;
+}
+
+.testimonial__header {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  width: min-content;
 }
 
 .product-grey-addition {
-  font-size: 1.8rem;
+  color: #888;
+  font-size: 1.5rem;
 }
 
-.product-text p {
-  font-size: 1rem;
-  margin-top: 0px;
-  font-weight: lighter;
-}
-
-.text-muted {
-  color: grey;
-}
-
-.product-img {
-  width: 13rem;
+.testimonial__text {
+  font-size: 1.2rem;
+  margin-bottom: 3.5rem;
+  color: #666;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */

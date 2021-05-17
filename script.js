@@ -203,4 +203,90 @@ btnContainer.addEventListener("click", function (e) {
     .classList.remove("horaires-content-hidden");
 });
 
-//  Cookies opt-in or out
+// Pour le slider des produits du moment
+
+const slider = function () {
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  // On va créer les points en bas du slider. On les numérotes en leur donnant un numéro dans l'attribut data-slide.
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
+    });
+  };
+
+  // On met le point de la slide à l'écran en surbrillance par rapport aux autres. On fait ça grâce à une classe CSS .
+  // dots__dot--active qui change la background color.
+  // On commence par enlever toutes les classes active pour que notre point soit le seul à être en surbrillance.
+  const activateDots = function (slide) {
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach((d) => d.classList.remove("dots__dot--active"));
+    // On met le point de la slide à l'écran en surbrillance.
+    // .dots__dot[data-slide="${slide} ou tous les éléments qui comme classe dots__dot et comme attribut data-slide.
+    // L'argument slide est donné au moment de l'appel de la fonction.
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
+  };
+
+  // goToSlide fait glisser chaque slide quand on veut en changer (Elle repositionne toutes les slides grâce à un  transform)
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+  // On initialise pour que, quand on charge on ait bien la première slide avec les points crées et mis en surbrillance.
+  const init = function () {
+    goToSlide(0);
+    createDots();
+    activateDots(0);
+  };
+  init();
+
+  // On passe à la slide suivant en le faisant revenir au début si on est arrivé à la fin.
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) curSlide = 0;
+    else curSlide++;
+    goToSlide(curSlide);
+    activateDots(curSlide);
+  };
+  const prevSlide = function () {
+    if (curSlide === 0) curSlide = maxSlide - 1;
+    else curSlide--;
+    goToSlide(curSlide);
+    activateDots(curSlide);
+  };
+
+  // On rajoute les event handlers pour les boutons
+  btnRight.addEventListener("click", nextSlide);
+  btnLeft.addEventListener("click", prevSlide);
+  // Pour les event listeners sur le clavier, on les attache toujours sur le docucment en entier
+  document.addEventListener("keydown", function (e) {
+    console.log(e);
+    if (e.key === "ArrowLeft") prevSlide();
+    e.key === "ArrowRight" && nextSlide();
+  });
+
+  //On rajoute le fait de changer de slide en cliquant sur les points
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
+      const { slide } = e.target.dataset;
+      // On déstructure
+      goToSlide(slide);
+      activateDots(slide);
+    }
+  });
+};
+
+//On met les variables dans une fonction que l'on active maintenant.
+slider();
