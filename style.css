@@ -381,7 +381,6 @@ h3 {
   z-index: 10;
   border: none;
   background-color: rgba(255, 255, 255, 0.7);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: var(--color-primary);
   border-radius: 50%;
   height: 5.5rem;
@@ -412,12 +411,15 @@ h3 {
   border: none;
   background-color: #b9b9b9;
   opacity: 0.7;
-  height: 0.5rem;
-  width: 0.5rem;
+  min-height: 0.5rem;
+  max-width: 0.5rem;
   border-radius: 100%;
   margin-right: 1.75rem;
   cursor: pointer;
   transition: all 0.5s;
+  padding-right: 6px;
+  padding-left: 6px;
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
 
   /* Only necessary when overlying images */
   /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */

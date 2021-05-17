@@ -254,7 +254,6 @@ const slider = function () {
   btnLeft.addEventListener("click", prevSlide);
   // Pour les event listeners sur le clavier, on les attache toujours sur le docucment en entier
   document.addEventListener("keydown", function (e) {
-    console.log(e);
     if (e.key === "ArrowLeft") prevSlide();
     e.key === "ArrowRight" && nextSlide();
   });
