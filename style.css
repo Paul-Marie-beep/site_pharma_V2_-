@@ -851,6 +851,10 @@ h3 {
     min-height: 100%;
     width: 40%;
   }
+
+  .contact-bloc h3 {
+    margin-top: 1%;
+  }
   .find-us {
     transform: translateX(0%);
   }
@@ -874,6 +878,8 @@ h3 {
 
   .contact-bloc {
     min-width: 60%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
