@@ -882,6 +882,10 @@ h3 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+  .contact-bloc li {
+    list-style: none;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -890,11 +894,11 @@ h3 {
   }
 
   .contact-bloc {
-    min-width: 80%;
+    min-width: 85%;
   }
 
   .google-map {
-    width: 80%;
+    width: 85%;
   }
 
   .contact-text li {
