@@ -189,6 +189,18 @@ h3 {
   transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 1140px) {
+  .nav-links {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 1066px) {
+  .nav-links {
+    margin-left: 5rem;
+  }
+}
+
 @media screen and (max-width: 750px) {
   body {
     overflow-x: hidden;
@@ -282,6 +294,16 @@ h3 {
 
 .toggle {
   border: none;
+}
+
+@media screen and (max-width: 550px) {
+  .navbar {
+    height: 8vh;
+  }
+
+  .carrousel {
+    height: 92vh;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Carousel CSS */
