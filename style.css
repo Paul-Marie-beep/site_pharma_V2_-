@@ -771,11 +771,14 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 90%;
+  margin: auto;
 }
 
 .contact-text {
   width: 40%;
   margin-top: 3%;
+  overflow-wrap: break-word;
 }
 
 .contact-bloc {
@@ -818,6 +821,74 @@ h3 {
 .contact-us {
   transform: translateX(8%);
   transform: translateY(-15%);
+}
+
+@media screen and (max-width: 1200px) {
+  .google-map {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .google-map {
+    width: 60%;
+  }
+
+  .contact-text {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-height: 15%;
+  }
+
+  .contact-bloc {
+    min-height: 100%;
+    width: 40%;
+  }
+  .find-us {
+    transform: translateX(0%);
+  }
+
+  .contact-us {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .contact-us {
+    margin-top: 1rem;
+  }
+
+  .contact-bloc {
+    min-width: 50%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .contact-bloc h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-bloc {
+    min-width: 65%;
+  }
+
+  .google-map {
+    width: 80%;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */
