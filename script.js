@@ -172,9 +172,25 @@ const productsObserver = new IntersectionObserver(
 );
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
 
-categories.classList.add("section-hidden");
-products.classList.add("section-hidden");
-contact.classList.add("section-hidden");
+const notIfMobile = function () {
+  // On ne le fait pas sur tel
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  )
+    return;
+
+  categories.classList.add("section-hidden");
+  products.classList.add("section-hidden");
+  contact.classList.add("section-hidden");
+};
+
+notIfMobile();
 
 categoriesObserver.observe(categories);
 productsObserver.observe(products);
