@@ -870,6 +870,7 @@ h3 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-top: 1rem;
   }
 
   .contact-us {
