@@ -27,11 +27,15 @@ const allHorairesBtn = document.querySelectorAll(".horaires-btn");
 const btnContainer = document.querySelector(".horaires-btn-container");
 const horairesContent = document.querySelectorAll(".horaires-content");
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+
 // Mute link when hover another link
 navBar.addEventListener("mouseover", function (e) {
-  if (e.target.classList.contains("nav-link")) {
+  if (e.target.classList.contains("nav-mute")) {
     const link = e.target;
-    const siblings = e.target.closest("nav").querySelectorAll(".nav-link");
+    const siblings = e.target.closest("nav").querySelectorAll(".nav-mute");
+    console.log(link);
+    console.log(siblings);
 
     siblings.forEach((s) => {
       if (s !== link) {
@@ -43,9 +47,9 @@ navBar.addEventListener("mouseover", function (e) {
 });
 
 navBar.addEventListener("mouseout", function (e) {
-  if (e.target.classList.contains("nav-link")) {
+  if (e.target.classList.contains("nav-mute")) {
     const link = e.target;
-    const siblings = e.target.closest("nav").querySelectorAll(".nav-link");
+    const siblings = e.target.closest("nav").querySelectorAll(".nav-mute");
 
     siblings.forEach((s) => {
       if (s !== link) {
@@ -55,6 +59,8 @@ navBar.addEventListener("mouseout", function (e) {
     });
   }
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 // Effet appui sur le bouton
 let press = false;
@@ -69,6 +75,8 @@ document.addEventListener("click", function (e) {
     press = !press;
   }
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 // Nav sticky
 const navHeight = navBar.getBoundingClientRect().height;
@@ -88,6 +96,8 @@ const obsOptions = {
 const navObserver = new IntersectionObserver(obsCallback, obsOptions);
 
 navObserver.observe(main);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 // Fade in out photo intro
 
