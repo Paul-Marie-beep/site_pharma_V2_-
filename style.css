@@ -227,7 +227,7 @@ h3 {
     width: 45%;
     transform: translateX(100%);
     transition: transform 0.8s ease-in;
-    opacity: 0;
+    display: none;
   }
 
   .for-opac {
@@ -242,6 +242,7 @@ h3 {
     width: fit-content;
     height: 5rem;
     margin: auto;
+    margin-top: 5rem;
   }
 
   .nav-contact {
@@ -250,6 +251,7 @@ h3 {
     margin: auto;
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
   }
 
   .btn-contact {
@@ -267,7 +269,7 @@ h3 {
 }
 
 .nav-visible {
-  opacity: 1;
+  display: block;
 }
 
 @keyframes navLinkFade {
@@ -300,19 +302,15 @@ h3 {
   .navbar {
     height: 8vh;
   }
-
-  .carrousel {
-    height: 92vh;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .pharma-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .cross-logo {
-    height: 1.5rem;
+    height: 2rem;
   }
 }
 
@@ -387,6 +385,13 @@ h3 {
   margin-top: 5vh;
 }
 
+@media screen and (max-width: 1160px) {
+  .carrousel-image {
+    object-fit: cover;
+    /* La taille de l'image s'adapte sans toucher au ration donc elle ne se déforme pas même si on n'en voit qu'une partie */
+  }
+}
+
 .title-space {
   color: var(--text-primary);
   width: 100%;
@@ -452,6 +457,37 @@ h3 {
   text-decoration: none;
   white-space: nowrap;
   color: var(--text-primary);
+}
+
+@media screen and (max-width: 800px) {
+  .title-space {
+    position: absolute;
+    top: 40vh;
+    text-align: center;
+  }
+
+  .title-text--h1 {
+    font-size: 2.5rem;
+  }
+
+  .title-text--p {
+    font-size: 1rem;
+  }
+
+  .slide-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+
+  .btn-slide-container {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carrousel {
+    height: 92vh;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Categories */
