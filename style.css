@@ -485,8 +485,8 @@ h3 {
 
 @media screen and (max-width: 600px) {
   .slide-btn {
-    font-size: 0.6rem;
-    padding: 0.2rem;
+    font-size: 0.9rem;
+    padding: 0.4rem;
   }
 }
 
@@ -711,6 +711,9 @@ h3 {
 }
 
 @media screen and (max-width: 715px) {
+  .moment-products {
+    margin-top: 2rem;
+  }
   .slider {
     height: 65vh;
     min-width: 90%;
