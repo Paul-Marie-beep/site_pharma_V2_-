@@ -927,6 +927,11 @@ h3 {
     font-size: 1.2rem;
     font-weight: bolder;
   }
+
+  .contact-bullets {
+    width: 90%;
+    transform: translateX(-12%);
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */
@@ -1042,14 +1047,29 @@ h3 {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .horaires-padded-component {
-    height: 16rem;
+    height: 11rem;
     width: 80%;
   }
 
   .horaires-btn-container {
-    width: 80%;
+    width: 65%;
+    margin-top: 2rem;
+  }
+
+  .horaires-btn {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 4rem;
+  }
+
+  .horaires-content h5 {
+    font-size: 1.25rem;
+  }
+
+  .horaires-content p {
+    font-size: 1rem;
   }
 }
 
