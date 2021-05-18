@@ -516,7 +516,6 @@ h3 {
 }
 
 .cat-name {
-  font-size: 1rem;
   color: var(--color-primary);
 }
 
@@ -533,6 +532,19 @@ h3 {
 .cat-btn a {
   text-decoration: none;
   color: var(--text-primary);
+}
+
+@media screen and (max-width: 900px) {
+  .categories {
+    display: grid;
+    grid-template-columns: auto;
+    align-content: center;
+  }
+
+  .cat-homeo,
+  .cat-huiles {
+    margin-top: 4rem;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
@@ -668,6 +680,43 @@ h3 {
   font-size: 1.2rem;
   margin-bottom: 3.5rem;
   color: #666;
+}
+
+@media screen and (max-width: 975px) {
+  .testimonial-pic {
+    height: 11rem;
+  }
+
+  .testimonial__header {
+    font-size: 1.75rem;
+  }
+
+  .testimonial__text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .testimonial__header {
+    font-size: 1.5rem;
+  }
+
+  .slider {
+    height: 70vh;
+    min-width: 90%;
+  }
+
+  .testimonial-pic {
+    margin-top: 5rem;
+  }
+
+  .slider__btn--left {
+    margin-left: 1rem;
+  }
+
+  .slider__btn--right {
+    margin-right: 1rem;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
