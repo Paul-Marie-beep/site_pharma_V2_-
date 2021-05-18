@@ -727,17 +727,18 @@ h3 {
   .testimonial__text {
     margin-top: 1rem;
     font-size: 0.8rem;
+    z-index: 20;
   }
   .testimonial-pic {
     height: 8rem;
   }
 
   .slider__btn--left {
-    margin-left: 1rem;
+    transform: translateY(50%);
   }
 
   .slider__btn--right {
-    margin-right: 1rem;
+    transform: translateY(50%);
   }
 }
 
