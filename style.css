@@ -917,6 +917,8 @@ h3 {
   .contact-text li {
     font-size: 1rem;
     font-weight: lighter;
+    border: 1px solid red;
+    width: 120%;
   }
 
   .contact-text p {
@@ -1050,7 +1052,7 @@ h3 {
 @media screen and (max-width: 520px) {
   .horaires-padded-component {
     height: 11rem;
-    width: 80%;
+    width: 85%;
   }
 
   .horaires-btn-container {
@@ -1061,7 +1063,7 @@ h3 {
   .horaires-btn {
     font-size: 0.8rem;
     width: 5rem;
-    height: 4rem;
+    height: 3.6rem;
   }
 
   .horaires-content h5 {
