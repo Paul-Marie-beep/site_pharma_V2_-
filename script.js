@@ -135,6 +135,8 @@ setInterval(() => {
   }
 }, 10000);
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Faire apparaître les catégories et les produits
 const revealSection = function (entries, observer) {
   const [entry] = entries;

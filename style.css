@@ -208,6 +208,8 @@ h3 {
   .navbar {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0px;
   }
 
   .navbar li {
@@ -547,6 +549,13 @@ h3 {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .cat-btn {
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
 
 .moment-products {
@@ -578,6 +587,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 
   /* THIS creates the animation! */
   transition: transform 1s;
@@ -696,18 +706,30 @@ h3 {
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 700px) {
+  .dots {
+    margin-top: 2rem;
+  }
+
+  .slider {
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 690px) {
   .testimonial__header {
     font-size: 1.5rem;
   }
 
   .slider {
-    height: 70vh;
     min-width: 90%;
   }
 
+  .testimonial__text {
+    margin-top: 1rem;
+  }
   .testimonial-pic {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 
   .slider__btn--left {
@@ -716,6 +738,22 @@ h3 {
 
   .slider__btn--right {
     margin-right: 1rem;
+  }
+
+  .dots {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .slider {
+    min-height: 75vh;
   }
 }
 
@@ -1033,4 +1071,19 @@ footer {
   margin-left: 5%;
   width: 90%;
   color: grey;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/* Media queries globales */
+/* @media screen and (max-width: 675px) { */
+
+@media screen and (max-width: 650px) {
+  h3,
+  .product-grey-addition {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }
