@@ -34,8 +34,6 @@ navBar.addEventListener("mouseover", function (e) {
   if (e.target.classList.contains("nav-mute")) {
     const link = e.target;
     const siblings = e.target.closest("nav").querySelectorAll(".nav-mute");
-    console.log(link);
-    console.log(siblings);
 
     siblings.forEach((s) => {
       if (s !== link) {
