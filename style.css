@@ -873,7 +873,7 @@ h3 {
   }
 
   .contact-bloc {
-    min-width: 50%;
+    min-width: 60%;
   }
 }
 
@@ -888,6 +888,16 @@ h3 {
 
   .google-map {
     width: 80%;
+  }
+
+  .contact-text li {
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+
+  .address {
+    font-size: 1.2rem;
+    font-weight: bolder;
   }
 }
 
