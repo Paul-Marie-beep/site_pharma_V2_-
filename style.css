@@ -1131,6 +1131,20 @@ footer {
   transform: scale(1.2);
 }
 
+@media screen and (max-width: 600px) {
+  .jumbo-text h1 {
+    font-size: 2rem;
+  }
+
+  .jumbo-text p {
+    font-size: 1rem;
+  }
+
+  .jumbo-img {
+    height: 70vh;
+  }
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Cards laboratoires */
 
 .produits-naturels-presentation {
@@ -1167,7 +1181,7 @@ footer {
 
 .card-body {
   padding: 0px;
-  height: 10rem;
+  height: 10.5rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -1203,6 +1217,28 @@ footer {
   .produits-naturels-grid-container {
     grid-template-columns: auto;
     grid-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 20rem;
+  }
+
+  .cardpic {
+    width: 19.8rem;
+  }
+
+  .card-body {
+    height: fit-content;
+  }
+
+  .card-body h5 {
+    font-size: 1.3rem;
+  }
+
+  .card-body p {
+    font-size: 0.8rem;
   }
 }
 
