@@ -766,6 +766,8 @@ h3 {
   .slide {
     touch-action: pan-left;
     touch-action: pan-right;
+    touch-action: cross-slide-x;
+    touch-action: cross-slide-y;
   }
 
   .dots__dot {
