@@ -1230,11 +1230,12 @@ footer {
   }
 
   .card-body {
-    height: fit-content;
+    height: 8rem;
   }
 
   .card-body h5 {
     font-size: 1.3rem;
+    margin-top: 2rem;
   }
 
   .card-body p {
