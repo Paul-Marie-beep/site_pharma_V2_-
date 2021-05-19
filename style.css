@@ -718,6 +718,11 @@ h3 {
   .slider {
     height: 65vh;
     min-width: 90%;
+    border: 1px solid red;
+  }
+
+  .slide {
+    border: 1px solid blue;
   }
 
   .testimonial {
