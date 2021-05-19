@@ -718,11 +718,6 @@ h3 {
   .slider {
     height: 65vh;
     min-width: 90%;
-    border: 1px solid red;
-  }
-
-  .slide {
-    border: 1px solid blue;
   }
 
   .testimonial {
@@ -771,6 +766,12 @@ h3 {
   .slide {
     touch-action: pan-left;
     touch-action: pan-right;
+  }
+
+  .dots__dot {
+    min-height: 1rem;
+    max-width: 1rem;
+    border-radius: 70%;
   }
 }
 
