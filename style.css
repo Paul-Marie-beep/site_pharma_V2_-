@@ -99,8 +99,7 @@ h3 {
   margin-right: 0px;
   margin-left: 2rem;
   font-size: var(--nav-textSize);
-  width: 25%;
-  min-width: 252px;
+  min-width: 35%;
   height: 5vh;
 }
 
@@ -118,7 +117,7 @@ h3 {
   font-weight: 600;
   font-size: 1.5rem;
   min-width: fit-content;
-  border: 1px solid blue;
+  border: 1px solid red;
 }
 
 .nav-links {
