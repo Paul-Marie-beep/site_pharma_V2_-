@@ -709,7 +709,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 715px) {
+/* @media screen and (max-width: 715px) {
   .moment-products {
     margin-top: 2rem;
   }
@@ -754,9 +754,9 @@ h3 {
     height: 3rem;
     width: 3rem;
   }
-}
+} */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .slider {
     height: 25rem;
     min-width: 90%;
