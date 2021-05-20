@@ -116,7 +116,7 @@ h3 {
   margin-left: 1rem;
   font-weight: 600;
   font-size: 1.5rem;
-  min-width: fit-content;
+  width: 100%;
   border: 1px solid red;
 }
 
