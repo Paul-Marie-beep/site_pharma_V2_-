@@ -1051,21 +1051,6 @@ h3 {
   }
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
-
-footer {
-  height: 3rem;
-  background-color: var(--color-primary);
-  margin-top: 0px;
-  display: flex;
-  align-items: center;
-}
-
-.copy-right {
-  margin-left: 1rem;
-  color: var(--text-primary);
-}
-
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Page produits naturels */
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Jumbotron */
@@ -1243,4 +1228,64 @@ footer {
   h2 {
     font-size: 3rem;
   }
+}
+
+/* ////////////////////////////////////////////////////////////// /* ////////////////////////////////////////////////////////////// */
+
+/* Page Mentions légales */
+
+.legal-text {
+  width: 90%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.legal-text h1 {
+  margin: auto;
+  margin-bottom: 4rem;
+  width: fit-content;
+  font-size: 3.5rem;
+  color: var(--color-primary);
+}
+
+.legal-text h2 {
+  margin-top: 2rem;
+  color: black;
+  font-size: 2rem;
+}
+
+.legal-text p {
+  margin-top: 2rem;
+}
+
+.legal-footer {
+  margin-top: 4rem;
+}
+
+/* ////////////////////////////////////////////////////////////// /* ////////////////////////////////////////////////////////////// */
+
+/* Footer */
+
+footer {
+  height: 3rem;
+  background-color: var(--color-primary);
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-right {
+  margin-left: 1rem;
+  color: var(--text-primary);
+}
+
+.legal-link {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.legal-link:hover {
+  border-bottom: 2px solid white;
 }
