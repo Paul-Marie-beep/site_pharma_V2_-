@@ -649,7 +649,6 @@ h3 {
   transition: all 0.5s;
   padding-right: 6px;
   padding-left: 6px;
-  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
 
   /* Only necessary when overlying images */
   /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
@@ -716,7 +715,7 @@ h3 {
     margin-top: 2rem;
   }
   .slider {
-    height: 65vh;
+    height: 55vh;
     min-width: 90%;
   }
 
@@ -759,21 +758,17 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
+  .slider {
+    height: 65vh;
+    min-width: 90%;
+  }
+
   .slider__btn {
     display: none;
   }
 
-  .slide {
-    touch-action: pan-left;
-    touch-action: pan-right;
-    touch-action: cross-slide-x;
-    touch-action: cross-slide-y;
-  }
-
   .dots__dot {
-    min-height: 1rem;
-    max-width: 1rem;
-    border-radius: 70%;
+    display: none;
   }
 }
 
@@ -841,6 +836,10 @@ h3 {
 .contact-us {
   transform: translateX(8%);
   transform: translateY(-15%);
+}
+
+.tel {
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 1300px) {
