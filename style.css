@@ -709,56 +709,9 @@ h3 {
   }
 }
 
-/* @media screen and (max-width: 715px) {
-  .moment-products {
-    margin-top: 2rem;
-  }
-  .slider {
-    height: 55vh;
-    min-width: 90%;
-  }
-
-  .testimonial {
-    transform: translateY(-10%);
-  }
-
-  .testimonial h3 {
-    font-size: 1.2rem;
-  }
-
-  .product-grey-addition {
-    font-size: 1.1rem;
-  }
-
-  .testimonial__text {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    z-index: 20;
-  }
-  .testimonial-pic {
-    height: 5rem;
-  }
-
-  .slider__btn--left {
-    left: 8%;
-    transform: translate(-50%, -50%);
-  }
-
-  .slider__btn--right {
-    right: 8%;
-    transform: translate(50%, -50%);
-  }
-
-  .slider__btn {
-    background-color: transparent;
-    height: 3rem;
-    width: 3rem;
-  }
-} */
-
 @media screen and (max-width: 700px) {
   .slider {
-    height: 25rem;
+    height: 28rem;
     min-width: 90%;
     border: none;
     margin-bottom: 1rem;
@@ -775,13 +728,17 @@ h3 {
   .dots__dot {
     display: none;
   }
+
+  .testimonial__text {
+    width: 100%;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
 
 #contact {
   margin-bottom: 5rem;
-  margin-top: 0rem;
+  /* margin-top: 0rem; */
   transition: 1s;
   border-top: 1px solid var(--border-color);
   padding-top: 4rem;
