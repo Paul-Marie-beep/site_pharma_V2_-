@@ -136,6 +136,20 @@ setInterval(() => {
 }, 10000);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Lazy loading des images du carrousel
+
+const lazyCarrousel = function () {
+  const lazyImages = document.querySelectorAll("img[data-src]");
+  const loadImage = function (image) {
+    image.src = image.dataset.src;
+  };
+  setTimeout(loadImage(lazyImages[0], 1000));
+  setTimeout(loadImage(lazyImages[1], 2000));
+};
+
+lazyCarrousel();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Faire apparaître les catégories et les produits
 const revealSection = function (entries, observer) {
