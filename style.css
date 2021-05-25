@@ -201,6 +201,22 @@ h3 {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .navbar-left {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-left {
+    width: 60%;
+  }
+
+  .nav-links {
+    margin-left: 2rem;
+  }
+}
+
 @media screen and (max-width: 750px) {
   body {
     overflow-x: hidden;

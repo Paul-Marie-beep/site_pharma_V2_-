@@ -136,18 +136,19 @@ setInterval(() => {
 }, 10000);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Lazy loading des images du carrousel
+// Lazy loading des images du carrousel (moche mais ça marche alors que demande le peuple ?)
 
-const lazyCarrousel = function () {
-  const lazyImages = document.querySelectorAll("img[data-src]");
-  const loadImage = function (image) {
-    image.src = image.dataset.src;
-  };
-  setTimeout(loadImage(lazyImages[0], 1000));
-  setTimeout(loadImage(lazyImages[1], 2000));
-};
+function DelayloadingImages1() {
+  const imgDiv = document.querySelector(".slide--4");
+  imgDiv.innerHTML = `<img src=Images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
+}
+setTimeout("DelayloadingImages1()", 3000);
 
-lazyCarrousel();
+function DelayloadingImages2() {
+  const imgDiv = document.querySelector(".slide--3");
+  imgDiv.innerHTML = `<img src=Images/parlement_2.jpg class="carrousel-image" alt="Parlement de Bretagne" />`;
+}
+setTimeout("DelayloadingImages2()", 6000);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
