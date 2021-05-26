@@ -17,10 +17,10 @@ let index = 2;
 
 const categories = document.querySelector(".categories");
 const catImgTargets = document.querySelectorAll(".cat-icone");
-const prodImgTargets = document.querySelectorAll(".testimonial-pic");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
+const [...prodImgTargets] = document.querySelectorAll(".testimonial-pic");
 const contact = document.getElementById("contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
 const scrollToProduct = document.querySelector(".scroll-to-products");
@@ -177,10 +177,14 @@ const revealCategories = function (entries, observer) {
 };
 
 const revealProducts = function (entries, observer) {
+  console.log("avant", prodImgTargets);
+  console.log("après", prodImgTargets);
   revealSection(entries, observer);
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   prodImgTargets.forEach(loadImage);
+  // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le
+  //  slider pour ne pas qu'on la voit en traind de se charger.
 };
 
 const categoriesOptions = {
@@ -208,6 +212,10 @@ const productsObserver = new IntersectionObserver(
 );
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
 
+const addLazyClass = function (image) {
+  image.classList.add("icone-lazy");
+};
+
 const notIfMobile = function () {
   // On ne le fait pas sur tel
   if (
@@ -224,12 +232,9 @@ const notIfMobile = function () {
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
-  catImgTargets.forEach(function (image) {
-    image.classList.add("icone-lazy");
-  });
-  prodImgTargets.forEach(function (image) {
-    image.classList.add("icone-lazy");
-  });
+  catImgTargets.forEach(addLazyClass);
+  prodImgTargets.shift();
+  prodImgTargets.forEach(addLazyClass);
 };
 
 notIfMobile();
