@@ -17,6 +17,7 @@ let index = 2;
 
 const categories = document.querySelector(".categories");
 const catImgTargets = document.querySelectorAll(".cat-icone");
+const prodImgTargets = document.querySelectorAll(".testimonial-pic");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
@@ -163,14 +164,23 @@ const revealSection = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
+const loadImage = function (img) {
+  img.src = img.dataset.src;
+  img.classList.remove("icone-lazy");
+};
+
 const revealCategories = function (entries, observer) {
   revealSection(entries, observer);
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  catImgTargets.forEach(function (img) {
-    img.src = img.dataset.src;
-    img.classList.remove("icone-lazy");
-  });
+  catImgTargets.forEach(loadImage);
+};
+
+const revealProducts = function (entries, observer) {
+  revealSection(entries, observer);
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  prodImgTargets.forEach(loadImage);
 };
 
 const categoriesOptions = {
@@ -193,7 +203,7 @@ const categoriesObserver = new IntersectionObserver(
   categoriesOptions
 );
 const productsObserver = new IntersectionObserver(
-  revealSection,
+  revealProducts,
   productsOptions
 );
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
@@ -215,6 +225,9 @@ const notIfMobile = function () {
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
   catImgTargets.forEach(function (image) {
+    image.classList.add("icone-lazy");
+  });
+  prodImgTargets.forEach(function (image) {
     image.classList.add("icone-lazy");
   });
 };
