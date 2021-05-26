@@ -184,7 +184,7 @@ const revealProducts = function (entries, observer) {
   if (!entry.isIntersecting) return;
   prodImgTargets.forEach(loadImage);
   // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le
-  //  slider pour ne pas qu'on la voit en traind de se charger.
+  //  slider pour ne pas qu'on la voit en train de se charger quand l'observer se lance.
 };
 
 const categoriesOptions = {
