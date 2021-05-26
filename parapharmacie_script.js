@@ -52,7 +52,6 @@ const navHeight = navBar.getBoundingClientRect().height;
 
 const obsCallback = function (entries) {
   const [entry] = entries;
-  console.log(entry);
   if (entry.isIntersecting) navBar.classList.add("nav-sticky");
   else navBar.classList.remove("nav-sticky");
 };
@@ -66,9 +65,6 @@ const obsOptionsPara = {
 const navObserverPara = new IntersectionObserver(obsCallback, obsOptionsPara);
 
 navObserverPara.observe(cardsPara);
-
-console.log(cardsPara);
-console.log(navObserverPara);
 
 // Lien contact sur les pages 2 et 3
 
@@ -103,3 +99,43 @@ const navSlide = () => {
 };
 
 navSlide();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Faire apparaître la grid
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.add("trans");
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+
+const paraOptions = {
+  root: null,
+  threshold: 0.1,
+};
+
+const paraObserver = new IntersectionObserver(revealSection, paraOptions);
+
+const notIfMobile = function () {
+  // On ne le fait pas sur tel
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  )
+    return;
+
+  cardsPara.classList.add("section-hidden");
+};
+
+notIfMobile();
+
+paraObserver.observe(cardsPara);

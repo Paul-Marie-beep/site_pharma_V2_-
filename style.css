@@ -757,7 +757,6 @@ h3 {
 
 #contact {
   margin-bottom: 5rem;
-  /* margin-top: 0rem; */
   transition: 1s;
   border-top: 1px solid var(--border-color);
   padding-top: 4rem;
@@ -1138,6 +1137,15 @@ h3 {
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Cards laboratoires */
+
+.grid-nat-hidden {
+  opacity: 0;
+  transform: translateY(2%);
+}
+
+.trans {
+  transition: 1s;
+}
 
 .produits-naturels-presentation {
   height: 100%;
