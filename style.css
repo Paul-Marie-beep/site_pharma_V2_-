@@ -533,6 +533,10 @@ h3 {
   width: 15rem;
 }
 
+.icone-lazy {
+  filter: blur(20px);
+}
+
 .huile-icone {
   height: 5rem;
 }

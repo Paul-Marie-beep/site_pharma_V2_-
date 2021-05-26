@@ -16,6 +16,7 @@ const slide3 = document.querySelector(".slide--4");
 let index = 2;
 
 const categories = document.querySelector(".categories");
+const catImgTargets = document.querySelectorAll(".cat-icone");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
@@ -152,7 +153,7 @@ setTimeout("DelayloadingImages2()", 6000);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Faire apparaître les catégories et les produits
+// Faire apparaître les catégories (avec lazy loading des icones) et les produits
 const revealSection = function (entries, observer) {
   const [entry] = entries;
 
@@ -160,6 +161,16 @@ const revealSection = function (entries, observer) {
 
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
+};
+
+const revealCategories = function (entries, observer) {
+  revealSection(entries, observer);
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  catImgTargets.forEach(function (img) {
+    img.src = img.dataset.src;
+    img.classList.remove("icone-lazy");
+  });
 };
 
 const categoriesOptions = {
@@ -178,7 +189,7 @@ const contactOptions = {
 };
 
 const categoriesObserver = new IntersectionObserver(
-  revealSection,
+  revealCategories,
   categoriesOptions
 );
 const productsObserver = new IntersectionObserver(
@@ -203,6 +214,9 @@ const notIfMobile = function () {
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
+  catImgTargets.forEach(function (image) {
+    image.classList.add("icone-lazy");
+  });
 };
 
 notIfMobile();
@@ -211,6 +225,7 @@ categoriesObserver.observe(categories);
 productsObserver.observe(products);
 contactObserver.observe(contact);
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Scroller vers contact
 
 scrollToContact.forEach((s) =>
@@ -218,6 +233,8 @@ scrollToContact.forEach((s) =>
     contact.scrollIntoView({ behavior: "smooth" });
   })
 );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //  Scroller vers produits du moment
 
