@@ -405,6 +405,10 @@ h3 {
   display: block;
 }
 
+.sm-screen-replacement {
+  display: none;
+}
+
 @media screen and (max-width: 1160px) {
   .carrousel-image {
     object-fit: cover;
@@ -728,28 +732,48 @@ h3 {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .moment-products {
+    margin-bottom: 2rem;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .slider {
-    height: 28rem;
-    min-width: 90%;
-    border: none;
-    margin-bottom: 1rem;
-  }
-
-  .testimonial-pic {
-    height: 8rem;
-  }
-
-  .slider__btn {
     display: none;
   }
 
-  .dots__dot {
-    display: none;
+  .moment-products {
+    min-height: auto;
+    margin: auto;
   }
 
-  .testimonial__text {
-    width: 100%;
+  .sm-screen-replacement {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-10%);
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .rpm-pic {
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+  .rpm-header {
+    width: 85%;
+    margin-top: 2rem;
+  }
+
+  .rpm-text {
+    width: 80%;
+    font-size: 1rem;
+    margin-bottom: 3.5rem;
+    color: #666;
   }
 }
 

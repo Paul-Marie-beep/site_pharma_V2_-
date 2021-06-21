@@ -99,6 +99,38 @@ navObserver.observe(main);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+// Nav responsive
+
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navbBar__links = document.querySelectorAll(".for-opac");
+
+  const burgerPress = function () {
+    // Toggle nav
+    nav.classList.toggle("nav-active");
+    nav.classList.add("nav-visible");
+    // Reveal the links
+    navbBar__links.forEach((link, index) => {
+      // index incrémente à chaque fois qu'un truc se passe
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.3s ease forwards ${
+          index / 7 + 1
+        }s`;
+      }
+    });
+    // Burger animation
+    burger.classList.toggle("toggle");
+  };
+  // Event handler on the burger
+  burger.addEventListener("click", burgerPress);
+};
+
+navSlide();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Fade in out photo intro
 
 let currentSlide;
@@ -138,7 +170,7 @@ setInterval(() => {
 }, 10000);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Lazy loading des images du carrousel (moche mais ça marche alors que demande le peuple ?)
+// Lazy loading des images du carrousel
 
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
@@ -152,9 +184,9 @@ function DelayloadingImages2() {
 }
 setTimeout("DelayloadingImages2()", 6000);
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Faire apparaître les catégories (avec lazy loading des icones) et les produits
+
 const revealSection = function (entries, observer) {
   const [entry] = entries;
 
@@ -177,8 +209,6 @@ const revealCategories = function (entries, observer) {
 };
 
 const revealProducts = function (entries, observer) {
-  console.log("avant", prodImgTargets);
-  console.log("après", prodImgTargets);
   revealSection(entries, observer);
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -368,35 +398,3 @@ btnContainer.addEventListener("click", function (e) {
     .querySelector(`.horaires-content--${clicked.dataset.tab}`)
     .classList.remove("horaires-content-hidden");
 });
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Nav responsive
-
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-links");
-  const navbBar__links = document.querySelectorAll(".for-opac");
-
-  const burgerPress = function () {
-    // Toggle nav
-    nav.classList.toggle("nav-active");
-    nav.classList.add("nav-visible");
-    // Reveal the links
-    navbBar__links.forEach((link, index) => {
-      // index incrémente à chaque fois qu'un truc se passe
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.3s ease forwards ${
-          index / 7 + 1
-        }s`;
-      }
-    });
-    // Burger animation
-    burger.classList.toggle("toggle");
-  };
-  // Event handler on the burger
-  burger.addEventListener("click", burgerPress);
-};
-
-navSlide();
