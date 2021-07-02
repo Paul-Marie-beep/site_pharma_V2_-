@@ -696,7 +696,8 @@ h3 {
 }
 
 .testimonial-pic {
-  height: 13rem;
+  max-height: 13rem;
+  max-width: 40%;
   margin-top: 1rem;
 }
 
