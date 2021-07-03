@@ -1,5 +1,5 @@
-# site_pharma_V2_-
+# site*pharma_V2*-
 
-Web site for a chemist. 
+Website for a chemist.
 
 Basic HTML & vanilla CSS + a little bit of JS

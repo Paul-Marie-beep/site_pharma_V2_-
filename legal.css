@@ -1,0 +1,29 @@
+/* Page Mentions légales */
+
+.legal-text {
+  width: 90%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.legal-text h1 {
+  margin: auto;
+  margin-bottom: 4rem;
+  width: fit-content;
+  font-size: 3.5rem;
+  color: var(--color-primary);
+}
+
+.legal-text h2 {
+  margin-top: 2rem;
+  color: black;
+  font-size: 2rem;
+}
+
+.legal-text p {
+  margin-top: 2rem;
+}
+
+.legal-footer {
+  margin-top: 4rem;
+}
