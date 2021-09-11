@@ -267,14 +267,14 @@
 .moment-products {
   margin-top: 7rem;
   padding-top: 4rem;
+  margin-bottom: 5rem;
   transition: 1s;
-  min-height: 95vh;
   border-top: 1px solid var(--border-color);
 }
 
 /* SLIDER */
 .slider {
-  max-width: 80%;
+  max-width: 85%;
   height: 30rem;
   margin: 0 auto;
   padding-top: 0px;
@@ -365,25 +365,45 @@
 
 /* TESTIMONIALS */
 .testimonial {
-  width: 65%;
+  width: 75%;
   position: relative;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .testimonial-pic {
-  max-height: 13rem;
-  max-width: 40%;
+  max-height: 16rem;
+  max-width: 50%;
+  margin-top: 1rem;
+}
+
+.biarritz-pic {
+  height: auto;
+}
+
+.testimonial-description-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.testimonial-description-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 3rem;
   margin-top: 1rem;
 }
 
 .testimonial__header {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  width: min-content;
+  width: 80%;
 }
 .highlight {
   position: relative;
@@ -397,7 +417,7 @@
   bottom: 0;
   left: 0;
   height: 100%;
-  width: 96%;
+  width: 100%;
   z-index: -1;
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
@@ -410,9 +430,10 @@
 }
 
 .testimonial__text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 3.5rem;
   color: #666;
+  width: 80%;
 }
 
 @media screen and (max-width: 975px) {
