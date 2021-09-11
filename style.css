@@ -6,6 +6,7 @@
   --border-color: #ddd;
   --card-width: 22rem;
   --cardpic-width: 21.8rem;
+  --gradient-primary: linear-gradient(to top left, #35af81, #a1e665);
 }
 
 * {
