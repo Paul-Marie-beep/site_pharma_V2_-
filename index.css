@@ -186,21 +186,27 @@
 
 .categories {
   margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   transition: 1s;
-  border: none;
+  width: 80%;
+  /* border: 1px solid red; */
 }
 
 .catprez {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* border: 1px solid lime; */
 }
 
 .cat-icone {
-  width: 15rem;
+  width: 20rem;
 }
 
 .icone-lazy {
@@ -211,6 +217,12 @@
   height: 5rem;
 }
 
+.cat-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 35%;
+}
 .cat-name {
   color: var(--color-primary);
 }
@@ -222,7 +234,7 @@
   padding: 0.5rem;
   border-radius: 10px;
   border-style: none;
-  margin-top: 1rem;
+  width: 10rem;
 }
 
 .cat-btn a {
@@ -257,6 +269,7 @@
   padding-top: 4rem;
   transition: 1s;
   min-height: 95vh;
+  border-top: 1px solid var(--border-color);
 }
 
 /* SLIDER */
@@ -646,13 +659,13 @@
   margin: auto;
   margin-top: 5rem;
   width: fit-content;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 }
 
 .horaires-padded-component {
   margin: auto;
   width: 51%;
-  height: 18rem;
+  height: 12rem;
   border-radius: 5px;
   border: 1px gray;
   background-color: rgb(201, 247, 208);
@@ -670,13 +683,13 @@
   background-color: white;
   color: var(--color-primary);
   border-radius: 12px;
-  padding: 1rem;
+  /* padding: 1rem; */
   border: 1px solid var(--color-primary);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   width: 8rem;
-  height: 5rem;
+  height: 3rem;
 }
 
 .horaires-btn:focus {
@@ -696,10 +709,10 @@
 }
 
 .horaires-content h5 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin: auto;
   width: fit-content;
-  margin-top: 5%;
+  margin-top: 10%;
   text-align: center;
 }
 
