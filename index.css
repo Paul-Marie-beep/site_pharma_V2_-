@@ -391,11 +391,12 @@
   }
 
   .cat-name-oil {
-    width: 80%;
+    width: 100%;
+    transform: translateX(-14%);
   }
 
   .oil-highlight {
-    width: 103%;
+    width: 128%;
   }
 }
 
