@@ -753,7 +753,9 @@
 
 @media screen and (max-width: 500px) {
   .moment-products {
-    margin-top: 10rem;
+    /* margin-top: 10rem;
+     */
+    border-top: none;
   }
 }
 
