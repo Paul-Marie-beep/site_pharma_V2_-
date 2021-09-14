@@ -363,6 +363,40 @@
   .cat-icone {
     width: 11rem;
   }
+
+  .cat-description {
+    display: none;
+  }
+
+  .categories {
+    align-items: center;
+  }
+
+  .catprez {
+    display: block;
+    width: min-content;
+  }
+
+  .cat-btn {
+    margin-top: 1rem;
+  }
+
+  .cat-text {
+    width: 100%;
+    align-items: center;
+  }
+
+  .cat-name {
+    width: fit-content;
+  }
+
+  .cat-name-oil {
+    width: 80%;
+  }
+
+  .oil-highlight {
+    width: 103%;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
