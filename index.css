@@ -605,6 +605,7 @@
   margin-bottom: 3.5rem;
   color: #666;
   width: 80%;
+  overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 1440px) {
@@ -711,9 +712,6 @@
 
   .testimonial__header {
     font-size: 1.75rem;
-  }
-  .ergy-highlight {
-    font-size: 1.25rem;
   }
   .ergy-pic {
     max-width: 35%;
@@ -822,13 +820,15 @@
 .contact-bloc {
   border-radius: 10px;
   padding: 1rem;
-  border: 2px solid var(--color-primary);
 }
 
 .find-us {
-  background-color: var(--color-primary);
   color: white;
   transform: translateX(-8%);
+  transform: translateY(15%);
+  background-image: var(--gradient-primary);
+  position: relative;
+  z-index: 2;
 }
 .find-us h3 {
   color: var(--text-primary);
@@ -858,7 +858,9 @@
 
 .contact-us {
   transform: translateX(8%);
-  transform: translateY(-15%);
+  border: 2px solid var(--color-primary);
+  position: relative;
+  z-index: 1;
 }
 
 .tel {
