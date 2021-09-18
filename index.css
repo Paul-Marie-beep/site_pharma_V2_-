@@ -610,6 +610,10 @@
   overflow-wrap: break-word;
 }
 
+.testimonial_header-rpm {
+  width: 80%;
+}
+
 @media screen and (max-width: 1440px) {
   .testimonial-description-propolis {
     width: 50%;
