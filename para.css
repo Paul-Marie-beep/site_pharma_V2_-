@@ -50,6 +50,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .jumbotron {
+    height: 90vh;
+  }
+
   .jumbo-text h1 {
     font-size: 2rem;
   }
@@ -59,7 +63,7 @@
   }
 
   .jumbo-img {
-    height: 70vh;
+    height: 80vh;
   }
 }
 
