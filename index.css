@@ -312,7 +312,15 @@
 }
 
 @media screen and (max-width: 500px) {
+  .cat-section-title {
+    text-align: center;
+  }
+
   .item {
+    width: 90%;
+  }
+
+  .item:hover {
     width: 90%;
   }
 
@@ -860,6 +868,10 @@ x
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */
+
+.horaires {
+  margin-bottom: 2rem;
+}
 
 .horaires h3 {
   font-size: 3.5rem;
