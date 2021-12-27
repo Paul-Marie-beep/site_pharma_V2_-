@@ -309,6 +309,10 @@
 }
 
 @media screen and (max-width: 500px) {
+  .item {
+    width: 90%;
+  }
+
   .horiz h3 {
     font-size: 2rem;
   }
