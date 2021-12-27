@@ -213,15 +213,16 @@
   transition: width 700ms ease;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
 
 .vert {
   color: white;
   font-size: 2.5rem;
   transform: rotate(-90deg);
-  position: relative;
+  position: absolute;
   left: -6rem;
-  top: 21rem;
+  bottom: 9rem;
   transition: opacity 200ms ease;
 }
 
@@ -231,17 +232,17 @@
   top: 18.5rem;
 }
 
-.hor {
+.horiz {
   opacity: 0;
-  position: relative;
-  top: 50%;
+  position: absolute;
+  bottom: 1rem;
   width: 80%;
   margin-left: 2rem;
   color: white;
-  transition: opacity 200ms ease;
+  transition: opacity 1000ms ease;
 }
 
-.hor h3 {
+.horiz h3 {
   color: white;
 }
 
@@ -249,7 +250,7 @@
   width: 120%;
 }
 
-.item:hover .hor {
+.item:hover .horiz {
   opacity: 1;
 }
 
