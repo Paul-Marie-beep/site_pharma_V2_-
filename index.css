@@ -228,8 +228,12 @@
 
 .cat-titre-huiles {
   white-space: nowrap;
-  left: -8rem;
-  top: 18.5rem;
+  left: -8.5rem;
+  bottom: 11.3rem;
+}
+
+.cat-titre-homeo {
+  bottom: 8.4rem;
 }
 
 .horiz {
@@ -256,6 +260,52 @@
 
 .item:hover .vert {
   opacity: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .horiz h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    margin-bottom: 0px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .item {
+    width: 80%;
+    height: 50vh;
+    margin-top: 2rem;
+  }
+  .vert {
+    display: none;
+  }
+
+  .horiz {
+    display: block;
+    opacity: 1;
+  }
+
+  .horiz h3 {
+    font-size: 2.5rem;
+  }
+
+  .item:hover {
+    width: 80%;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
