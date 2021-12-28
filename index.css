@@ -381,14 +381,19 @@
   position: absolute;
   top: 50%;
   z-index: 10;
-  background-color: rgb(228, 252, 228);
+  background-color: white;
   color: var(--color-primary);
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--color-primary);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  line-height: 0;
 }
 
 .slider__btn--left {
@@ -436,6 +441,7 @@
 }
 
 /* TESTIMONIALS */
+
 .testimonial {
   width: 75%;
   position: relative;
@@ -463,6 +469,7 @@
   margin: 1rem;
   width: 70%;
 }
+
 .testimonial-description-right {
   margin-right: 0px;
 }
@@ -908,13 +915,12 @@ x
   background-color: white;
   color: var(--color-primary);
   border-radius: 12px;
-  /* padding: 1rem; */
   border: 1px solid var(--color-primary);
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
   width: 8rem;
-  height: 3rem;
+  height: 2.5rem;
 }
 
 .horaires-btn:focus {
@@ -968,8 +974,7 @@ x
 
   .horaires-btn {
     font-size: 1rem;
-    width: 7rem;
-    height: 4rem;
+    width: 6rem;
   }
 
   .horaires-padded-component {
@@ -1002,8 +1007,7 @@ x
 
   .horaires-btn {
     font-size: 0.7rem;
-    width: 4.5rem;
-    height: 3.5rem;
+    width: 4rem;
   }
 
   .horaires-content h5 {
