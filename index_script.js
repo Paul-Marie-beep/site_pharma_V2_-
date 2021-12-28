@@ -7,7 +7,7 @@ const slide3 = document.querySelector(".slide--4");
 let index = 2;
 
 const categories = document.querySelector(".categories");
-const catImgTargets = document.querySelectorAll(".cat-icone");
+const catImgTargets = document.querySelectorAll(".item");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
@@ -112,11 +112,15 @@ const loadImage = function (img) {
   img.classList.remove("icone-lazy");
 };
 
+const changeBackground = function (item) {
+  item.style = item.dataset.style;
+};
+
 const revealCategories = function (entries, observer) {
   revealSection(entries, observer);
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  catImgTargets.forEach(loadImage);
+  catImgTargets.forEach(changeBackground);
 };
 
 const revealProducts = function (entries, observer) {
@@ -173,7 +177,6 @@ const notIfMobile = function () {
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
-  catImgTargets.forEach(addLazyClass);
   prodImgTargets.shift();
   prodImgTargets.forEach(addLazyClass);
 };

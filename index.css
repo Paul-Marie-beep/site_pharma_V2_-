@@ -293,6 +293,11 @@
     height: 50vh;
     margin-top: 2rem;
   }
+
+  .icone-lazy {
+    filter: blur(20px);
+  }
+
   .vert {
     display: none;
   }
