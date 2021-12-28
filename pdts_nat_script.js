@@ -54,7 +54,7 @@ const revealPdtsNat = function (entries, observer) {
 
 const pdtsNatOptions = {
   root: null,
-  threshold: 0.2,
+  threshold: 0.3,
 };
 
 const pdtsNatObserver = new IntersectionObserver(revealPdtsNat, pdtsNatOptions);

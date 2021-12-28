@@ -96,31 +96,34 @@
 }
 
 .card {
-  border: 2px solid lightgray;
+  /* border: 2px solid red; */
   width: var(--card-width);
   background-color: white;
   margin: auto;
-}
-
-.card:hover {
-  transform: translateY(-0.5rem);
-  transition: 1s;
+  height: 12rem;
 }
 
 .cardpic {
   width: var(--cardpic-width);
   height: 12rem;
-  border-bottom: 2px solid var(--border-color);
 }
 
 .card-body {
   padding: 0px;
-  height: 10.5rem;
+  height: 12rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  transform: translateY(-102%);
+  background-color: white;
+  opacity: 0;
+  transition: 0.8s ease;
+}
+
+.card:hover .card-body {
+  opacity: 1;
 }
 
 .card-body h5 {
@@ -155,16 +158,32 @@
 }
 
 @media screen and (max-width: 550px) {
+  .produits-naturels-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
   .card {
     width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    border: 1px solid lightgray;
   }
 
   .cardpic {
     width: 19.8rem;
+    border-bottom: 1px solid lightgray;
   }
 
   .card-body {
     height: 8rem;
+    transform: translateY(0%);
+    opacity: 1;
+    padding-top: 1rem;
   }
 
   .card-body h5 {
