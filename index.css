@@ -348,7 +348,6 @@
   max-width: 80%;
   height: 30rem;
   margin: 0 auto;
-  margin-top: -2rem;
   padding-top: 0px;
   position: relative;
 
@@ -361,9 +360,6 @@
   top: 0px;
   width: 100%;
   height: 30rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-sizing: border-box;
 
   /* THIS creates the animation! */
@@ -379,7 +375,7 @@
 
 .slider__btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
   z-index: 10;
   background-color: white;
   color: var(--color-primary);
@@ -387,7 +383,7 @@
   width: 2.5rem;
   font-size: 1.5rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
+  border: none;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -397,12 +393,12 @@
 }
 
 .slider__btn--left {
-  left: 6%;
+  left: 10%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: 6%;
+  right: 10%;
   transform: translate(50%, -50%);
 }
 
@@ -442,17 +438,25 @@
 
 /* TESTIMONIALS */
 
-.testimonial {
-  width: 75%;
-  position: relative;
+.testimonial_header {
+  margin: auto;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.testi-title {
+  font-size: 1.5rem;
+  margin: auto;
+  width: fit-content;
+}
+
+.product-grey-addition {
+  color: #888;
+  font-size: 1.2rem;
+  width: fit-content;
 }
 
 .testimonial-pic {
-  max-height: 16rem;
+  max-height: 12rem;
   max-width: 50%;
   margin: 1rem;
 }
@@ -463,34 +467,11 @@
 
 .testimonial-description {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  margin: 1rem;
-  width: 70%;
-}
-
-.testimonial-description-right {
-  margin-right: 0px;
-}
-
-.testimonial-description-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin: 1rem;
-  width: 70%;
-}
-
-.testimonial__header {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
+  width: 55%;
 }
 
 .ergy-highlight {
@@ -498,160 +479,15 @@
   margin: auto;
 }
 
-.product-grey-addition {
-  color: #888;
-  font-size: 1.5rem;
-}
-
 .testimonial__text {
   font-size: 1rem;
-  margin-bottom: 3.5rem;
   color: #666;
-  width: 80%;
+  width: 60%;
   overflow-wrap: break-word;
 }
 
 .testimonial_header-rpm {
   width: 80%;
-}
-
-@media screen and (max-width: 1440px) {
-  .testimonial-description-propolis {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 1405px) {
-  .testimonial-description-propolis {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 1385px) {
-  .ergy-highlight {
-    width: 70%;
-  }
-  .endro-highlight {
-    width: 65%;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 1305px) {
-  .ergy-highlight {
-    width: 85%;
-  }
-  .ergy-pic {
-    max-width: 35%;
-  }
-  .testimonial-description-left {
-    width: 55%;
-  }
-}
-
-@media screen and (max-width: 1270px) {
-  .endro-highlight {
-    width: 72%;
-  }
-}
-
-@media screen and (max-width: 1192px) {
-  .testimonial-description-bouleau {
-    height: 60%;
-    width: 50%;
-    margin-right: 2rem;
-  }
-
-  .endro-highlight {
-    width: 75%;
-  }
-
-  .product-grey-addition {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 1170px) {
-  .endro-pic .royale-pic {
-    max-width: 45%;
-  }
-  .endro-highlight {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 1091px) {
-  .endro-highlight {
-    width: 85%;
-  }
-}
-
-@media screen and (max-width: 1055px) {
-  .royale-pic {
-    max-width: 40%;
-  }
-  .testimonial-description-propolis {
-    width: 50%;
-  }
-
-  .ergy-pic {
-    max-width: 30%;
-  }
-  .endro-pic {
-    max-width: 40%;
-  }
-}
-
-@media screen and (max-width: 1045px) {
-  .testimonial-description-bouleau {
-    width: 45%;
-    height: 45%;
-  }
-}
-
-@media screen and (max-width: 975px) {
-  .testimonial-description-propolis {
-    width: 50%;
-  }
-  .slider {
-    max-width: 90%;
-  }
-
-  .testimonial__header {
-    font-size: 1.75rem;
-  }
-  .ergy-pic {
-    max-width: 35%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .moment-products {
-    margin-bottom: 2rem;
-  }
-}
-
-@media screen and (max-width: 843px) {
-  .highlight {
-    font-size: 1.5rem;
-  }
-
-  .ergy-highlight {
-    font-size: 1.25rem;
-    width: 65%;
-  }
-
-  .product-grey-addition {
-    font-size: 1rem;
-  }
-
-  .bouleau-pic {
-    max-width: 30%;
-  }
-
-  .testimonial-description-bouleau {
-    width: 55%;
-  }
 }
 
 @media screen and (max-width: 700px) {
