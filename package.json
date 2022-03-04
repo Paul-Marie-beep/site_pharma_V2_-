@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
+  "name": "site-pharma-v2",
+  "description": "Website for a chemist.",
+  "version": "1.0.0",
+  "main": "index_script.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./src/sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul-Marie-beep/site_pharma_V2_-.git"
+  },
+  "author": "PM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paul-Marie-beep/site_pharma_V2_-/issues"
+  },
+  "homepage": "https://github.com/Paul-Marie-beep/site_pharma_V2_-#readme"
+}

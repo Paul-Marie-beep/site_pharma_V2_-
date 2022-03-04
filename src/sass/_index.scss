@@ -83,7 +83,7 @@
 }
 
 .title-space {
-  color: var(--text-primary);
+  color: $text-primary;
   width: 100%;
   position: absolute;
   top: 63vh;
@@ -100,7 +100,7 @@
   font-weight: 500;
   font-size: 3rem;
   padding-top: 1rem;
-  color: var(--text-primary);
+  color: $text-primary;
   width: fit-content;
   margin: auto;
 }
@@ -123,20 +123,26 @@
   padding: 0.5rem;
   border-radius: 7px;
   cursor: pointer;
-  border: 2px solid var(--color-primary);
+  border: 2px solid $color-primary;
   margin: auto;
 }
 
 .slide-btn-white {
-  background-color: var(--text-primary);
-  color: var(--color-primary);
+  background-color: $text-primary;
+  color: $color-primary;
   margin-right: 1rem;
+  &:hover {
+    background-color: darken($text-primary, 10%);
+  }
 }
 
 .slide-btn-green {
-  background-color: var(--color-primary);
-  color: var(--text-primary);
+  background-color: $color-primary;
+  color: $text-primary;
   margin-left: 1rem;
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
 }
 
 .slide-btn:focus {
@@ -146,7 +152,6 @@
 .slide-btn a {
   text-decoration: none;
   white-space: nowrap;
-  color: var(--text-primary);
 }
 
 @media screen and (max-width: 800px) {
@@ -340,7 +345,7 @@
   padding-top: 4rem;
   margin-bottom: 5rem;
   transition: 1s;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid $border-color;
 }
 
 /* SLIDER */
@@ -378,7 +383,7 @@
   top: 40%;
   z-index: 10;
   background-color: white;
-  color: var(--color-primary);
+  color: $color-primary;
   height: 2.5rem;
   width: 2.5rem;
   font-size: 1.5rem;
@@ -565,12 +570,12 @@ x
   color: white;
   transform: translateX(-8%);
   transform: translateY(15%);
-  background-image: var(--gradient-primary);
+  background-image: $gradient-primary;
   position: relative;
   z-index: 2;
 }
 .find-us h3 {
-  color: var(--text-primary);
+  color: $text-primary;
   font-size: 2rem;
   margin-bottom: 1%;
 }
@@ -597,7 +602,7 @@ x
 
 .contact-us {
   transform: translateX(8%);
-  border: 2px solid var(--color-primary);
+  border: 2px solid $color-primary;
   position: relative;
   z-index: 1;
 }
@@ -748,9 +753,9 @@ x
 
 .horaires-btn {
   background-color: white;
-  color: var(--color-primary);
+  color: $color-primary;
   border-radius: 12px;
-  border: 1px solid var(--color-primary);
+  border: 1px solid $color-primary;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
@@ -764,9 +769,9 @@ x
 
 .horaires-btn-active {
   transform: translateY(-50%);
-  color: var(--text-primary);
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: $text-primary;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
 }
 
 .horaires-content {
