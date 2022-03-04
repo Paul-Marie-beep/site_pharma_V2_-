@@ -377,15 +377,6 @@
   }
 }
 
-$ball-height: 1.5rem;
-$ball-width: 3%;
-
-@function after-width($ball-width) {
-  // On a 4 balles, trois espaces à combler entre ces balles et on veut exprimer la largeur en pourcentage;
-  // On rajoute 100 pour tenir compte du décalage de la position absolute
-  @return ((100- (4 * $ball-width))/9 * 100)+100;
-}
-
 .stepper {
   width: 80%;
   display: flex;

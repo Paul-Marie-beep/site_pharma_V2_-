@@ -1,0 +1,17 @@
+$color-primary: rgb(20, 163, 20);
+$text-primary: white;
+$text-muted: lightgrey;
+$nav-textSize: 1rem;
+$border-color: #ddd;
+$card-width: 22rem;
+$cardpic-width: 21.8rem;
+$gradient-primary: linear-gradient(to top left, #35af81, #a1e665);
+$background-color: #f7f7f7;
+$ball-height: 1.5rem;
+$ball-width: 3%;
+
+@function after-width($ball-width) {
+  // On a 4 balles, trois espaces à combler entre ces balles et on veut exprimer la largeur en pourcentage;
+  // On rajoute 100 pour tenir compte du décalage de la position absolute
+  @return ((100- (4 * $ball-width))/9 * 100)+100;
+}
