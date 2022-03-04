@@ -1195,5 +1195,224 @@ x #contact {
     font-size: 1rem;
   }
 }
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Jumbotron */
+.pdts-nat-body,
+.para-body {
+  background-color: #f3efef;
+}
+
+.jumbotron {
+  position: relative;
+}
+
+.jumbo-text {
+  color: white;
+  position: absolute;
+  bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 12%;
+  width: 100%;
+}
+
+.jumbo-text h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+}
+
+.jumbo-text p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+.jumbo-img {
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.para-img {
+  width: 100%;
+  height: 60rem;
+  transition: transform 15s ease;
+  object-fit: cover;
+}
+
+.jumbo-img:hover .para-img {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .jumbotron {
+    height: 90vh;
+  }
+
+  .jumbo-text h1 {
+    font-size: 2rem;
+  }
+
+  .jumbo-text p {
+    font-size: 1rem;
+  }
+
+  .jumbo-img {
+    height: 80vh;
+  }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Cards laboratoires */
+.grid-nat-hidden {
+  opacity: 0;
+  transform: translateY(2%);
+}
+
+.trans {
+  transition: 1s;
+}
+
+.produits-naturels-presentation {
+  height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 7%;
+  margin-bottom: 2rem;
+}
+
+.produits-naturels-grid-container {
+  width: fit-content;
+  max-width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 22rem;
+  background-color: white;
+  margin: auto;
+  height: 12rem;
+}
+
+.cardpic {
+  width: 21.8rem;
+  height: 12rem;
+}
+
+.card-body {
+  padding: 0px;
+  height: 12rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateY(-102%);
+  background-color: white;
+  opacity: 0;
+  transition: 0.8s ease;
+}
+
+.card:hover .card-body {
+  opacity: 1;
+}
+
+.card-body h5 {
+  font-size: 1.5rem;
+  width: fit-content;
+  margin-top: 3.5rem;
+  margin-bottom: 0px;
+  margin-left: 5%;
+  color: #14a314;
+}
+
+.card-body p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 5%;
+  width: 90%;
+  color: grey;
+}
+
+@media screen and (max-width: 1245px) {
+  .produits-naturels-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+  }
+}
+@media screen and (max-width: 874px) {
+  .produits-naturels-grid-container {
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .produits-naturels-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .card {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    border: 1px solid lightgray;
+  }
+
+  .cardpic {
+    width: 19.8rem;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .card-body {
+    height: 8rem;
+    transform: translateY(0%);
+    opacity: 1;
+    padding-top: 1rem;
+  }
+
+  .card-body h5 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  .card-body p {
+    font-size: 0.8rem;
+  }
+}
+/* Page Mentions légales */
+.legal-text {
+  width: 90%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.legal-text h1 {
+  margin: auto;
+  margin-bottom: 4rem;
+  width: fit-content;
+  font-size: 3.5rem;
+  color: var(--color-primary);
+}
+
+.legal-text h2 {
+  margin-top: 2rem;
+  color: black;
+  font-size: 2rem;
+}
+
+.legal-text p {
+  margin-top: 2rem;
+}
+
+.legal-footer {
+  margin-top: 4rem;
+}
 
 /*# sourceMappingURL=style.css.map */

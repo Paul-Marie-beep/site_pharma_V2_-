@@ -10,7 +10,7 @@
 }
 
 .jumbo-text {
-  color: var(--text-primary);
+  color: $text-primary;
   position: absolute;
   bottom: 5rem;
   display: flex;
@@ -96,15 +96,14 @@
 }
 
 .card {
-  /* border: 2px solid red; */
-  width: var(--card-width);
+  width: $card-width;
   background-color: white;
   margin: auto;
   height: 12rem;
 }
 
 .cardpic {
-  width: var(--cardpic-width);
+  width: $cardpic-width;
   height: 12rem;
 }
 
@@ -132,7 +131,7 @@
   margin-top: 3.5rem;
   margin-bottom: 0px;
   margin-left: 5%;
-  color: var(--color-primary);
+  color: $color-primary;
 }
 
 .card-body p {
