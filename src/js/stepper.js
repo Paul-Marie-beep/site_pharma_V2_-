@@ -68,6 +68,16 @@ const advanceProgressBar = function () {
   treatedBall.classList.remove("unscale");
 };
 
+const atrophyGreenBall = function () {
+  const nextGreenBall = document.querySelector(`.green--${i}`);
+  nextGreenBall.classList.add("atrophy");
+};
+
+const revealGreenBall = function () {
+  const nextGreenBall = document.querySelector(`.green--${i + 1}`);
+  nextGreenBall.classList.remove("atrophy");
+};
+
 const leftAction = function () {
   // On met une guard si on est sur la première slide
   if (i === 1) return;
@@ -77,6 +87,7 @@ const leftAction = function () {
   moveDescriptionsRight();
   moveImagesRight();
   retreatProgressBar();
+  atrophyGreenBall();
 
   i--;
   // Si on est sur la première slide, on rend la flèche de gauche transparente.
@@ -92,6 +103,7 @@ const rightAction = function () {
   moveDescriptionsLeft();
   moveimagesLeft();
   advanceProgressBar();
+  revealGreenBall();
 
   i++;
   // On met la flèche en transparence une fois arrivé au bout des slides.

@@ -28,3 +28,11 @@ $ball-width: 3%;
   opacity: 0;
   transform: scaleX(0);
 }
+
+.ball-left {
+  transform: translateX(-118%);
+}
+
+.atrophy {
+  transform: scaleX(0);
+}
