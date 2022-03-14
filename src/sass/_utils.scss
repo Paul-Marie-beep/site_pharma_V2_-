@@ -20,6 +20,16 @@ $ball-width: 3%;
 //   transform: translate($coef);
 // }
 
+.translate--100 {
+  transform: translateX(-100%);
+}
+.translate--200 {
+  transform: translateX(-200%);
+}
+.translate--300 {
+  transform: translateX(-300%);
+}
+
 @mixin transition-transform {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }

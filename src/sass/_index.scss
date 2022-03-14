@@ -375,7 +375,7 @@
   &__pics {
     display: flex;
     align-items: center;
-    width: 26%;
+    width: 22%;
   }
 }
 
@@ -422,8 +422,14 @@
 .product {
   &__pic {
     width: 100%;
-    height: 80%;
-    border: 1px solid lime;
+    height: 100%;
+    @include transition-transform;
+    // &--3 {
+    //   transform: translateX(-100%);
+    // }
+    // &--4 {
+    //   transform: translateX(-200%);
+    // }
   }
 }
 
