@@ -461,21 +461,9 @@
   border: 1px solid red;
   &__ball {
     position: relative;
-    width: 1.5rem;
     height: 1.5rem;
-    z-index: 2;
-    &--1 {
-      z-index: 4;
-    }
-    &--2 {
-      z-index: 3;
-    }
-    &--3 {
-      z-index: 2;
-    }
-    &--4 {
-      z-index: 1;
-    }
+    width: 33%;
+    border: 1px solid blue;
     &--green {
       transform: translateY(-100%);
     }
@@ -485,8 +473,7 @@
       height: 0.2rem;
       background-color: darkgray;
       top: 50%;
-      right: 100%;
-      width: 11.5rem;
+      width: 100%;
     }
     &::after {
       position: absolute;
@@ -494,12 +481,14 @@
       height: 0.2rem;
       background-color: rgb(47, 231, 47);
       top: 50%;
-      left: 100%;
-      width: 11.5rem;
+      width: 100%;
       transform-origin: left;
       @include transition-transform;
     }
-    &:first-child::before {
+    &:last-child {
+      width: 1.5rem;
+    }
+    &:last-child::before {
       content: none;
     }
     &:last-child::after {
@@ -507,8 +496,7 @@
     }
   }
   &__ball img {
-    width: 100%;
-    height: $ball-height;
+    width: 1.5rem;
   }
 }
 

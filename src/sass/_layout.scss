@@ -33,6 +33,10 @@ h3 {
   width: fit-content;
 }
 
+li {
+  list-style: none;
+}
+
 @media screen and (max-width: 650px) {
   h3 {
     font-size: 1.5rem;
