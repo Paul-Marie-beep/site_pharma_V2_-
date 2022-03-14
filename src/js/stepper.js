@@ -48,7 +48,6 @@ const moveDescriptionsLeft = function () {
 
 const moveImagesRight = function () {
   const currentImage = document.querySelector(`.product__pic--${i}`);
-  console.log("current image", currentImage);
   currentImage.classList.remove(`translate--${i - 1}00`);
   currentImage.classList.add("hidden");
 };
@@ -59,8 +58,17 @@ const moveimagesLeft = function () {
   nextImage.classList.remove("hidden");
 };
 
+const retreatProgressBar = function () {
+  const currentBall = document.querySelector(`.stepper__ball--${i - 1}`);
+  currentBall.classList.add("unscale");
+};
+
+const advanceProgressBar = function () {
+  const treatedBall = document.querySelector(`.stepper__ball--${i}`);
+  treatedBall.classList.remove("unscale");
+};
+
 const leftAction = function () {
-  console.log("trig");
   // On met une guard si on est sur la première slide
   if (i === 1) return;
   // Si on était sur la  dernière slide on remet la flèche de droite entièrement visible
@@ -68,6 +76,7 @@ const leftAction = function () {
   moveTitlesRight();
   moveDescriptionsRight();
   moveImagesRight();
+  retreatProgressBar();
 
   i--;
   // Si on est sur la première slide, on rend la flèche de gauche transparente.
@@ -82,6 +91,7 @@ const rightAction = function () {
   moveTitlesLeft();
   moveDescriptionsLeft();
   moveimagesLeft();
+  advanceProgressBar();
 
   i++;
   // On met la flèche en transparence une fois arrivé au bout des slides.

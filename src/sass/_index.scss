@@ -433,6 +433,8 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 7rem;
+  border: 1px solid blue;
+  overflow: hidden;
 }
 
 .arrows {
@@ -452,27 +454,56 @@
 
 .stepper {
   width: 70%;
+  height: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid red;
   &__ball {
     position: relative;
-    width: $ball-width;
-    height: $ball-height;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 2;
+    &--1 {
+      z-index: 4;
+    }
+    &--2 {
+      z-index: 3;
+    }
+    &--3 {
+      z-index: 2;
+    }
+    &--4 {
+      z-index: 1;
+    }
     &--green {
       transform: translateY(-100%);
     }
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       height: 0.2rem;
       background-color: darkgray;
       top: 50%;
+      right: 100%;
+      width: 11.5rem;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 0.2rem;
+      background-color: rgb(47, 231, 47);
+      top: 50%;
       left: 100%;
-      width: after-width($ball-width);
+      width: 11.5rem;
+      transform-origin: left;
+      @include transition-transform;
+    }
+    &:first-child::before {
+      content: none;
     }
     &:last-child::after {
-      display: none;
+      content: none;
     }
   }
   &__ball img {

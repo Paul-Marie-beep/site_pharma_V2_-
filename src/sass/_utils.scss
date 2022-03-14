@@ -10,16 +10,6 @@ $background-color: #f7f7f7;
 $ball-height: 1.5rem;
 $ball-width: 3%;
 
-// @function after-width($ball-width) {
-//   // On a 4 balles, trois espaces à combler entre ces balles et on veut exprimer la largeur en pourcentage;
-//   // On rajoute 100 pour tenir compte du décalage généré par la position absolute
-//   @return ((100- (4 * $ball-width))/9 * 100)+100;
-// }
-
-// @mixin trans($coef) {
-//   transform: translate($coef);
-// }
-
 .translate--100 {
   transform: translateX(-100%);
 }
@@ -32,4 +22,9 @@ $ball-width: 3%;
 
 @mixin transition-transform {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.unscale::after {
+  opacity: 0;
+  transform: scaleX(0);
 }
