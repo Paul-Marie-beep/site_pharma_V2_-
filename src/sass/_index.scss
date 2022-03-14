@@ -388,6 +388,7 @@
     height: fit-content;
     width: 25rem;
     margin: auto;
+    @include transition-transform;
   }
 }
 
@@ -407,14 +408,14 @@
 .descriptions {
   display: flex;
   align-items: flex-start;
-  // width: 70%;
   &__description {
-    text-align: center;
+    text-align: left;
     width: 20rem;
     margin: auto;
     margin-top: 2rem;
     font-style: italic;
     color: #666;
+    @include transition-transform;
   }
 }
 
@@ -422,6 +423,7 @@
   &__pic {
     width: 100%;
     height: 80%;
+    border: 1px solid lime;
   }
 }
 
@@ -436,8 +438,10 @@
   display: flex;
   &__arrow {
     height: 2.5rem;
+    cursor: pointer;
     &--left {
       transform: rotateY(180deg);
+      opacity: 0.5;
     }
   }
 }
