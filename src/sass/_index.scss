@@ -386,7 +386,7 @@
   margin: auto;
   &__title {
     height: fit-content;
-    width: 25rem;
+    width: 24rem;
     margin: auto;
     @include transition-transform;
   }
@@ -424,12 +424,6 @@
     width: 100%;
     height: 100%;
     @include transition-transform;
-    // &--3 {
-    //   transform: translateX(-100%);
-    // }
-    // &--4 {
-    //   transform: translateX(-200%);
-    // }
   }
 }
 
