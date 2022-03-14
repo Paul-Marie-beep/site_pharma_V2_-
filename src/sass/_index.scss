@@ -355,6 +355,7 @@
   &__container {
     width: 70%;
     margin: auto;
+    margin-top: 8rem;
     position: relative;
   }
 }
@@ -431,13 +432,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 7rem;
 }
 
 .arrows {
   display: flex;
+  justify-content: space-between;
+  width: 12%;
   &__arrow {
     height: 2.5rem;
+    width: min-content;
     cursor: pointer;
     &--left {
       transform: rotateY(180deg);
@@ -447,7 +451,7 @@
 }
 
 .stepper {
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
