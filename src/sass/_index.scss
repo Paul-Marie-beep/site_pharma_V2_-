@@ -463,23 +463,19 @@
     height: 1.5rem;
     width: 33%;
     &--grey {
-      border-radius: 50%;
-      background-color: $stepper-grey;
-      width: 1.5rem;
-      height: 1.5rem;
+      @include ball($stepper-grey);
     }
     &--green {
-      border-radius: 50%;
-      background-color: $stepper-green;
-      width: 1.5rem;
-      height: 1.5rem;
+      @include ball($stepper-green);
+      transition: transform 0.2s ease-in-out;
+      transform-origin: left;
     }
     &::before {
       position: absolute;
       content: "";
       height: 0.2rem;
       background-color: $stepper-grey;
-      top: 50%;
+      top: 45%;
       width: 100%;
       z-index: -1;
     }
@@ -488,11 +484,11 @@
       content: "";
       height: 0.2rem;
       background-color: $stepper-green;
-      top: 50%;
+      top: 45%;
       width: 100%;
       right: 0%;
       transform-origin: left;
-      @include transition-transform;
+      @include transition-after;
       z-index: 2;
     }
     &:last-child {

@@ -845,22 +845,24 @@ footer {
 }
 .stepper__ball--grey {
   border-radius: 50%;
-  background-color: #b9b6b6;
+  background-color: #ccc9c9;
   width: 1.5rem;
   height: 1.5rem;
 }
 .stepper__ball--green {
   border-radius: 50%;
-  background-color: #2fe72f;
+  background-color: #14a314;
   width: 1.5rem;
   height: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: left;
 }
 .stepper__ball::before {
   position: absolute;
   content: "";
   height: 0.2rem;
-  background-color: #b9b6b6;
-  top: 50%;
+  background-color: #ccc9c9;
+  top: 45%;
   width: 100%;
   z-index: -1;
 }
@@ -868,12 +870,12 @@ footer {
   position: absolute;
   content: "";
   height: 0.2rem;
-  background-color: #2fe72f;
-  top: 50%;
+  background-color: #14a314;
+  top: 45%;
   width: 100%;
   right: 0%;
   transform-origin: left;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   z-index: 2;
 }
 .stepper__ball:last-child {

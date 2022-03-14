@@ -9,8 +9,9 @@ $gradient-primary: linear-gradient(to top left, #35af81, #a1e665);
 $background-color: #f7f7f7;
 $ball-height: 1.5rem;
 $ball-width: 3%;
-$stepper-green: rgb(47, 231, 47);
-$stepper-grey: rgb(185, 182, 182);
+// $stepper-green: rgb(30, 207, 30);
+$stepper-green: $color-primary;
+$stepper-grey: rgb(204, 201, 201);
 
 .translate--100 {
   transform: translateX(-100%);
@@ -24,6 +25,17 @@ $stepper-grey: rgb(185, 182, 182);
 
 @mixin transition-transform {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@mixin transition-after {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@mixin ball($color) {
+  border-radius: 50%;
+  background-color: $color;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .unscale::after {

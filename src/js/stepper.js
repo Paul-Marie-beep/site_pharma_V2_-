@@ -3,6 +3,7 @@
 const arrowLeft = document.querySelector(".arrows__arrow--left");
 const arrowRight = document.querySelector(".arrows__arrow--right");
 let i = 1;
+let carryOn = true;
 
 const moveTitlesRight = function () {
   const currentTitle = document.querySelector(`.titles__title--${i}`);
@@ -58,9 +59,12 @@ const moveimagesLeft = function () {
   nextImage.classList.remove("hidden");
 };
 
-const retreatProgressBar = function () {
-  const currentBall = document.querySelector(`.stepper__ball--${i - 1}`);
-  currentBall.classList.add("unscale");
+const retreatProgressBar = function (index) {
+  setTimeout(function () {
+    const currentBall = document.querySelector(`.stepper__ball--${index - 1}`);
+    currentBall.classList.add("unscale");
+    carryOn = true;
+  }, 200);
 };
 
 const advanceProgressBar = function () {
@@ -71,22 +75,31 @@ const advanceProgressBar = function () {
 const atrophyGreenBall = function () {
   const nextGreenBall = document.querySelector(`.green--${i}`);
   nextGreenBall.classList.add("atrophy");
+  // On bloque la possibilité de cliquer sur une autre slide avant que la barre verte ne soit rétractée.
+  carryOn = false;
 };
 
-const revealGreenBall = function () {
-  const nextGreenBall = document.querySelector(`.green--${i + 1}`);
-  nextGreenBall.classList.remove("atrophy");
+const revealGreenBall = function (index) {
+  // On met une paramètre dans la fonction pour être sûr que l'incrémentation du timer ne sera pas effectuée avant la fin de l'intervalle.
+  carryOn = false;
+  setTimeout(function () {
+    const nextGreenBall = document.querySelector(`.green--${index + 1}`);
+    nextGreenBall.classList.remove("atrophy");
+    carryOn = true;
+  }, 300);
 };
 
 const leftAction = function () {
   // On met une guard si on est sur la première slide
   if (i === 1) return;
+  // On met une guard pour être sûr que l'on ne change pas de slide avant la fin de l'intervalle
+  if (!carryOn) return;
   // Si on était sur la  dernière slide on remet la flèche de droite entièrement visible
   if (i === 4) arrowRight.style.opacity = 1;
   moveTitlesRight();
   moveDescriptionsRight();
   moveImagesRight();
-  retreatProgressBar();
+  retreatProgressBar(i);
   atrophyGreenBall();
 
   i--;
@@ -98,12 +111,14 @@ const rightAction = function () {
   // On met une guard arrivé au bout des slides
   if (i === 4) return;
   // Si c'est le premier appui sur la flèche on remet la flèche de gauche à la bonne couleur.
+  // On met une guard pour être sûr que l'on ne change pas de slide avant la fin de l'intervalle
+  if (!carryOn) return;
   if (i === 1) arrowLeft.style.opacity = 1;
   moveTitlesLeft();
   moveDescriptionsLeft();
   moveimagesLeft();
   advanceProgressBar();
-  revealGreenBall();
+  revealGreenBall(i);
 
   i++;
   // On met la flèche en transparence une fois arrivé au bout des slides.
