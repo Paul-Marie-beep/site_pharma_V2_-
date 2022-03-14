@@ -343,7 +343,7 @@
   margin-top: 2.5rem;
   &__container {
     height: 80vh;
-    background: url("/Images/ext_pharma.jpeg") no-repeat fixed;
+    background: url("/Images/ext_pharma.jpeg") repeat fixed;
   }
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
@@ -507,10 +507,14 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .moment-products {
     min-height: auto;
     margin: auto;
+  }
+
+  .moment-products__container {
+    display: none;
   }
 
   .sm-screen-replacement {

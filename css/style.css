@@ -727,7 +727,7 @@ footer {
 }
 .sticky-pic__container {
   height: 80vh;
-  background: url("/Images/ext_pharma.jpeg") no-repeat fixed;
+  background: url("/Images/ext_pharma.jpeg") repeat fixed;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
@@ -891,10 +891,14 @@ footer {
   width: 1.5rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .moment-products {
     min-height: auto;
     margin: auto;
+  }
+
+  .moment-products__container {
+    display: none;
   }
 
   .sm-screen-replacement {
