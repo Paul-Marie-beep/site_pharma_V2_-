@@ -433,7 +433,6 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 7rem;
-  border: 1px solid blue;
   overflow: hidden;
 }
 
@@ -458,24 +457,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
   margin-right: -2.2rem;
   &__ball {
     position: relative;
     height: 1.5rem;
     width: 33%;
-    border: 1px solid blue;
+    &--grey {
+      border-radius: 50%;
+      background-color: $stepper-grey;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
     &--green {
-      transition: transform 0.5s ease-in-out;
-      transform-origin: left;
-      margin-left: 0px;
-      z-index: 5;
+      border-radius: 50%;
+      background-color: $stepper-green;
+      width: 1.5rem;
+      height: 1.5rem;
     }
     &::before {
       position: absolute;
       content: "";
       height: 0.2rem;
-      background-color: darkgray;
+      background-color: $stepper-grey;
       top: 50%;
       width: 100%;
       z-index: -1;
@@ -484,7 +487,7 @@
       position: absolute;
       content: "";
       height: 0.2rem;
-      background-color: rgb(47, 231, 47);
+      background-color: $stepper-green;
       top: 50%;
       width: 100%;
       right: 0%;
@@ -505,7 +508,6 @@
   }
   &__ball img {
     width: 1.5rem;
-    border: 1px solid red;
   }
 }
 

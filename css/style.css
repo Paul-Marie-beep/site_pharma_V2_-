@@ -16,8 +16,8 @@
   transform: scaleX(0);
 }
 
-.ball-left {
-  transform: translateX(-118%);
+.ball-up {
+  transform: translateY(-100%);
 }
 
 .atrophy {
@@ -812,7 +812,6 @@ footer {
   align-items: center;
   justify-content: space-between;
   margin-top: 7rem;
-  border: 1px solid blue;
   overflow: hidden;
 }
 
@@ -837,26 +836,30 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
   margin-right: -2.2rem;
 }
 .stepper__ball {
   position: relative;
   height: 1.5rem;
   width: 33%;
-  border: 1px solid blue;
+}
+.stepper__ball--grey {
+  border-radius: 50%;
+  background-color: #b9b6b6;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .stepper__ball--green {
-  transition: transform 0.5s ease-in-out;
-  transform-origin: left;
-  margin-left: 0px;
-  z-index: 5;
+  border-radius: 50%;
+  background-color: #2fe72f;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .stepper__ball::before {
   position: absolute;
   content: "";
   height: 0.2rem;
-  background-color: darkgray;
+  background-color: #b9b6b6;
   top: 50%;
   width: 100%;
   z-index: -1;
@@ -884,7 +887,6 @@ footer {
 }
 .stepper__ball img {
   width: 1.5rem;
-  border: 1px solid red;
 }
 
 @media screen and (max-width: 700px) {
