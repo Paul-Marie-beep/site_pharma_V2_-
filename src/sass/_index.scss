@@ -453,12 +453,13 @@
 }
 
 .stepper {
-  width: 70%;
+  width: 75%;
   height: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid red;
+  margin-right: -2.2rem;
   &__ball {
     position: relative;
     height: 1.5rem;
