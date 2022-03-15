@@ -11,7 +11,7 @@ const catImgTargets = document.querySelectorAll(".item");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
-const [...prodImgTargets] = document.querySelectorAll(".testimonial-pic");
+const [...prodImgTargets] = document.querySelectorAll(".product__pic");
 const contact = document.getElementById("contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
 const scrollToProduct = document.querySelector(".scroll-to-products");
@@ -127,8 +127,7 @@ const revealProducts = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   prodImgTargets.forEach(loadImage);
-  // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le
-  //  slider pour ne pas qu'on la voit en train de se charger quand l'observer se lance.
+  // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le slider pour ne pas qu'on la voit en train de se charger quand l'observer se lance.
 };
 
 const categoriesOptions = {

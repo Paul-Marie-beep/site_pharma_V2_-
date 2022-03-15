@@ -2,4 +2,4 @@
 
 Website for a chemist.
 
-Basic HTML & vanilla CSS + a little bit of JS
+Basic HTML & Sass + a little bit of JS
