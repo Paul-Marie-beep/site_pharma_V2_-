@@ -677,6 +677,11 @@ footer {
     margin-bottom: 0px;
   }
 
+  .cat-section-title {
+    width: fit-content;
+    margin: auto;
+  }
+
   .right {
     display: flex;
     flex-direction: column;
