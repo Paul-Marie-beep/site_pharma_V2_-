@@ -44,7 +44,7 @@ html {
 h2 {
   color: #14a314;
   font-weight: 700;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   margin: auto;
   margin-bottom: 4rem;
   width: fit-content;
@@ -746,7 +746,7 @@ footer {
 .top-box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
 }
 .top-box--texts {
@@ -757,10 +757,31 @@ footer {
   align-items: flex-start;
   height: 30%;
 }
+@media screen and (max-width: 800px) {
+  .top-box--texts {
+    max-width: 50%;
+    word-wrap: break-word;
+  }
+}
 .top-box__pics {
   display: flex;
   align-items: center;
-  width: 22%;
+  width: 25%;
+}
+@media screen and (max-width: 1000px) {
+  .top-box__pics {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .top-box__pics {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .top-box__pics {
+    width: 33%;
+  }
 }
 
 .titles {
@@ -775,11 +796,26 @@ footer {
   margin: auto;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+@media screen and (max-width: 800px) {
+  .titles__title {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .titles__title {
+    width: 18rem;
+  }
+}
 
 .title-green {
   color: #14a314;
   font-weight: bolder;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .title-green {
+    font-size: 1.25rem;
+  }
 }
 .title-grey {
   color: #888;
@@ -799,6 +835,23 @@ footer {
   font-style: italic;
   color: #666;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+@media screen and (max-width: 1000px) {
+  .descriptions__description {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .descriptions__description {
+    margin-top: 0.5rem;
+    width: 17rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .descriptions__description {
+    margin-top: 0.2rem;
+    width: 15rem;
+  }
 }
 
 .product__pic {
@@ -828,6 +881,31 @@ footer {
 .arrows__arrow--left {
   transform: rotateY(180deg);
   opacity: 0.5;
+}
+@media screen and (max-width: 1200px) {
+  .arrows {
+    width: 13%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .arrows {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .arrows {
+    width: 17%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .arrows {
+    width: 19%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .arrows {
+    width: 23%;
+  }
 }
 
 .stepper {
@@ -879,7 +957,37 @@ footer {
   z-index: 2;
 }
 .stepper__ball:last-child {
-  width: 4rem;
+  width: 4.1rem;
+}
+@media screen and (max-width: 1000px) {
+  .stepper__ball:last-child {
+    width: 4.3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .stepper__ball:last-child {
+    width: 4.4rem;
+  }
+}
+@media screen and (max-width: 725px) {
+  .stepper__ball:last-child {
+    width: 4.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .stepper__ball:last-child {
+    width: 4.6rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .stepper__ball:last-child {
+    width: 4.7rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  .stepper__ball:last-child {
+    width: 4.8rem;
+  }
 }
 .stepper__ball:last-child::before {
   content: none;
@@ -891,7 +999,7 @@ footer {
   width: 1.5rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .moment-products {
     min-height: auto;
     margin: auto;

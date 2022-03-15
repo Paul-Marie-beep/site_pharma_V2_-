@@ -363,7 +363,7 @@
 .top-box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
   &--texts {
     max-width: 60%;
@@ -372,11 +372,24 @@
     justify-content: space-between;
     align-items: flex-start;
     height: 30%;
+    @media screen and (max-width: 800px) {
+      max-width: 50%;
+      word-wrap: break-word;
+    }
   }
   &__pics {
     display: flex;
     align-items: center;
-    width: 22%;
+    width: 25%;
+    @media screen and (max-width: 1000px) {
+      width: 28%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 30%;
+    }
+    @media screen and (max-width: 650px) {
+      width: 33%;
+    }
   }
 }
 
@@ -390,6 +403,12 @@
     width: 24rem;
     margin: auto;
     @include transition-transform;
+    @media screen and (max-width: 800px) {
+      width: 20rem;
+    }
+    @media screen and (max-width: 700px) {
+      width: 18rem;
+    }
   }
 }
 
@@ -398,6 +417,9 @@
     color: $color-primary;
     font-weight: bolder;
     font-size: 1.5rem;
+    @media screen and (max-width: 800px) {
+      font-size: 1.25rem;
+    }
   }
   &-grey {
     color: #888;
@@ -417,6 +439,17 @@
     font-style: italic;
     color: #666;
     @include transition-transform;
+    @media screen and (max-width: 1000px) {
+      margin-top: 0.5rem;
+    }
+    @media screen and (max-width: 700px) {
+      margin-top: 0.5rem;
+      width: 17rem;
+    }
+    @media screen and (max-width: 700px) {
+      margin-top: 0.2rem;
+      width: 15rem;
+    }
   }
 }
 
@@ -448,6 +481,21 @@
       transform: rotateY(180deg);
       opacity: 0.5;
     }
+  }
+  @media screen and (max-width: 1200px) {
+    width: 13%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 15%;
+  }
+  @media screen and (max-width: 850px) {
+    width: 17%;
+  }
+  @media screen and (max-width: 750px) {
+    width: 19%;
+  }
+  @media screen and (max-width: 650px) {
+    width: 23%;
   }
 }
 
@@ -492,8 +540,25 @@
       z-index: 2;
     }
     &:last-child {
-      width: 4rem;
-      // overflow: hidden;
+      width: 4.1rem;
+      @media screen and (max-width: 1000px) {
+        width: 4.3rem;
+      }
+      @media screen and (max-width: 800px) {
+        width: 4.4rem;
+      }
+      @media screen and (max-width: 725px) {
+        width: 4.5rem;
+      }
+      @media screen and (max-width: 650px) {
+        width: 4.6rem;
+      }
+      @media screen and (max-width: 650px) {
+        width: 4.7rem;
+      }
+      @media screen and (max-width: 570px) {
+        width: 4.8rem;
+      }
     }
     &:last-child::before {
       content: none;
@@ -507,7 +572,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .moment-products {
     min-height: auto;
     margin: auto;
