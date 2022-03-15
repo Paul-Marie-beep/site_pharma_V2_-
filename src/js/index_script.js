@@ -84,13 +84,13 @@ setInterval(() => {
 
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
-  imgDiv.innerHTML = `<img src=Images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
+  imgDiv.innerHTML = `<img src=src/images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
 }
 setTimeout("DelayloadingImages1()", 3000);
 
 function DelayloadingImages2() {
   const imgDiv = document.querySelector(".slide--3");
-  imgDiv.innerHTML = `<img src=Images/parlement_2.jpg class="carrousel-image" alt="Parlement de Bretagne" />`;
+  imgDiv.innerHTML = `<img src=src/images/parlement_2.jpg class="carrousel-image" alt="Parlement de Bretagne" />`;
 }
 setTimeout("DelayloadingImages2()", 6000);
 
