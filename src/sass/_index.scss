@@ -485,6 +485,7 @@
   &__arrow {
     height: 2.5rem;
     width: min-content;
+    max-width: 3rem;
     cursor: pointer;
     &--left {
       transform: rotateY(180deg);
@@ -492,19 +493,19 @@
     }
   }
   @media screen and (max-width: 1200px) {
-    width: 13%;
+    min-width: 14%;
   }
   @media screen and (max-width: 1000px) {
-    width: 15%;
+    min-width: 16%;
   }
   @media screen and (max-width: 850px) {
-    width: 17%;
+    min-width: 18%;
   }
   @media screen and (max-width: 750px) {
-    width: 19%;
+    min-width: 20%;
   }
   @media screen and (max-width: 650px) {
-    width: 23%;
+    min-width: 25%;
   }
 }
 

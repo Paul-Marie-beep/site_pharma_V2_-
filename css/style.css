@@ -884,6 +884,7 @@ footer {
 .arrows__arrow {
   height: 2.5rem;
   width: min-content;
+  max-width: 3rem;
   cursor: pointer;
 }
 .arrows__arrow--left {
@@ -892,27 +893,27 @@ footer {
 }
 @media screen and (max-width: 1200px) {
   .arrows {
-    width: 13%;
+    min-width: 14%;
   }
 }
 @media screen and (max-width: 1000px) {
   .arrows {
-    width: 15%;
+    min-width: 16%;
   }
 }
 @media screen and (max-width: 850px) {
   .arrows {
-    width: 17%;
+    min-width: 18%;
   }
 }
 @media screen and (max-width: 750px) {
   .arrows {
-    width: 19%;
+    min-width: 20%;
   }
 }
 @media screen and (max-width: 650px) {
   .arrows {
-    width: 23%;
+    min-width: 25%;
   }
 }
 
