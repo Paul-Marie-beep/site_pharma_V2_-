@@ -33,8 +33,7 @@ const obsCallback = function (entries) {
 
 const obsOptions = {
   root: null,
-  threshold: 0.22,
-  rootMargin: `-${navHeight + 3}px`,
+  threshold: 0.23,
 };
 
 const navObserver = new IntersectionObserver(obsCallback, obsOptions);

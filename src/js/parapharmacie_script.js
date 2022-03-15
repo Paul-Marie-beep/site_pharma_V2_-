@@ -16,7 +16,7 @@ const obsCallback = function (entries) {
 
 const obsOptionsPara = {
   root: null,
-  threshold: 0.48,
+  threshold: 0.8,
   rootMargin: `-${navHeight + 3}px`,
 };
 
