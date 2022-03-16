@@ -173,7 +173,13 @@ const notIfMobile = function () {
   prodImgTargets.forEach(addLazyClass);
 };
 
-notIfMobile();
+categories.classList.add("section-hidden");
+products.classList.add("section-hidden");
+contact.classList.add("section-hidden");
+prodImgTargets.shift();
+prodImgTargets.forEach(addLazyClass);
+
+// notIfMobile();
 
 categoriesObserver.observe(categories);
 productsObserver.observe(products);
