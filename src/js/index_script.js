@@ -153,6 +153,8 @@ const addLazyClass = function (image) {
   image.classList.add("icone-lazy");
 };
 
+prodImgTargets.shift();
+
 const notIfMobile = function () {
   // On ne le fait pas sur tel
   if (
@@ -173,13 +175,12 @@ const notIfMobile = function () {
   prodImgTargets.forEach(addLazyClass);
 };
 
-categories.classList.add("section-hidden");
-products.classList.add("section-hidden");
-contact.classList.add("section-hidden");
-prodImgTargets.shift();
-prodImgTargets.forEach(addLazyClass);
+// categories.classList.add("section-hidden");
+// products.classList.add("section-hidden");
+// contact.classList.add("section-hidden ");
+// prodImgTargets.forEach(addLazyClass);
 
-// notIfMobile();
+notIfMobile();
 
 categoriesObserver.observe(categories);
 productsObserver.observe(products);
