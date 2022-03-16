@@ -283,6 +283,10 @@
   .horiz h3 {
     font-size: 1.5em;
   }
+
+  .cat-section-title {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -308,7 +312,7 @@
   }
 
   .item {
-    width: 80%;
+    width: 70%;
     height: 50vh;
     margin-top: 2rem;
   }
@@ -358,6 +362,9 @@
   &__container {
     height: 80vh;
     background: url("../src/images/ext_pharma.jpeg") repeat fixed;
+    @media screen and (max-width: 600px) {
+      height: 50vh;
+    }
   }
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
@@ -613,16 +620,15 @@
     margin-top: 2rem;
   }
 
-  .rpm-header {
-    width: 85%;
-    margin-top: 2rem;
+  .product-grey-addition {
+    color: #888;
   }
 
-  .rpm-text {
-    width: 80%;
-    font-size: 1rem;
-    margin-bottom: 3.5rem;
+  .testimonial__text {
+    width: 70%;
     color: #666;
+    margin: auto;
+    text-align: center;
   }
 }
 

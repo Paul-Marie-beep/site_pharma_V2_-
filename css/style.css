@@ -65,11 +65,11 @@ li {
 
 @media screen and (max-width: 650px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 .hidden {
@@ -667,6 +667,10 @@ footer {
   .horiz h3 {
     font-size: 1.5em;
   }
+
+  .cat-section-title {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (max-width: 860px) {
   .categories {
@@ -691,7 +695,7 @@ footer {
   }
 
   .item {
-    width: 80%;
+    width: 70%;
     height: 50vh;
     margin-top: 2rem;
   }
@@ -741,6 +745,11 @@ footer {
 .sticky-pic__container {
   height: 80vh;
   background: url("../src/images/ext_pharma.jpeg") repeat fixed;
+}
+@media screen and (max-width: 600px) {
+  .sticky-pic__container {
+    height: 50vh;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
@@ -1039,16 +1048,15 @@ footer {
     margin-top: 2rem;
   }
 
-  .rpm-header {
-    width: 85%;
-    margin-top: 2rem;
+  .product-grey-addition {
+    color: #888;
   }
 
-  .rpm-text {
-    width: 80%;
-    font-size: 1rem;
-    margin-bottom: 3.5rem;
+  .testimonial__text {
+    width: 70%;
     color: #666;
+    margin: auto;
+    text-align: center;
   }
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Contact */
