@@ -747,8 +747,8 @@ footer {
   background: url("../src/images/ext_pharma.jpeg") repeat fixed;
 }
 @media screen and (max-width: 600px) {
-  .sticky-pic__container {
-    height: 50vh;
+  .sticky-pic {
+    display: none;
   }
 }
 

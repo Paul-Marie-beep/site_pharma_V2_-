@@ -362,9 +362,9 @@
   &__container {
     height: 80vh;
     background: url("../src/images/ext_pharma.jpeg") repeat fixed;
-    @media screen and (max-width: 600px) {
-      height: 50vh;
-    }
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Produits du moment */
