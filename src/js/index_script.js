@@ -153,7 +153,10 @@ const addLazyClass = function (image) {
   image.classList.add("icone-lazy");
 };
 
-prodImgTargets.shift();
+// On charge la première image des produits au chargement de la page pour laisser aux autres le temps de se charger quand l'observer intersect. En conséquence, on enlève la première image du tableau où on a rassemblé les trois autres et qui nous servira à gérer les lazy pictures.
+const letFirstProductImageAppart = function () {
+  prodImgTargets.shift();
+};
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
@@ -175,11 +178,7 @@ const notIfMobile = function () {
   prodImgTargets.forEach(addLazyClass);
 };
 
-// categories.classList.add("section-hidden");
-// products.classList.add("section-hidden");
-// contact.classList.add("section-hidden ");
-// prodImgTargets.forEach(addLazyClass);
-
+letFirstProductImageAppart();
 notIfMobile();
 
 categoriesObserver.observe(categories);
