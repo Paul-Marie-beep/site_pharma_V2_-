@@ -1078,22 +1078,19 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  border: 1px solid blue;
+  height: 25rem;
 }
 .right-bloc__contact {
   width: 100%;
-  margin-top: 3%;
-  overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 50%;
-  border: 1px solid red;
+  max-height: 50%;
 }
 .right-bloc__contact--find-us {
   font-size: 1.5rem;
+  margin-top: 0px;
 }
 
 .metro,
@@ -1102,6 +1099,7 @@ footer {
 .tel {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .metro__logo,
 .adress__logo,
@@ -1115,6 +1113,24 @@ footer {
 .mail__text,
 .tel__text {
   margin-left: 1rem;
+}
+
+.after::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 75%;
+  width: 100%;
+  background: linear-gradient(to top left, #35af81, #a1e665);
+  transform: scale(1.07, 1) skewX(-10deg);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+}
+
+.erase-after::after {
+  transform: scale(0, 1);
 }
 
 .plus-span {
@@ -1137,6 +1153,25 @@ footer {
 
   .google-map {
     width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .right-bloc {
+    height: auto;
+  }
+  .right-bloc__contact--find-us {
+    margin: auto;
+  }
+
+  .metro,
+.adress,
+.mail,
+.tel {
+    margin: auto;
+  }
+
+  .mobile-margin {
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 835px) {
@@ -1147,6 +1182,13 @@ footer {
 @media screen and (max-width: 660px) {
   .google-map {
     width: 85%;
+  }
+
+  .right-bloc {
+    margin-top: 2rem;
+  }
+  .right-bloc__contact--find-us {
+    font-size: 1.25rem;
   }
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */

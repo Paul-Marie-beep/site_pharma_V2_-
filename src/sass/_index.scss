@@ -652,20 +652,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  border: 1px solid blue;
+  height: 25rem;
+
   &__contact {
     width: 100%;
-    margin-top: 3%;
-    overflow-wrap: break-word;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 50%;
-    border: 1px solid red;
+    max-height: 50%;
     &--find-us {
       font-size: 1.5rem;
+      margin-top: 0px;
     }
   }
 }
@@ -675,6 +673,24 @@
 .mail,
 .tel {
   @include find-us;
+}
+
+.after::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 75%;
+  width: 100%;
+  background: $gradient-primary;
+  transform: scale(1.07, 1) skewX(-10deg);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+}
+
+.erase-after::after {
+  transform: scale(0, 1);
 }
 
 .plus-span {
@@ -697,6 +713,26 @@
   }
   .google-map {
     width: 60%;
+    margin-bottom: 2rem;
+  }
+  .right-bloc {
+    height: auto;
+    &__contact {
+      &--find-us {
+        margin: auto;
+      }
+    }
+  }
+
+  .metro,
+  .adress,
+  .mail,
+  .tel {
+    margin: auto;
+  }
+
+  .mobile-margin {
+    margin-top: 2rem;
   }
 }
 
@@ -709,6 +745,14 @@
 @media screen and (max-width: 660px) {
   .google-map {
     width: 85%;
+  }
+  .right-bloc {
+    margin-top: 2rem;
+    &__contact {
+      &--find-us {
+        font-size: 1.25rem;
+      }
+    }
   }
 }
 
