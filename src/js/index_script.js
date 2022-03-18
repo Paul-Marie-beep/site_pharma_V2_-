@@ -16,6 +16,9 @@ const contact = document.getElementById("contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
 const scrollToProduct = document.querySelector(".scroll-to-products");
 
+const rightBlock = document.querySelector(".right-bloc");
+const allAfter = document.querySelectorAll(".mark");
+
 const allHorairesBtn = document.querySelectorAll(".horaires-btn");
 const btnContainer = document.querySelector(".horaires-btn-container");
 const horairesContent = document.querySelectorAll(".horaires-content");
@@ -130,6 +133,13 @@ const revealProducts = function (entries, observer) {
   // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le slider pour ne pas qu'on la voit en train de se charger quand l'observer se lance.
 };
 
+const revealAdress = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  allAfter.forEach((div) => div.classList.add("erase-after"));
+  observer.unobserve(entry.target);
+};
+
 const categoriesOptions = {
   root: null,
   threshold: 0.07,
@@ -145,9 +155,15 @@ const contactOptions = {
   threshold: 0.01,
 };
 
+const adressOptions = {
+  root: null,
+  threshold: 0.65,
+};
+
 const categoriesObserver = new IntersectionObserver(revealCategories, categoriesOptions);
 const productsObserver = new IntersectionObserver(revealProducts, productsOptions);
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
+const adressObserver = new IntersectionObserver(revealAdress, adressOptions);
 
 const addLazyClass = function (image) {
   image.classList.add("icone-lazy");
@@ -176,6 +192,7 @@ const notIfMobile = function () {
   contact.classList.add("section-hidden");
   prodImgTargets.shift();
   prodImgTargets.forEach(addLazyClass);
+  allAfter.forEach((div) => div.classList.add("after"));
 };
 
 letFirstProductImageAppart();
@@ -184,6 +201,7 @@ notIfMobile();
 categoriesObserver.observe(categories);
 productsObserver.observe(products);
 contactObserver.observe(contact);
+adressObserver.observe(rightBlock);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Scroller vers contact

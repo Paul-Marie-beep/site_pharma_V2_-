@@ -37,6 +37,23 @@ $stepper-grey: rgb(204, 201, 201);
   height: 1.5rem;
 }
 
+@mixin logo {
+  &__logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@mixin find-us {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include logo;
+  &__text {
+    margin-left: 1rem;
+  }
+}
+
 .unscale::after {
   opacity: 0;
   transform: scaleX(0);
