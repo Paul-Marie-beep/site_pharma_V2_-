@@ -1074,61 +1074,52 @@ footer {
   margin: auto;
 }
 
-.contact-text {
-  width: 40%;
+.right-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid blue;
+}
+.right-bloc__contact {
+  width: 100%;
   margin-top: 3%;
   overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 50%;
+  border: 1px solid red;
 }
-
-.contact-bloc {
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-.find-us {
-  color: white;
-  transform: translateX(-8%);
-  transform: translateY(15%);
-  background-image: linear-gradient(to top left, #35af81, #a1e665);
-  position: relative;
-  z-index: 2;
-}
-
-.find-us h3 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 1%;
-}
-
-.contact-text p {
-  font-size: 1.3rem;
-  font-weight: lighter;
-}
-
-.address {
+.right-bloc__contact--find-us {
   font-size: 1.5rem;
-  font-weight: lighter;
 }
 
-.contact-text li {
-  font-size: 1.5rem;
-  font-weight: lighter;
-}
-
-.contact-bullets {
-  font-size: 1.3rem;
-  font-weight: lighter;
-}
-
-.contact-us {
-  transform: translateX(8%);
-  border: 2px solid #14a314;
-  position: relative;
-  z-index: 1;
-}
-
+.metro,
+.adress,
+.mail,
 .tel {
-  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.metro__logo,
+.adress__logo,
+.mail__logo,
+.tel__logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.metro__text,
+.adress__text,
+.mail__text,
+.tel__text {
+  margin-left: 1rem;
+}
+
+.plus-span {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1147,93 +1138,15 @@ footer {
   .google-map {
     width: 60%;
   }
-
-  .contact-text {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-height: 15%;
-  }
-
-  .contact-bloc {
-    min-height: 100%;
-    width: 40%;
-  }
-
-  .contact-bloc h3 {
-    margin-top: 1%;
-  }
-
-  .find-us {
-    transform: translateX(0%);
-  }
-
-  .contact-us {
-    transform: translateX(0%);
-  }
-
-  .contact-bullets {
-    transform: translateX(-2%);
-  }
 }
 @media screen and (max-width: 835px) {
-  .contact-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2rem;
-  }
-
-  .contact-us {
-    margin-top: 1rem;
-  }
-
-  .contact-bloc {
-    min-width: 60%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .contact-bloc li {
-    list-style: none;
-  }
-
-  .contact-bullets {
-    transform: translateX(-10%);
-  }
-
   .google-map {
     height: 20rem;
   }
 }
 @media screen and (max-width: 660px) {
-  .contact-bloc h3 {
-    font-size: 1.2rem;
-  }
-
-  .contact-bloc {
-    min-width: 85%;
-  }
-
   .google-map {
     width: 85%;
-  }
-
-  .contact-text li {
-    font-size: 0.8rem;
-    font-weight: lighter;
-    width: 120%;
-    transform: translateX(0%);
-  }
-
-  .contact-text p {
-    font-size: 1rem;
-  }
-
-  .address {
-    font-size: 1.2rem;
-    font-weight: bolder;
   }
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Horaires */
