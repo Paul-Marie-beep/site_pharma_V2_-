@@ -173,6 +173,7 @@ const addLazyClass = function (image) {
 const letFirstProductImageAppart = function () {
   prodImgTargets.shift();
 };
+console.log(prodImgTargets);
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
@@ -190,7 +191,6 @@ const notIfMobile = function () {
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
-  prodImgTargets.shift();
   prodImgTargets.forEach(addLazyClass);
   allAfter.forEach((div) => div.classList.add("after"));
 };
