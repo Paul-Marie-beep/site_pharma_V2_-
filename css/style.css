@@ -756,7 +756,6 @@ footer {
 .moment-products {
   padding-top: 4rem;
   transition: 1s;
-  border: 1px solid lime;
 }
 .moment-products__container {
   width: 70%;
