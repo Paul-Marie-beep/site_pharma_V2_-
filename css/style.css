@@ -758,6 +758,11 @@ footer {
   transition: 1s;
   height: 85vh;
 }
+@media screen and (max-height: 700px) {
+  .moment-products {
+    height: 70vh;
+  }
+}
 .moment-products__container {
   width: 70%;
   margin: auto;
