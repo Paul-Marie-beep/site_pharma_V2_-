@@ -173,7 +173,6 @@ const addLazyClass = function (image) {
 const letFirstProductImageAppart = function () {
   prodImgTargets.shift();
 };
-console.log(prodImgTargets);
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel

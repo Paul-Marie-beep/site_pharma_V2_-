@@ -886,7 +886,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5rem;
+  margin-top: 7rem;
   overflow: hidden;
 }
 
@@ -1063,16 +1063,61 @@ footer {
 #contact {
   margin-bottom: 5rem;
   transition: 1s;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
+@media screen and (max-height: 700px) {
+  #contact {
+    margin-top: 12rem;
+  }
+}
+@media screen and (max-height: 650px) {
+  #contact {
+    margin-top: 15rem;
+  }
+}
+@media screen and (max-height: 550px) {
+  #contact {
+    margin-top: 18rem;
+  }
+}
+@media screen and (max-height: 500px) {
+  #contact {
+    margin-top: 20rem;
+  }
+}
+@media screen and (max-height: 450px) {
+  #contact {
+    margin-top: 23rem;
+  }
+}
+@media screen and (max-height: 400px) {
+  #contact {
+    margin-top: 26rem;
+  }
+}
+@media screen and (max-height: 350px) {
+  #contact {
+    margin-top: 28rem;
+  }
+}
+@media screen and (max-height: 300px) {
+  #contact {
+    margin-top: 35rem;
+  }
+}
+@media screen and (max-height: 250px) {
+  #contact {
+    margin-top: 39rem;
+  }
+}
 .contact-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 90%;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .right-bloc {
@@ -1165,9 +1210,9 @@ footer {
   }
 
   .metro,
-  .adress,
-  .mail,
-  .tel {
+.adress,
+.mail,
+.tel {
     margin: auto;
   }
 
