@@ -373,13 +373,10 @@
   padding-top: 4rem;
   transition: 1s;
   border: 1px solid lime;
-  // @media screen and (max-height: 700px) {
-  //   height: 80vh;
-  // }
   &__container {
     width: 70%;
     margin: auto;
-    margin-top: 8rem;
+    margin-top: 5rem;
     position: relative;
   }
 }
@@ -489,7 +486,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 7rem;
+  margin-top: 5rem;
   overflow: hidden;
 }
 
@@ -642,57 +639,6 @@
   transition: 1s;
   margin-top: 8rem;
 }
-
-// @media screen and (max-height: 700px) {
-//   #contact {
-//     margin-top: 12rem;
-//   }
-// }
-// @media screen and (max-height: 650px) {
-//   #contact {
-//     margin-top: 15rem;
-//   }
-// }
-// @media screen and (max-height: 600px) {
-//   #contact {
-//     margin-top: 17rem;
-//   }
-// }
-// @media screen and (max-height: 550px) {
-//   #contact {
-//     margin-top: 20rem;
-//   }
-// }
-// @media screen and (max-height: 500px) {
-//   #contact {
-//     margin-top: 22rem;
-//   }
-// }
-// @media screen and (max-height: 450px) {
-//   #contact {
-//     margin-top: 23rem;
-//   }
-// }
-// @media screen and (max-height: 400px) {
-//   #contact {
-//     margin-top: 26rem;
-//   }
-// }
-// @media screen and (max-height: 350px) {
-//   #contact {
-//     margin-top: 28rem;
-//   }
-// }
-// @media screen and (max-height: 300px) {
-//   #contact {
-//     margin-top: 35rem;
-//   }
-// }
-// @media screen and (max-height: 250px) {
-//   #contact {
-//     margin-top: 39rem;
-//   }
-// }
 
 .contact-info {
   display: flex;
