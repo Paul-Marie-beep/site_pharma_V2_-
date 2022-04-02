@@ -1063,7 +1063,7 @@ footer {
 #contact {
   margin-bottom: 5rem;
   transition: 1s;
-  padding-top: 4rem;
+  margin-top: 9rem;
 }
 
 .contact-info {
@@ -1072,6 +1072,7 @@ footer {
   align-items: center;
   width: 90%;
   margin: auto;
+  margin-top: 5rem;
 }
 
 .right-bloc {
@@ -1164,9 +1165,9 @@ footer {
   }
 
   .metro,
-.adress,
-.mail,
-.tel {
+  .adress,
+  .mail,
+  .tel {
     margin: auto;
   }
 
