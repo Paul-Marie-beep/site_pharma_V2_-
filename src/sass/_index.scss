@@ -373,9 +373,9 @@
   padding-top: 4rem;
   transition: 1s;
   border: 1px solid lime;
-  @media screen and (max-height: 700px) {
-    height: 80vh;
-  }
+  // @media screen and (max-height: 700px) {
+  //   height: 80vh;
+  // }
   &__container {
     width: 70%;
     margin: auto;
