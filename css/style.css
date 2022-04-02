@@ -610,6 +610,7 @@ footer {
 .item {
   background-size: auto 100%;
   background-position: center;
+  background-size: cover;
   width: 33%;
   transition: width 700ms ease;
   border-radius: 5px;
@@ -721,17 +722,19 @@ footer {
     width: 80%;
   }
 }
-@media screen and (max-width: 500px) {
-  .cat-section-title {
-    text-align: center;
-  }
-
+@media screen and (max-width: 750px) {
   .item {
-    width: 90%;
+    width: 80%;
+    height: 20rem;
   }
 
   .item:hover {
-    width: 90%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cat-section-title {
+    text-align: center;
   }
 
   .horiz h3 {
@@ -1062,7 +1065,7 @@ footer {
 #contact {
   margin-bottom: 5rem;
   transition: 1s;
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 .contact-info {
