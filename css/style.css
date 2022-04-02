@@ -737,6 +737,10 @@ footer {
     text-align: center;
   }
 
+  .item {
+    height: 17rem;
+  }
+
   .horiz h3 {
     font-size: 2rem;
   }
