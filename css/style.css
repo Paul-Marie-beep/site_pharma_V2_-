@@ -756,7 +756,7 @@ footer {
 .moment-products {
   padding-top: 4rem;
   transition: 1s;
-  height: 85vh;
+  border: 1px solid lime;
 }
 @media screen and (max-height: 700px) {
   .moment-products {
@@ -1071,51 +1071,6 @@ footer {
   margin-top: 8rem;
 }
 
-@media screen and (max-height: 700px) {
-  #contact {
-    margin-top: 12rem;
-  }
-}
-@media screen and (max-height: 650px) {
-  #contact {
-    margin-top: 15rem;
-  }
-}
-@media screen and (max-height: 550px) {
-  #contact {
-    margin-top: 18rem;
-  }
-}
-@media screen and (max-height: 500px) {
-  #contact {
-    margin-top: 20rem;
-  }
-}
-@media screen and (max-height: 450px) {
-  #contact {
-    margin-top: 23rem;
-  }
-}
-@media screen and (max-height: 400px) {
-  #contact {
-    margin-top: 26rem;
-  }
-}
-@media screen and (max-height: 350px) {
-  #contact {
-    margin-top: 28rem;
-  }
-}
-@media screen and (max-height: 300px) {
-  #contact {
-    margin-top: 35rem;
-  }
-}
-@media screen and (max-height: 250px) {
-  #contact {
-    margin-top: 39rem;
-  }
-}
 .contact-info {
   display: flex;
   justify-content: space-around;
