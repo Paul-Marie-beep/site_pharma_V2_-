@@ -193,7 +193,14 @@
 @media screen and (max-height: 600px) {
   .title-space {
     position: absolute;
-    top: 50vh;
+    top: 40vh;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .title-space {
+    position: absolute;
+    top: 30vh;
   }
 }
 
