@@ -1,14 +1,17 @@
 {
   "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.49.9"
   },
   "name": "site-pharma-v2",
   "description": "Website for a chemist.",
   "version": "1.0.0",
   "main": "index_script.js",
-  "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch ./src/sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./src/sass/main.scss:./css/style.css -w --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/Paul-Marie-beep/site_pharma_V2_-/issues"
   },
-  "homepage": "https://github.com/Paul-Marie-beep/site_pharma_V2_-#readme"
+  "homepage": "https://github.com/Paul-Marie-beep/site_pharma_V2_-#readme",
+  "browserslist": "last 4 versions"
 }
