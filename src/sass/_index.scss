@@ -376,7 +376,9 @@
   margin-top: 2.5rem;
   &__container {
     height: 80vh;
-    background: url("../src/images/ext_pharma.jpeg") repeat fixed;
+    width: 100%;
+    background: url("../src/images/ext_pharma.jpeg") no-repeat fixed;
+    background-size: cover;
   }
   @media screen and (max-width: 600px) {
     display: none;
