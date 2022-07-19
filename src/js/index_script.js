@@ -116,6 +116,15 @@ const loadImage = function (img) {
 
 const changeBackground = function (item) {
   item.style = item.dataset.style;
+  item.classList.remove("icone-lazy");
+};
+
+// On fait une fonction pour charger les images avec un autre observer qui se déclenche avant l'observer de reveal
+const loadCategoriesImages = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  catImgTargets.forEach(changeBackground);
+  observer.unobserve(entry.target);
 };
 
 const revealCategories = function (entries, observer) {
@@ -140,9 +149,14 @@ const revealAdress = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
+const categoriesImagesOptions = {
+  root: null,
+  threshold: 0.05,
+};
+
 const categoriesOptions = {
   root: null,
-  threshold: 0.07,
+  threshold: 0.9,
 };
 
 const productsOptions = {
@@ -160,6 +174,7 @@ const adressOptions = {
   threshold: 0.65,
 };
 
+const categoriesImagesObserver = new IntersectionObserver(loadCategoriesImages, categoriesImagesOptions);
 const categoriesObserver = new IntersectionObserver(revealCategories, categoriesOptions);
 const productsObserver = new IntersectionObserver(revealProducts, productsOptions);
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
@@ -190,6 +205,7 @@ const notIfMobile = function () {
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
+  catImgTargets.forEach(addLazyClass);
   prodImgTargets.forEach(addLazyClass);
   allAfter.forEach((div) => div.classList.add("after"));
 };
@@ -197,6 +213,7 @@ const notIfMobile = function () {
 letFirstProductImageAppart();
 notIfMobile();
 
+categoriesImagesObserver.observe(categories);
 categoriesObserver.observe(categories);
 productsObserver.observe(products);
 contactObserver.observe(contact);
