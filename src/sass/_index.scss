@@ -249,10 +249,10 @@
   left: -6rem;
   bottom: 9rem;
   transition: opacity 200ms ease;
+  white-space: nowrap;
 }
 
 .cat-titre-huiles {
-  white-space: nowrap;
   left: -8.5rem;
   bottom: 11.3rem;
 }
@@ -369,6 +369,46 @@
 
   .horiz h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .vert {
+    font-size: 2rem;
+    left: -4.5rem;
+  }
+
+  .cat-titre-huiles {
+    left: -6.5rem;
+    bottom: 11rem;
+  }
+
+  .cat-titre-homeo {
+    bottom: 8.6rem;
+  }
+}
+
+@media screen and (max-height: 525px) {
+  .vert {
+    font-size: 1.5rem;
+    left: -2.5rem;
+  }
+
+  .cat-titre-huiles {
+    left: -4rem;
+    bottom: 10.5rem;
+  }
+}
+
+@media screen and (max-height: 460px) {
+  .vert {
+    font-size: 1.3rem;
+    left: -2.5rem;
+  }
+
+  .cat-titre-huiles {
+    left: -3.6rem;
+    bottom: 10.15rem;
   }
 }
 /* Sticky Pic//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ///////////////////////////////////////////*/
@@ -639,6 +679,12 @@
     margin-top: 2rem;
   }
 
+  .testimonial_header-rpm {
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
   .product-grey-addition {
     color: #888;
   }
@@ -648,6 +694,7 @@
     color: #666;
     margin: auto;
     text-align: center;
+    margin-top: 1rem;
   }
 }
 
