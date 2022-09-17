@@ -11,7 +11,7 @@
   "main": "index_script.js",
   "scripts": {
     "sass": "sass --watch ./src/sass/main.scss:./src/css/style.css -w --style compressed",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d .src/css/prefixed/"
+    "prefix": "postcss ./src/css/style.css --use autoprefixer -d ./src/css/prefixed/"
   },
   "repository": {
     "type": "git",
