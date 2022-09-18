@@ -12,6 +12,7 @@ const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
 const [...prodImgTargets] = document.querySelectorAll(".product__pic");
+let allowKey;
 const contact = document.getElementById("contact");
 const scrollToContact = document.querySelectorAll(".scroll-to-contact");
 const scrollToProduct = document.querySelector(".scroll-to-products");
@@ -106,7 +107,6 @@ const revealSection = function (entries, observer) {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove("section-hidden");
-  observer.unobserve(entry.target);
 };
 
 const loadImage = function (img) {
@@ -132,14 +132,20 @@ const revealCategories = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   catImgTargets.forEach(changeBackground);
+  observer.unobserve(entry.target);
 };
 
+// On utilise l'observer pour autoriser ou non via la variable allowKey la possibilité d'utiliser le clavier pour faire
+// défiler le stepper. C'est pour ça que l'on arrête pas l'observer une fois qu'il a permis de révéler la section: on en a encore besoin.
 const revealProducts = function (entries, observer) {
   revealSection(entries, observer);
   const [entry] = entries;
-  if (!entry.isIntersecting) return;
+  if (!entry.isIntersecting) {
+    allowKey = false;
+    return;
+  }
   prodImgTargets.forEach(loadImage);
-  stepper();
+  allowKey = true;
   // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le slider pour ne pas qu'on la voit en train de se charger quand l'observer se lance.
 };
 
@@ -388,22 +394,19 @@ const rightAction = function () {
 // function to handle the user's order via the keyboard
 const stepperKey = function () {
   document.addEventListener("keydown", function (event) {
-    if (event.key === "ArrowLeft") {
+    if (event.key === "ArrowLeft" && allowKey) {
       leftAction();
     }
-    if (event.key === "ArrowRight") {
+    if (event.key === "ArrowRight" && allowKey) {
       rightAction();
     }
   });
 };
+stepperKey();
 
 // function to handle the user's order via the mouse
 const stepperClick = function () {
   arrowRight.addEventListener("click", rightAction);
   arrowLeft.addEventListener("click", leftAction);
 };
-
-const stepper = function () {
-  stepperClick();
-  stepperKey();
-};
+stepperClick();
