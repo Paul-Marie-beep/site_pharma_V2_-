@@ -10,6 +10,7 @@ let index = 2;
 
 const categories = document.querySelector(".categories");
 const catImgTargets = document.querySelectorAll(".item");
+const stickyPic = document.querySelector(".sticky-pic__container");
 const products = document.querySelector(".moment-products");
 const productsTitle = document.querySelector(".product-title");
 const allProducts = document.querySelectorAll(".product");
@@ -29,12 +30,7 @@ const horairesContent = document.querySelectorAll(".horaires-content");
 const loading = document.querySelector(".loading");
 const loadingGif = document.querySelector(".loading__gif");
 
-///////////////////////////////////////////////////////////////////////////////////////////////
-// Generic functions
 
-const addLazyClass = function (image) {
-  image.classList.add("icone-lazy");
-};
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Loader
@@ -75,12 +71,13 @@ const loadCategoriesImages = function () {
   });
 };
 
-// We wait until the loading of the loading wheel to authorize the loading of the images
-loadingGif.addEventListener("load", () => {
-  console.log("loader loaded");
+const LoadFirstSlideAndCatImages = function () {
   loadFirstSlideImage();
   loadCategoriesImages();
-});
+};
+
+// We wait until the loading of the loading wheel to authorize the loading of the images
+setTimeout(LoadFirstSlideAndCatImages, 400);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -147,6 +144,7 @@ setInterval(() => {
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
   imgDiv.innerHTML = `<img src=src/images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
+  stickyPic.style.background = 'background: url("../../src/images/ext_pharma.jpeg") no-repeat fixed';
 }
 setTimeout("DelayloadingImages1()", 3000);
 

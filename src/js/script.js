@@ -8,6 +8,13 @@ const header = document.querySelector("header");
 const main = document.querySelector("main");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
+// Generic functions
+
+const addLazyClass = function (image) {
+  image.classList.add("icone-lazy");
+};
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 // Mute link when hover another link
 navBar.addEventListener("mouseover", function (e) {
@@ -73,9 +80,7 @@ const navSlide = () => {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navLinkFade 0.3s ease forwards ${
-          index / 7 + 1
-        }s`;
+        link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 + 1}s`;
       }
     });
     // Burger animation
