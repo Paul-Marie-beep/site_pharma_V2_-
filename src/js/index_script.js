@@ -80,6 +80,7 @@ const noLoadingAnimationIfMobile = function () {
     setTimeout(LoadFirstSlideAndCatImages, 700);
   } else {
     slide1.firstElementChild.src = "src/images/inside_pharma.jpg";
+    slide1.firstElementChild.classList.remove("icone-lazy");
   }
 };
 
