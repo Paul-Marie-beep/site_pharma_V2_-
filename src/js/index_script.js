@@ -75,7 +75,7 @@ const LoadFirstSlideAndCatImages = function () {
 };
 
 // We wait until the loading of the loading wheel to authorize the loading of the images
-setTimeout(LoadFirstSlideAndCatImages, 1000);
+setTimeout(LoadFirstSlideAndCatImages, 700);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
