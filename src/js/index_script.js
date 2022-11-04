@@ -27,23 +27,62 @@ const btnContainer = document.querySelector(".horaires-btn-container");
 const horairesContent = document.querySelectorAll(".horaires-content");
 
 const loading = document.querySelector(".loading");
+const loadingGif = document.querySelector(".loading__gif");
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Generic functions to load images
+
+const loadImage = function (img) {
+  img.src = img.dataset.src;
+  img.classList.remove("icone-lazy");
+};
+const addLazyClass = function (image) {
+  image.classList.add("icone-lazy");
+};
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Loader
 
 // We display a loading wheel so that we have time to load the categories images
 
-loading.classList.remove("no-display");
-main.classList.add("no-display");
-carrousel.classList.add("no-display");
-titleSpace.classList.add("no-display");
+const dontDisplayBodyAndBlurImages = function () {
+  loading.classList.remove("no-display");
+  main.classList.add("no-display");
+  carrousel.classList.add("no-display");
+  titleSpace.classList.add("no-display");
+  addLazyClass(slide1.firstElementChild);
+  catImgTargets.forEach((img) => {
+    addLazyClass(img);
+  });
+};
 
-setTimeout(() => {
+const displayBody = function () {
   loading.classList.add("no-display");
   main.classList.remove("no-display");
   carrousel.classList.remove("no-display");
   titleSpace.classList.remove("no-display");
-}, 2000);
+};
+
+// display the loading circle and hide the body for two seconds then do the opposite
+dontDisplayBodyAndBlurImages();
+setTimeout(displayBody, 200);
+
+const loadFirstSlideImage = function () {
+  slide1.firstElementChild.src = "src/images/inside_pharma.jpg";
+  slide1.firstElementChild.classList.remove("icone-lazy");
+};
+
+const loadCategoriesImages = function () {
+  catImgTargets.forEach((img) => {
+    loadImage(img);
+  });
+};
+
+// We wait until the loading of the loading wheel to authorize the loading of the images
+loadingGif.addEventListener("load", () => {
+  loadFirstSlideImage();
+  loadCategoriesImages();
+});
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -130,11 +169,6 @@ const revealSection = function (entries, observer) {
   entry.target.classList.remove("section-hidden");
 };
 
-const loadImage = function (img) {
-  img.src = img.dataset.src;
-  img.classList.remove("icone-lazy");
-};
-
 const changeBackground = function (item) {
   item.style = item.dataset.style;
   item.classList.remove("icone-lazy");
@@ -195,10 +229,6 @@ const categoriesObserver = new IntersectionObserver(revealCategories, categories
 const productsObserver = new IntersectionObserver(revealProducts, productsOptions);
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
 const adressObserver = new IntersectionObserver(revealAdress, adressOptions);
-
-const addLazyClass = function (image) {
-  image.classList.add("icone-lazy");
-};
 
 // On charge la première image des produits au chargement de la page pour laisser aux autres le temps de se charger quand l'observer intersect. En conséquence, on enlève la première image du tableau où on a rassemblé les trois autres et qui nous servira à gérer les lazy pictures.
 const letFirstProductImageAppart = function () {
