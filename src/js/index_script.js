@@ -1,3 +1,5 @@
+const carrousel = document.querySelector(".carrousel");
+const titleSpace = document.querySelector(".title-space");
 const slides = document.querySelectorAll(".carrousel-slide");
 const slide = document.querySelector(".carrousel-slide");
 // Il y a un décalage sur les slides parce que j'ai un peu fait nimp avec les z-index mais ça fontionne bien
@@ -23,6 +25,25 @@ const allAfter = document.querySelectorAll(".mark");
 const allHorairesBtn = document.querySelectorAll(".horaires-btn");
 const btnContainer = document.querySelector(".horaires-btn-container");
 const horairesContent = document.querySelectorAll(".horaires-content");
+
+const loading = document.querySelector(".loading");
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Loader
+
+// We display a loading wheel so that we have time to load the categories images
+
+loading.classList.remove("no-display");
+main.classList.add("no-display");
+carrousel.classList.add("no-display");
+titleSpace.classList.add("no-display");
+
+setTimeout(() => {
+  loading.classList.add("no-display");
+  main.classList.remove("no-display");
+  carrousel.classList.remove("no-display");
+  titleSpace.classList.remove("no-display");
+}, 2000);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 

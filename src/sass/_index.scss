@@ -1,3 +1,35 @@
+// /////////////////////////// /////////////////////////// ///////////////////////// // /////////////////////////// ////////////////////////// /////////////////////////
+// /////////////////////////
+
+// Loader
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__gif {
+    height: 12rem;
+    width: 12rem;
+  }
+  &__text {
+    color: rgb(15, 136, 15);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}
+
+.no-display {
+  display: none;
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Carousel CSS */
 
 .carrousel {
