@@ -180,8 +180,11 @@ const loadImage = function (img) {
 };
 
 const revealCategories = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
   revealSection(entries, observer);
-  // observer.unobserve();
+  observer.unobserve(categories);
 };
 
 // On utilise l'observer pour autoriser ou non via la variable allowKey la possibilité d'utiliser le clavier pour faire
@@ -202,7 +205,7 @@ const revealAdress = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   allAfter.forEach((div) => div.classList.add("erase-after"));
-  observer.unobserve(categories);
+  observer.unobserve(rightBlock);
 };
 
 const categoriesImagesOptions = {
