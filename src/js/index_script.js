@@ -149,14 +149,14 @@ setTimeout("loadStickyPic()", 5000);
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
   imgDiv.innerHTML = `<img src=src/images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
+  imgDiv.innerHTML = `<img src=src/images/parlement_2.jpg class="carrousel-image" alt="Parlement de Bretagne" />`;
 }
-setTimeout("DelayloadingImages1()", 3000);
+setTimeout("DelayloadingImages1()", 6000);
 
 function DelayloadingImages2() {
   const imgDiv = document.querySelector(".slide--3");
-  imgDiv.innerHTML = `<img src=src/images/parlement_2.jpg class="carrousel-image" alt="Parlement de Bretagne" />`;
 }
-setTimeout("DelayloadingImages2()", 6000);
+setTimeout("DelayloadingImages2()", 3000);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Faire apparaître les catégories (avec lazy loading des icones) et les produits
