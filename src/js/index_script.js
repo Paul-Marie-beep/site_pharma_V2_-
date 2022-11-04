@@ -144,10 +144,11 @@ const loadStickyPic = function () {
   stickyPic.classList.add("sticky-pic__background-style");
 };
 
+setTimeout("loadStickyPic()", 5000);
+
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
   imgDiv.innerHTML = `<img src=src/images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
-  loadStickyPic();
 }
 setTimeout("DelayloadingImages1()", 3000);
 
