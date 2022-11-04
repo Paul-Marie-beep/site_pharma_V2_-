@@ -53,10 +53,6 @@ const displayBody = function () {
   titleSpace.classList.remove("no-display");
 };
 
-// display the loading circle and hide the body for two seconds then do the opposite
-dontDisplayBodyAndBlurImages();
-setTimeout(displayBody, 2500);
-
 const loadFirstSlideImage = function () {
   slide1.firstElementChild.src = "src/images/inside_pharma.jpg";
   slide1.firstElementChild.classList.remove("icone-lazy");
@@ -74,8 +70,20 @@ const LoadFirstSlideAndCatImages = function () {
   loadCategoriesImages();
 };
 
-// We wait until the loading of the loading wheel to authorize the loading of the images
-setTimeout(LoadFirstSlideAndCatImages, 700);
+const noLoadingAnimationIfMobile = function () {
+  if (!userIsOnMobile) {
+    // display the loading circle and hide the body for two seconds then do the opposite
+    dontDisplayBodyAndBlurImages();
+    setTimeout(displayBody, 2500);
+
+    // We wait until the loading of the loading wheel to authorize the loading of the images
+    setTimeout(LoadFirstSlideAndCatImages, 700);
+  } else {
+    slide1.firstElementChild.src = "src/images/inside_pharma.jpg";
+  }
+};
+
+noLoadingAnimationIfMobile();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -245,16 +253,7 @@ const letFirstProductImageAppart = function () {
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
-  if (
-    navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPad/i) ||
-    navigator.userAgent.match(/iPod/i) ||
-    navigator.userAgent.match(/BlackBerry/i) ||
-    navigator.userAgent.match(/Windows Phone/i)
-  )
-    return;
+  if (userIsOnMobile) return;
 
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
