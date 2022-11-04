@@ -55,7 +55,7 @@ const displayBody = function () {
 
 // display the loading circle and hide the body for two seconds then do the opposite
 dontDisplayBodyAndBlurImages();
-setTimeout(displayBody, 2000);
+setTimeout(displayBody, 2500);
 
 const loadFirstSlideImage = function () {
   slide1.firstElementChild.src = "src/images/inside_pharma.jpg";
@@ -75,7 +75,7 @@ const LoadFirstSlideAndCatImages = function () {
 };
 
 // We wait until the loading of the loading wheel to authorize the loading of the images
-setTimeout(LoadFirstSlideAndCatImages, 800);
+setTimeout(LoadFirstSlideAndCatImages, 1000);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
