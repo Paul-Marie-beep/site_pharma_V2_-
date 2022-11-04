@@ -30,12 +30,8 @@ const loading = document.querySelector(".loading");
 const loadingGif = document.querySelector(".loading__gif");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-// Generic functions to load images
+// Generic functions
 
-const loadImage = function (img) {
-  img.src = img.dataset.src;
-  img.classList.remove("icone-lazy");
-};
 const addLazyClass = function (image) {
   image.classList.add("icone-lazy");
 };
@@ -74,12 +70,14 @@ const loadFirstSlideImage = function () {
 
 const loadCategoriesImages = function () {
   catImgTargets.forEach((img) => {
-    loadImage(img);
+    img.style = img.dataset.style;
+    img.classList.remove("icone-lazy");
   });
 };
 
 // We wait until the loading of the loading wheel to authorize the loading of the images
 loadingGif.addEventListener("load", () => {
+  console.log("loader loaded");
   loadFirstSlideImage();
   loadCategoriesImages();
 });
@@ -172,6 +170,11 @@ const revealSection = function (entries, observer) {
 const changeBackground = function (item) {
   item.style = item.dataset.style;
   item.classList.remove("icone-lazy");
+};
+
+const loadImage = function (img) {
+  img.src = img.dataset.src;
+  img.classList.remove("icone-lazy");
 };
 
 const revealCategories = function (entries, observer) {
