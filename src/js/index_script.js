@@ -140,20 +140,9 @@ const changeBackground = function (item) {
   item.classList.remove("icone-lazy");
 };
 
-// On fait une fonction pour charger les images avec un autre observer qui se déclenche avant l'observer de reveal
-const loadCategoriesImages = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  catImgTargets.forEach(changeBackground);
-  observer.unobserve(entry.target);
-};
-
 const revealCategories = function (entries, observer) {
   revealSection(entries, observer);
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  catImgTargets.forEach(changeBackground);
-  observer.unobserve(entry.target);
+  // observer.unobserve();
 };
 
 // On utilise l'observer pour autoriser ou non via la variable allowKey la possibilité d'utiliser le clavier pour faire
@@ -174,7 +163,7 @@ const revealAdress = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   allAfter.forEach((div) => div.classList.add("erase-after"));
-  observer.unobserve(entry.target);
+  observer.unobserve(categories);
 };
 
 const categoriesImagesOptions = {
@@ -202,7 +191,6 @@ const adressOptions = {
   threshold: 0.65,
 };
 
-const categoriesImagesObserver = new IntersectionObserver(loadCategoriesImages, categoriesImagesOptions);
 const categoriesObserver = new IntersectionObserver(revealCategories, categoriesOptions);
 const productsObserver = new IntersectionObserver(revealProducts, productsOptions);
 const contactObserver = new IntersectionObserver(revealSection, contactOptions);
@@ -233,7 +221,6 @@ const notIfMobile = function () {
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
   contact.classList.add("section-hidden");
-  catImgTargets.forEach(addLazyClass);
   prodImgTargets.forEach(addLazyClass);
   allAfter.forEach((div) => div.classList.add("after"));
 };
@@ -241,7 +228,6 @@ const notIfMobile = function () {
 letFirstProductImageAppart();
 notIfMobile();
 
-categoriesImagesObserver.observe(categories);
 categoriesObserver.observe(categories);
 productsObserver.observe(products);
 contactObserver.observe(contact);
