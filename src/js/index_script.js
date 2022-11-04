@@ -65,7 +65,7 @@ const displayBody = function () {
 
 // display the loading circle and hide the body for two seconds then do the opposite
 dontDisplayBodyAndBlurImages();
-setTimeout(displayBody, 200);
+setTimeout(displayBody, 2000);
 
 const loadFirstSlideImage = function () {
   slide1.firstElementChild.src = "src/images/inside_pharma.jpg";
