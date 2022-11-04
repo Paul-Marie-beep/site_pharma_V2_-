@@ -30,8 +30,6 @@ const horairesContent = document.querySelectorAll(".horaires-content");
 const loading = document.querySelector(".loading");
 const loadingGif = document.querySelector(".loading__gif");
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Loader
 
@@ -78,6 +76,11 @@ const LoadFirstSlideAndCatImages = function () {
 
 // We wait until the loading of the loading wheel to authorize the loading of the images
 setTimeout(LoadFirstSlideAndCatImages, 400);
+
+// Loading Sticky Pic
+const loadStickyPic = function () {
+  stickyPic.classList.add("sticky-pic__background-style");
+};
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -144,7 +147,7 @@ setInterval(() => {
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
   imgDiv.innerHTML = `<img src=src/images/opera_nuit.jpg class="carrousel-image" alt="Opéra de Rennes" />`;
-  stickyPic.style.background = 'background: url("../../src/images/ext_pharma.jpeg") no-repeat fixed';
+  loadStickyPic();
 }
 setTimeout("DelayloadingImages1()", 3000);
 
