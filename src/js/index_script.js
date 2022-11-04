@@ -75,12 +75,7 @@ const LoadFirstSlideAndCatImages = function () {
 };
 
 // We wait until the loading of the loading wheel to authorize the loading of the images
-setTimeout(LoadFirstSlideAndCatImages, 400);
-
-// Loading Sticky Pic
-const loadStickyPic = function () {
-  stickyPic.classList.add("sticky-pic__background-style");
-};
+setTimeout(LoadFirstSlideAndCatImages, 800);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -142,7 +137,12 @@ setInterval(() => {
 }, 5000);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Lazy loading des images du carrousel
+// Lazy loading des images du carrousel et de la sticky picture
+
+// Loading Sticky Pic
+const loadStickyPic = function () {
+  stickyPic.classList.add("sticky-pic__background-style");
+};
 
 function DelayloadingImages1() {
   const imgDiv = document.querySelector(".slide--4");
