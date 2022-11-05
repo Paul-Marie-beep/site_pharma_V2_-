@@ -71,7 +71,6 @@ const LoadFirstSlideAndCatImages = function () {
 };
 
 const noLoadingAnimationIfMobile = function () {
-  // if (!userIsOnMobile) {
   if (window.screen.width > 550) {
     // display the loading circle and hide the body for two seconds then do the opposite
     dontDisplayBodyAndBlurImages();
@@ -219,7 +218,7 @@ const revealAdress = function (entries, observer) {
 
 const categoriesOptions = {
   root: null,
-  threshold: 0.1,
+  threshold: 0.5,
 };
 
 const productsOptions = {
