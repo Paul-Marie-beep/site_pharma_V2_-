@@ -73,7 +73,6 @@ const LoadFirstSlideAndCatImages = function () {
 
 const noLoadingAnimationIfMobile = function () {
   if (window.innerWidth > 650) {
-    console.log("taille disponible", window.innerWidth);
     // display the loading circle and hide the body for two seconds then do the opposite
     dontDisplayBodyAndBlurImages();
     setTimeout(displayBody, 2500);
