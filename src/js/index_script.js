@@ -3,6 +3,7 @@ const titleSpace = document.querySelector(".title-space");
 const slides = document.querySelectorAll(".carrousel-slide");
 const slide = document.querySelector(".carrousel-slide");
 // Il y a un décalage sur les slides parce que j'ai un peu fait nimp avec les z-index mais ça fontionne bien
+let currentSlide;
 const slide1 = document.querySelector(".slide--2");
 const slide2 = document.querySelector(".slide--3");
 const slide3 = document.querySelector(".slide--4");
@@ -71,7 +72,7 @@ const LoadFirstSlideAndCatImages = function () {
 };
 
 const noLoadingAnimationIfMobile = function () {
-  if (window.screen.width > 550) {
+  if (window.screen.width > 650) {
     // display the loading circle and hide the body for two seconds then do the opposite
     dontDisplayBodyAndBlurImages();
     setTimeout(displayBody, 2500);
@@ -108,9 +109,6 @@ navObserver.observe(main);
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Fade in out photo intro
 
-let currentSlide;
-
-// On enlève toutes les classes fadeInOut qui s'occupe de la transition
 setInterval(() => {
   slides.forEach((slide) => {
     slide.classList.remove("carrousel-slide-fadeInOut");
@@ -248,7 +246,7 @@ const letFirstProductImageAppart = function () {
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
-  if (window.screen.width < 550) return;
+  if (window.screen.width < 650) return;
 
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
@@ -261,7 +259,7 @@ letFirstProductImageAppart();
 notIfMobile();
 
 const triggerObservers = function () {
-  if (window.screen.width < 550) return;
+  if (window.screen.width < 650) return;
   productsObserver.observe(products);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
