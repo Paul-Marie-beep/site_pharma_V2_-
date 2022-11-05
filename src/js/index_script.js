@@ -74,13 +74,14 @@ const LoadFirstSlideAndCatImages = function () {
 const loadMobileReplacementImage = function () {};
 
 const noLoadingAnimationIfMobile = function () {
+  setTimeout(LoadFirstSlideAndCatImages, 700);
+
   if (window.innerWidth < 650) return;
   // display the loading circle and hide the body for two seconds then do the opposite
   dontDisplayBodyAndBlurImages();
   setTimeout(displayBody, 2500);
 
   // We wait until the loading of the loading wheel to authorize the loading of the images
-  setTimeout(LoadFirstSlideAndCatImages, 700);
 };
 
 noLoadingAnimationIfMobile();
@@ -258,11 +259,11 @@ letFirstProductImageAppart();
 notIfMobile();
 
 const triggerObservers = function () {
+  categoriesObserver.observe(categories);
   if (window.innerWidth < 650) return;
   productsObserver.observe(products);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
-  categoriesObserver.observe(categories);
 };
 
 triggerObservers();
