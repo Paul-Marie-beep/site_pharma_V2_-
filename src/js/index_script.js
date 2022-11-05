@@ -71,7 +71,8 @@ const LoadFirstSlideAndCatImages = function () {
 };
 
 const noLoadingAnimationIfMobile = function () {
-  if (!userIsOnMobile) {
+  // if (!userIsOnMobile) {
+  if (window.screen.width > 550) {
     // display the loading circle and hide the body for two seconds then do the opposite
     dontDisplayBodyAndBlurImages();
     setTimeout(displayBody, 2500);
@@ -253,7 +254,7 @@ const letFirstProductImageAppart = function () {
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
-  if (userIsOnMobile) return;
+  if (window.screen.width < 550) return;
 
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
