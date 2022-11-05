@@ -262,7 +262,7 @@ letFirstProductImageAppart();
 notIfMobile();
 
 const triggerObservers = function () {
-  // if (window.screen.width < 550) return;
+  if (window.screen.width < 550) return;
   productsObserver.observe(products);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
