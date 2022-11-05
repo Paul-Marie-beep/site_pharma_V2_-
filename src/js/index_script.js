@@ -202,6 +202,7 @@ const revealProducts = function (entries, observer) {
     allowKey = false;
     return;
   }
+  console.log("obs triggered");
   prodImgTargets.forEach(loadImage);
   allowKey = true;
   // À noter que l'on a ci-après (mais chronologiquement avant dans l'exécution du script) enlevé l'image qui apparaît la première dans le slider pour ne pas qu'on la voit en train de se charger quand l'observer se lance.
@@ -259,9 +260,9 @@ letFirstProductImageAppart();
 notIfMobile();
 
 const triggerObservers = function () {
-  categoriesObserver.observe(categories);
-  if (window.innerWidth < 650) return;
   productsObserver.observe(products);
+  if (window.innerWidth < 650) return;
+  categoriesObserver.observe(categories);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
 };
