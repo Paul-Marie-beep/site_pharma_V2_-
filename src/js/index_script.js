@@ -266,10 +266,16 @@ const notIfMobile = function () {
 letFirstProductImageAppart();
 notIfMobile();
 
-categoriesObserver.observe(categories);
-productsObserver.observe(products);
-contactObserver.observe(contact);
-adressObserver.observe(rightBlock);
+const triggerObservers = function () {
+  if (window.screen.width < 550) return;
+
+  categoriesObserver.observe(categories);
+  productsObserver.observe(products);
+  contactObserver.observe(contact);
+  adressObserver.observe(rightBlock);
+};
+
+triggerObservers();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Scroller vers contact
