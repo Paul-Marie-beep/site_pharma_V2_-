@@ -61,6 +61,10 @@
 
 .carrousel {
   width: 100%;
+  display: block;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 }
 
 .carrousel-container {
@@ -73,6 +77,13 @@
   position: absolute;
   display: flex;
   justify-content: center;
+  &__rpm {
+    display: none;
+    object-position: left;
+    @media screen and (max-width: 650px) {
+      display: block;
+    }
+  }
 }
 
 .carrousel-slide-fadeInOut {

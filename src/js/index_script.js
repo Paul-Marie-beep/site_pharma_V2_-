@@ -71,17 +71,16 @@ const LoadFirstSlideAndCatImages = function () {
   loadCategoriesImages();
 };
 
-const noLoadingAnimationIfMobile = function () {
-  if (window.innerWidth > 650) {
-    // display the loading circle and hide the body for two seconds then do the opposite
-    dontDisplayBodyAndBlurImages();
-    setTimeout(displayBody, 2500);
+const loadMobileReplacementImage = function () {};
 
-    // We wait until the loading of the loading wheel to authorize the loading of the images
-    setTimeout(LoadFirstSlideAndCatImages, 700);
-  } else {
-    loadFirstSlideImage();
-  }
+const noLoadingAnimationIfMobile = function () {
+  if (window.innerWidth < 650) return;
+  // display the loading circle and hide the body for two seconds then do the opposite
+  dontDisplayBodyAndBlurImages();
+  setTimeout(displayBody, 2500);
+
+  // We wait until the loading of the loading wheel to authorize the loading of the images
+  setTimeout(LoadFirstSlideAndCatImages, 700);
 };
 
 noLoadingAnimationIfMobile();
