@@ -59,10 +59,6 @@ const pdtsNatOptions = {
 
 const pdtsNatObserver = new IntersectionObserver(revealPdtsNat, pdtsNatOptions);
 
-const addLazyClass = function (image) {
-  image.classList.add("icone-lazy");
-};
-
 const notIfMobile = function () {
   // On ne le fait pas sur tel
   if (
