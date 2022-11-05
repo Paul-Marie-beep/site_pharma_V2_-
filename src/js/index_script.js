@@ -34,7 +34,9 @@ const loadingGif = document.querySelector(".loading__gif");
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Test à effacer
 
-document.querySelector(".title-text--h1").innerHTML = `Taille de l'écran : ${window.innerWidth}`;
+document.querySelector(
+  ".title-text--h1"
+).innerHTML = `Taille de l'écran : ${window.innerWidth} Taille de l'écran : ${window.screen.availWidth}`;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Loader
