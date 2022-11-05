@@ -266,8 +266,6 @@ const triggerObservers = function () {
   productsObserver.observe(products);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
-
-  // if (window.screen.width <= 860) return;
   categoriesObserver.observe(categories);
 };
 
