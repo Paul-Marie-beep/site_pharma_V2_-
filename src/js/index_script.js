@@ -217,14 +217,9 @@ const revealAdress = function (entries, observer) {
   observer.unobserve(rightBlock);
 };
 
-const categoriesImagesOptions = {
-  root: null,
-  threshold: 0.05,
-};
-
 const categoriesOptions = {
   root: null,
-  threshold: 0.9,
+  threshold: 0.7,
 };
 
 const productsOptions = {
