@@ -268,11 +268,12 @@ notIfMobile();
 
 const triggerObservers = function () {
   if (window.screen.width < 550) return;
-
-  categoriesObserver.observe(categories);
   productsObserver.observe(products);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
+
+  if (window.screen.width < 860) return;
+  categoriesObserver.observe(categories);
 };
 
 triggerObservers();
