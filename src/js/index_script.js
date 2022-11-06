@@ -261,8 +261,8 @@ notIfMobile();
 
 const triggerObservers = function () {
   productsObserver.observe(products);
-  if (window.innerWidth < 650) return;
   categoriesObserver.observe(categories);
+  if (window.innerWidth < 650) return;
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
 };
