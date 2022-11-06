@@ -167,7 +167,7 @@ setTimeout("DelayloadingImages2()", 3000);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Faire apparaître les catégories (avec lazy loading des icones) et les produits
 
-const revealSection = function (entries, observer) {
+const revealSection = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
@@ -189,14 +189,14 @@ const revealCategories = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
-  revealSection(entries, observer);
+  revealSection(entries);
   observer.unobserve(categories);
 };
 
 // On utilise l'observer pour autoriser ou non via la variable allowKey la possibilité d'utiliser le clavier pour faire
 // défiler le stepper. C'est pour ça que l'on arrête pas l'observer une fois qu'il a permis de révéler la section: on en a encore besoin.
 const revealProducts = function (entries, observer) {
-  revealSection(entries, observer);
+  revealSection(entries);
   const [entry] = entries;
   if (!entry.isIntersecting) {
     allowKey = false;
