@@ -9,6 +9,7 @@ const slide2 = document.querySelector(".slide--3");
 const slide3 = document.querySelector(".slide--4");
 let index = 2;
 
+const viewportWidthCondition = window.innerWidth < 750;
 const categories = document.querySelector(".categories");
 const catImgTargets = document.querySelectorAll(".item");
 const stickyPic = document.querySelector(".sticky-pic__container");
@@ -81,7 +82,7 @@ const loadMobileReplacementImage = function () {};
 const noLoadingAnimationIfMobile = function () {
   setTimeout(LoadFirstSlideAndCatImages, 700);
 
-  if (window.innerWidth < 650) return;
+  if (viewportWidthCondition) return;
   // display the loading circle and hide the body for two seconds then do the opposite
   dontDisplayBodyAndBlurImages();
   setTimeout(displayBody, 2500);
@@ -252,7 +253,7 @@ const letFirstProductImageAppart = function () {
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
-  if (window.innerWidth < 750) return;
+  if (viewportWidthCondition) return;
 
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
@@ -266,7 +267,7 @@ notIfMobile();
 
 const triggerObservers = function () {
   productsObserver.observe(products);
-  if (window.innerWidth < 750) return;
+  if (viewportWidthCondition) return;
   document.querySelector(".lnk-contact").innerHTML = "ok";
   categoriesObserver.observe(categories);
   contactObserver.observe(contact);
