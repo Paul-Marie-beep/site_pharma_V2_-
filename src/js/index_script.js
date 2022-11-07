@@ -194,7 +194,7 @@ const revealCategories = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
-  document.querySelector(".pharma-name").innerHTML = "OK";
+  document.querySelector(".pharma-name").innerHTML = "Seuil 0.35";
   revealSection(entries);
   observer.unobserve(categories);
 };
@@ -222,7 +222,7 @@ const revealAdress = function (entries, observer) {
 
 const categoriesOptions = {
   root: null,
-  threshold: 0.3,
+  threshold: 0.35,
 };
 
 const productsOptions = {
