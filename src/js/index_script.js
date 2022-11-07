@@ -222,7 +222,7 @@ const revealAdress = function (entries, observer) {
 
 const categoriesOptions = {
   root: null,
-  threshold: 0.3,
+  threshold: 0.5,
 };
 
 const productsOptions = {
@@ -252,7 +252,7 @@ const letFirstProductImageAppart = function () {
 
 const notIfMobile = function () {
   // On ne le fait pas sur tel
-  if (window.innerWidth < 650) return;
+  if (window.innerWidth < 750) return;
 
   categories.classList.add("section-hidden");
   products.classList.add("section-hidden");
@@ -266,7 +266,7 @@ notIfMobile();
 
 const triggerObservers = function () {
   productsObserver.observe(products);
-  if (window.innerWidth < 650) return;
+  if (window.innerWidth < 750) return;
   document.querySelector(".lnk-contact").innerHTML = "ok";
   categoriesObserver.observe(categories);
   contactObserver.observe(contact);
