@@ -222,7 +222,7 @@ const revealAdress = function (entries, observer) {
 
 const categoriesOptions = {
   root: null,
-  threshold: 0.5,
+  threshold: 0.1,
 };
 
 const productsOptions = {
