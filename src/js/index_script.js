@@ -194,6 +194,7 @@ const revealCategories = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
+  document.querySelector(".pharma-name").innerHTML = "OK";
   revealSection(entries);
   observer.unobserve(categories);
 };
