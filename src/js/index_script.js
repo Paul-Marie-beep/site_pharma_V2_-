@@ -33,20 +33,18 @@ const loading = document.querySelector(".loading");
 const loadingGif = document.querySelector(".loading__gif");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-// Test affichage
-
-document.querySelector(".title-text--h1").innerHTML = `Taille d'écran : ${window.innerWidth}`;
-
-///////////////////////////////////////////////////////////////////////////////////////////////
 // Loader
 
 // We display a loading wheel so that we have time to load the categories images
 
-const dontDisplayBodyAndBlurImages = function () {
+const dontDisplayBody = function () {
   loading.classList.remove("no-display");
   main.classList.add("no-display");
   carrousel.classList.add("no-display");
   titleSpace.classList.add("no-display");
+};
+
+const blurImages = function () {
   addLazyClass(slide1.firstElementChild);
   catImgTargets.forEach((img) => {
     addLazyClass(img);
@@ -77,14 +75,13 @@ const LoadFirstSlideAndCatImages = function () {
   loadCategoriesImages();
 };
 
-const loadMobileReplacementImage = function () {};
-
 const noLoadingAnimationIfMobile = function () {
   setTimeout(LoadFirstSlideAndCatImages, 700);
 
-  if (viewportWidthCondition) return;
+  if (window.innerWidth <= 650) return;
   // display the loading circle and hide the body for two seconds then do the opposite
-  dontDisplayBodyAndBlurImages();
+  dontDisplayBody();
+  blurImages();
   setTimeout(displayBody, 2500);
 
   // We wait until the loading of the loading wheel to authorize the loading of the images
@@ -195,7 +192,6 @@ const revealCategories = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
-  document.querySelector(".pharma-name").innerHTML = "Seuil 0.3";
   revealSection(entries);
   observer.unobserve(categories);
 };
@@ -268,7 +264,6 @@ notIfMobile();
 const triggerObservers = function () {
   productsObserver.observe(products);
   if (viewportWidthCondition) return;
-  document.querySelector(".lnk-contact").innerHTML = "ok";
   categoriesObserver.observe(categories);
   contactObserver.observe(contact);
   adressObserver.observe(rightBlock);
