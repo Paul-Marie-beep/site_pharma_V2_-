@@ -32,6 +32,11 @@ const loading = document.querySelector(".loading");
 const loadingGif = document.querySelector(".loading__gif");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
+// Test affichage
+
+document.querySelector(".title-text--h1").innerHTML = `Taille d'écran : ${window.screen.innerWidth}`;
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 // Loader
 
 // We display a loading wheel so that we have time to load the categories images
