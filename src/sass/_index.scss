@@ -165,24 +165,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.title-text--h1 {
-  font-weight: 500;
-  font-size: 3rem;
-  padding-top: 1rem;
-  color: $text-primary;
-  width: fit-content;
-  margin: auto;
-  @media screen and (max-width: 650px) {
-    text-shadow: 2px 2px 2px #01fa4c;
+  & h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    padding-top: 1rem;
+    color: $text-primary;
+    width: fit-content;
+    margin: auto;
+    @media screen and (max-width: 650px) {
+      text-shadow: 2px 2px 2px #01fa4c;
+    }
   }
-}
-
-.title-text--p {
-  font-size: 1.5rem;
-  padding-top: 0.5rem;
-  width: 80%;
-  margin: auto;
+  & p {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
 }
 
 .btn-slide-container {
